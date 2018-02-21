@@ -1,0 +1,44 @@
+.main-section-gate {min-height: 1000px; background: url(../images/main_section1_bg.jpg) 50% 0 no-repeat;}
+.main-section-gate .main-section-gate-title {padding-top: 198px; text-align: center; color: #464646; font-size: 62px; font-weight: 100; line-height: 1.05;}
+
+.main-section-guide {background: url(../images/main_section2_bg.png) no-repeat 50% 100% #f1f1f1; padding-top: 128px; height: 2037px;}
+.main-section-guide .main-guide-event {width: 1211px; margin: 0 auto; font-size: 0;}
+.main-section-guide .main-guide-event .guide-text {float: left;}
+.main-section-guide .main-guide-event .guide-text .guide-title {display: inline-block; margin-bottom: 56px; position: relative; font-size: 70px; color: #5a6680; font-weight: 300;}
+.main-section-guide .main-guide-event .guide-text ul li {font-size: 31px; font-weight: 400; color: #5a6680; line-height: 1.1;}
+.main-section-guide .main-guide-event .guide-rule {display: inline-block; margin-left: 78px;}
+.main-section-guide .main-guide-event .guide-rule ul li {position: relative; padding-left: 106px; height: 57px; margin-bottom: 13px; background: url(../images/main_section2_rule_numbering.png) 0 50% no-repeat; font-size: 28px; font-weight: 400; color: #464646;}
+.main-section-guide .main-guide-event .guide-rule ul li .number {position: absolute; left: 13px; top: 0; font-size: 25px; color: #ffffff; font-weight: 400;}
+.main-section-guide .main-guide-event .guide-rule ul li span {display: inline-block; padding-top: 18px; line-height: 1.1;}
+.main-section-guide .main-guide-event .guide-rule ul li:last-child {margin-bottom: 0;}
+
+
+.main-section-guide .main-guide-gift {width: 1211px; margin: 99px auto 248px; font-size: 0;}
+/*.main-section-guide .main-guide-gift {width: 1211px; margin: 99px auto 167px; font-size: 0;}*/
+.main-section-guide .main-guide-gift .guide-title {display: inline-block; margin-bottom: 41px; position: relative; font-size: 46px; color: #5a6680; font-weight: 300;}
+.main-section-guide .main-guide-gift .gift-wrap ul {font-size: 0;}
+.main-section-guide .main-guide-gift .gift-wrap ul li {min-height: 679px; display: inline-block; position: relative; width: 566px; padding: 78px 0 72px; margin-right: 10px; background: url(../images/main_section2_gift_line.png) 50% 0 no-repeat rgba(255, 255, 255, 0.8); text-align: center; color: #5a6680;}
+.main-section-guide .main-guide-gift .gift-wrap ul li:last-child {margin-right: 0;}
+.main-section-guide .main-guide-gift .gift-wrap ul li .badge {display: block; position: absolute; top: -14px;}
+.main-section-guide .main-guide-gift .gift-wrap ul li .badge:after {display: block; position: absolute; left: 44px; top: 76px; content: attr(title); font-size: 37px; color: #ffffff;}
+.main-section-guide .main-guide-gift .gift-wrap ul li._1 .badge {left: -65px;}
+.main-section-guide .main-guide-gift .gift-wrap ul li._2 .badge {right: -65px;}
+.main-section-guide .main-guide-gift .gift-wrap ul li .gift-name {font-size: 40px;}
+.main-section-guide .main-guide-gift .gift-wrap ul li .gift-img {}
+.main-section-guide .main-guide-gift .gift-wrap ul li._1 .gift-img {padding: 52px 0 32px;}
+.main-section-guide .main-guide-gift .gift-wrap ul li._2 .gift-img {padding: 70px 0 68px;}
+.main-section-guide .main-guide-gift .gift-wrap ul li .gift-txt {font-size: 32px; line-height: 1.1;}
+.main-section-guide .main-guide-gift .gift-caution {padding-left: 22px; margin-top: 39px;}
+.main-section-guide .main-guide-gift .gift-caution li {padding-left: 2px; margin-bottom: 2px; list-style: none; font-size: 20px; color: #454545;}
+.main-section-guide .main-guide-gift .gift-caution li:first-child {padding: 0; margin-bottom: 3px; font-weight: 700;}
+.main-section-guide .main-guide-gift .gift-caution li:first-child img {padding: 5px 5px 0 0;}
+
+.main-section-guide .main-guide-video {position: relative; z-index: 2;}
+.main-section-guide .main-guide-video .video-wrapper {width: 1182px; height: 726px; background: url(../images/main_section2_video_frame.png) no-repeat; margin: 0 auto; padding: 13px 0 0 19px;}
+.main-section-guide .main-guide-video .video-wrapper .video {width: 1132px; height: 692px; background: url(../images/main_section2_video_frame.png) no-repeat;}
+
+.main-section-guide .guide-title:before {display: block; position: absolute; top: -34px; left: 5px; content: ""; width: 49px; height: 6px; background: url(../images/before_shape.jpg) no-repeat;}
+
+.main-section-product {height: 1323px; background: url(../images/main_section3_bg.jpg) 50% 0 no-repeat; text-align: center;}
+.main-section-product .main-product-wrap {display: inline-block; padding: 592px 0 0 355px;}
+.main-section-product .main-product-wrap .buy-link {display: block; background: url(../images/main_section3_product_buy.png); margin-top: 21px; width: 172px; height: 200px;}
