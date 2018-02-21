@@ -5,9 +5,9 @@
 .main-section-guide .main-guide-event {width: 1211px; margin: 0 auto; font-size: 0;}
 .main-section-guide .main-guide-event .guide-text {float: left;}
 .main-section-guide .main-guide-event .guide-text .guide-title {display: inline-block; margin-bottom: 56px; position: relative; font-size: 70px; color: #5a6680; font-weight: 300;}
-.main-section-guide .main-guide-event .guide-text ul li {font-size: 33px; font-weight: 400; color: #5a6680; line-height: 1.1;}
+.main-section-guide .main-guide-event .guide-text ul li {font-size: 31px; font-weight: 400; color: #5a6680; line-height: 1.1;}
 .main-section-guide .main-guide-event .guide-rule {display: inline-block; margin-left: 78px;}
-.main-section-guide .main-guide-event .guide-rule ul li {position: relative; padding-left: 106px; height: 57px; margin-bottom: 13px; background: url(../images/main_section2_rule_numbering.png) 0 50% no-repeat; font-size: 31px; font-weight: 400; color: #464646;}
+.main-section-guide .main-guide-event .guide-rule ul li {position: relative; padding-left: 106px; height: 57px; margin-bottom: 13px; background: url(../images/main_section2_rule_numbering.png) 0 50% no-repeat; font-size: 28px; font-weight: 400; color: #464646;}
 .main-section-guide .main-guide-event .guide-rule ul li .number {position: absolute; left: 13px; top: 0; font-size: 25px; color: #ffffff; font-weight: 400;}
 .main-section-guide .main-guide-event .guide-rule ul li span {display: inline-block; padding-top: 18px; line-height: 1.1;}
 .main-section-guide .main-guide-event .guide-rule ul li:last-child {margin-bottom: 0;}
