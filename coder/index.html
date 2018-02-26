@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>현황판</title>
+		<meta name="format-detection" content="telephone=no" />
+		
+		<link rel="stylesheet" href="css/common.css" />
+		
+		<script src="lib/jquery/jquery-1.9.1.min.js"></script>
+		<script src="lib/placeholder/jquery.placeholder.min.js"></script>
+		
+		<style type="text/css">
+			* {
+				word-wrap: break-word;
+			}
+			body {
+				background-color: #f4f5f6;
+			}
+			.now {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 50px 0;
+			}
+			h1 {
+				margin-bottom: 30px;
+				padding: 0 15px;
+			}
+
+			h1 span {
+				margin-left: 5px;
+				color: #999;
+				font-size: 20px;
+			}
+			h1 em {
+				margin-left: 5px;
+				color: #1b4354;
+				font-size: 13px;
+				font-style: normal;
+				font-weight: 400;
+				border-bottom: 1px solid #1b4354;
+			}
+
+			.noti {
+				margin-bottom: 5px;
+				padding: 0 15px;
+				color: red;
+				font-size: 15px;
+			}
+
+			table {
+				table-layout: fixed;
+				border-collapse: collapse; 
+				border-spacing: 0;
+				width: 100%;
+			}
+			table th {
+				padding: 5px 0;
+				background: #e8e8e8;
+			}
+			table td {
+				background-color: #fff;
+				border-bottom: 1px solid #e2e2e2;
+				opacity: .7;
+			}
+
+			table td.active {
+				background-color: #f9f9f9;
+			}
+
+			a {
+				display: block;
+				padding: 5px 10px;
+				font-size: 15px;
+			}
+			.page {
+				color: #666;
+				font-weight: 700;
+			}
+			.route {
+				color: #9e9e9e;
+				font-size: 15px;
+				font-weight: 700;
+			}
+			.counts {
+				position: relative;
+				border-right: 1px solid #e2e2e2;
+				font-size: 13px;
+				text-align: center;			
+				z-index: 100;
+			}
+			.copy {
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+			}
+			.copy__txt {
+				position: relative;
+				border: 0;
+				color: #000;
+				text-indent: -9999px;
+				opacity: 0;
+			}
+			.copy__button {
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				padding: 2px;
+				margin-left: -13px;
+				border: 1px solid #e30061;
+				border-radius: 2px;
+				font-size: 11px;
+				background-color: #fff;
+				color: #000;
+				text-align: center;
+			}
+
+			em {
+				color: red;
+			}
+
+			.heading {
+				padding: 5px 20px;
+				background-color: #797979;
+				color: #fff;
+				font-size: 23px;
+				text-align: left;
+			}
+			.title {
+				margin-top: 10px;
+				font-size: 13px;
+				padding: 5px 5px 0 5px;
+				border-top: 1px dashed #e2e2e2;
+				color: #e30061;
+				font-size: 13px;
+				text-align: left;
+			}
+			.title.title--popup:after {
+				content: "팝업";
+				display: inline-block;
+				margin: -2px 0 0 10px;
+				padding: 2px 7px;
+				background-color: #e30061;
+				-webkit-border-radius: 5px;
+				-ms-border-radius: 5px;
+				border-radius: 5px;
+				font-size: 12px;
+				color: #fff;
+				vertical-align: middle;
+			}
+
+			.utils {
+				display: block;
+				padding: 5px 10px;
+				font-size: 0;
+				text-align: right;
+			}
+			.util {
+				display: inline-block;
+				position: relative;
+				padding-left: 15px;
+				font-size: 15px;
+				color: #333
+			}
+			.util:before {
+				content: " ";
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 10px;
+				height: 10px;
+				-webkit-border-radius: 10px;
+				-ms-border-radius: 10px;
+				border-radius: 10px;
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+			}
+			.util.util-1:before {
+				background-color: #666;
+			}
+			.util.util-2:before {
+				background-color: #c5c5c5;
+			}
+			.util.util-3:before {
+				background-color: #e30061;
+			}
+			.util + .util {
+				margin-left: 15px;
+			}
+
+			.end {
+				background-color: #e30061;
+				color: #fff;
+			}
+			.modify {
+				background-color: red;
+				color: #fff;
+			}
+			table td.end,
+			table td.end + td {
+				opacity: 1;
+			}
+
+		</style>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('table td a').on('mouseover click', function(){
+					$('table td').removeClass('active');
+					$(this).parent().addClass('active');
+
+					if ( !$(this).parent().prev().hasClass('end') && !$(this).parent().prev().hasClass('modify') ){
+						$(this).parent().prev().addClass('active');
+					}
+				});
+
+				$('.c-section').each(function(){
+					$(this).find('table tbody tr').each(function(i){
+						$(this).find('.counts').text(i+1);
+					});
+				});
+
+				$('.route').each(function(){
+					var thisPage = $(this).text();
+					$(this).parent().attr('href',thisPage);
+				});
+
+				$('.counts').on('click', function(){
+					var copyTxts = $(this).next().find('.route').text(),
+						  copyTxt = copyTxts.replace('html/','');
+					$('.copy').remove();
+					$(this).append('<div class="copy"><input class="copy__txt" value="'+copyTxt+'" /><button class="copy__button" onclick="copys();">복사</button></div>');
+
+					return false;
+				});	
+				var allCount = $('.counts').length,
+					  endCount = $('.counts.end').length,
+					  modifyCount = $('.counts.modify').length;
+				
+				if ( !modifyCount == 0){
+					$('h1').append('<span>( '+endCount+'/'+allCount+' )<em>" '+modifyCount+'페이지 수정중 "</em></span>');	
+				}else {
+					$('h1').append('<span>( '+endCount+'/'+allCount+' )</span>');
+				}
+				
+			});
+
+			function copys() {
+				var copyText = document.querySelector('.copy__txt');
+				copyText.select();
+				document.execCommand("copy");
+			}
+		</script>
+	</head>
+	<body>
+		<div class="now">
+			<h1>현황판</h1>
+			<div class="c-section">
+				<div class="utils">
+					<div class="util util-1">경로</div>
+					<div class="util util-3">페이지</div>
+				</div>
+				<table>
+					<colgroup>
+						<col style="width: 40px;"/>
+						<col style="width: * ;" />
+					</colgroup>
+					<thead>
+						<th class="heading" colspan="2">[ WEB ]</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="counts end"></td>
+							<td>
+								<a href="#" target="_blank">
+									<div class="route">html/main.html</div>
+									<div class="title">MAIN</div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="counts end"></td>
+							<td>
+								<a href="#" target="_blank">
+									<div class="route">html/sub.html</div>
+									<div class="title" >SUB( step1 )</div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="counts end"></td>
+							<td>
+								<a href="#" target="_blank">
+									<div class="route">html/sub__step-2.html</div>
+									<div class="title" >SUB( step2 )</div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="counts end"></td>
+							<td>
+								<a href="#" target="_blank">
+									<div class="route">html/sub__step-3.html</div>
+									<div class="title" >SUB( step3 )</div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="counts end"></td>
+							<td>
+								<a href="#" target="_blank">
+									<div class="route">html/sub__popup-1.html</div>
+									<div class="title title--popup" >TRY AGAIN!</div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="counts end"></td>
+							<td>
+								<a href="#" target="_blank">
+									<div class="route">html/sub__popup-2.html</div>
+									<div class="title title--popup" >LEVEL 1 CLEAR</div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="counts end"></td>
+							<td>
+								<a href="#" target="_blank">
+									<div class="route">html/sub__popup-3.html</div>
+									<div class="title title--popup" >LEVEL 2 CLEAR</div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="counts end"></td>
+							<td>
+								<a href="#" target="_blank">
+									<div class="route">html/sub__popup-4.html</div>
+									<div class="title title--popup" >LEVEL 3 CLEAR</div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="counts end"></td>
+							<td>
+								<a href="#" target="_blank">
+									<div class="route">html/sub__popup-5.html</div>
+									<div class="title title--popup" >바이오더마 정품 당첨</div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="counts end"></td>
+							<td>
+								<a href="#" target="_blank">
+									<div class="route">html/sub__popup-6.html</div>
+									<div class="title title--popup" >바이오더마 투고키트 당첨</div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="counts end"></td>
+							<td>
+								<a href="#" target="_blank">
+									<div class="route">html/sub__popup-7.html</div>
+									<div class="title title--popup" >다음 기회에!</div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="counts end"></td>
+							<td>
+								<a href="#" target="_blank">
+									<div class="route">html/sub__popup-8.html</div>
+									<div class="title title--popup" >개인 정보 취급 위탁에 대한 동의</div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="counts end"></td>
+							<td>
+								<a href="#" target="_blank">
+									<div class="route">html/sub__popup-9.html</div>
+									<div class="title title--popup" >개인 정보 취급 위탁에 대한 동의</div>
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
