@@ -19,11 +19,11 @@ class mnv_function extends mnv_dbi
 	public function MobileCheck()
 	{
 		$mobile_agent = array("iPhone","iPod","iPad","Android","Blackberry","SymbianOS|SCH-M\d+","Opera Mini", "Windows ce", "Nokia", "sony" );
-		$check_mobile = "N";
+		$check_mobile = "PC";
 
 		for($i=0; $i<sizeof($mobile_agent); $i++){
 			if(stripos( $_SERVER['HTTP_USER_AGENT'], $mobile_agent[$i] )){
-				$check_mobile = "Y";
+				$check_mobile = "MOBILE";
 				break;
 			}
 		}

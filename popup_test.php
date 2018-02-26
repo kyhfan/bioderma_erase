@@ -2,11 +2,6 @@
 	include_once "./include/autoload.php";
 
     $mnv_f = new mnv_function();
-    $my_db         = $mnv_f->Connect_MySQL();
-    $rs_tracking   = $mnv_f->InsertTrackingInfo($media, $gubun);
-    $mobileYN      = $mnv_f->MobileCheck();
-    $saveMedia     = $mnv_f->SaveMedia();
-
 	include_once "./head.php";
 ?>
 	<body>
@@ -119,7 +114,7 @@
 									<a href="#" class="m-video__percent"><img src="./images/pages/m-video__percent--3.png" alt="클렌징 후 부드러운 피부 1)" /></a>
 								</div>
 
-								<button class="m-video__button">스킨케어 클렌
+								<button class="m-video__button" data-layer-popup="popup_level3_clear" onclick="wmbt.popupOpen(this);">스킨케어 클렌
 								저 구매하기</button>
 							</div>
 						</div>
@@ -127,7 +122,25 @@
 				</div>
 			</div>
 <?
-	include_once "./footer.php";
+    include_once "./footer.php";
+    
+    include_once "./popup/popup_try_again.php";
+    
+    include_once "./popup/popup_level1_clear.php";
+    
+	include_once "./popup/popup_level2_clear.php";
+    
+	include_once "./popup/popup_level3_clear.php";
+    
+	include_once "./popup/popup_winner_goods.php";
+    
+	include_once "./popup/popup_winner_kit.php";
+    
+	include_once "./popup/popup_winner_draw.php";
+    
+	include_once "./popup/popup_agree1.php";
+    
+	include_once "./popup/popup_agree2.php";
 ?>		
 		</div>
 	</body>
