@@ -33,7 +33,7 @@
 										<label for="c-popup__input-2" class="c-popup__label">전화번호</label>
 									</div>
 									<div class="c-popup__value">
-										<input type="text" id="level2_phone" class="c-popup__input" />
+										<input type="text" id="level2_phone" class="c-popup__input" onkeyup="wmbt.only_num(this);wmbt.chk_strlen(this);" />
 									</div>
 								</div>
 								<div class="c-popup__form c-popup__form--button">
@@ -41,7 +41,7 @@
 										<label for="c-popup__input-3" class="c-popup__label">주소</label>
 									</div>
 									<div class="c-popup__value">
-										<input type="text" id="level2_addr" class="c-popup__input"/>
+										<input type="text" id="level2_addr" class="c-popup__input" readonly="true"/>
 										<a href="javascript:void(0)" class="c-search__button" onclick="wmbt.findAddr(2)">찾기버튼</a>
 									</div>
 								</div>

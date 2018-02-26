@@ -18,9 +18,23 @@ var bioderma = function() {
 
 		return false;
 	},
+	this.popupSelfOpen = function(popup) {
+		// var $this = $(me),
+		// 	val = $this.attr('data-layer-popup');
+
+		$("#" + popup).addClass("c-popup--active");
+
+		return false;
+	},
 	this.popupClose = function(me) {
 		$('html').removeClass('is-popup-open');
 		$(me).parent().parent().removeClass('c-popup--active');
+
+		return false;
+	},
+	this.popupSelfClose = function(popup) {
+		$('html').removeClass('is-popup-open');
+		$('#' + popup).removeClass('c-popup--active');
 
 		return false;
 	},
@@ -31,6 +45,42 @@ var bioderma = function() {
 		location.href = val + ".php";
 		
 		return false;
+	},
+	this.only_num = function(me) {
+		var inText = me.value;
+		var outText = "";
+		var flag = true;
+		var ret;
+		for(var i = 0; i < inText.length; i++)
+		{
+			ret = inText.charCodeAt(i);
+			if((ret < 48) || (ret > 57))
+			{
+				flag = false;
+			}
+			else
+			{
+				outText += inText.charAt(i);
+			}
+		}
+
+		if(flag == false)
+		{
+			alert("전화번호는 숫자입력만 가능합니다.");
+			me.value = outText;
+			me.focus();
+			return false;
+		}
+		return true;
+	},
+	this.chk_strlen = function(me) {
+		if(me.value.length > 11) {
+			alert("전화번호는 11자를 초과할 수 없습니다.");
+			me.value = me.value.slice(0, -(me.value.length-11));
+			me.focus();
+			return false;
+		}
+		return;
 	},
 	this.findAddr = function(level) {
 		new daum.Postcode({
@@ -64,6 +114,8 @@ var bioderma = function() {
 				// document.getElementById('mb_zipcode').value = data.zonecode; //5자리 새우편번호 사용
 				// document.getElementById('mb_addr1').value 	= fullRoadAddr;
 				document.getElementById('level' + level + '_addr').value 	= "(" + data.zonecode + ") " + fullRoadAddr;
+				$("#level" + level + "_addr").attr("readonly",false);
+				$("#level" + level + "_addr").focus();
 			}
 		}).open();	
 	},
@@ -71,13 +123,6 @@ var bioderma = function() {
         var level_name      = $("#level" + level + "_name").val();
         var level_phone     = $("#level" + level + "_phone").val();
         var level_addr      = $("#level" + level + "_addr").val();
-        // var level           = $("#level").val();
-
-        // 임시 변수값
-        // level_name          = "김영훈";
-        // level_phone         = "11111";
-        // level_addr          = "테스트 주소";
-        // level               = 2;
 
 		if (level_name == "")
 		{
@@ -123,6 +168,27 @@ var bioderma = function() {
 			},
 			url: "./main_exec.php",
 			success: function(response){
+				var res_arr = response.split("||");
+
+				switch(res_arr[1])
+				{
+					case "blank" :
+						wmbt.popupSelfClose("popup_level" + level + "_clear");
+						wmbt.popupSelfOpen("popup_winner_draw");
+					break;
+					case "goods" :
+						wmbt.popupSelfClose("popup_level" + level + "_clear");
+						wmbt.popupSelfOpen("popup_winner_goods");
+					break;
+					case "kit" :
+						wmbt.popupSelfClose("popup_level" + level + "_clear");
+						wmbt.popupSelfOpen("popup_winner_kit");
+					break;
+					case "D" :
+						alert("이미 참여해 주셨습니다. 감사합니다.");
+						location.href = "index.php";
+					break;
+				}
 				console.log(response);
 			}
 		});

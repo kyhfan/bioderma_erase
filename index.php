@@ -32,7 +32,7 @@
 						제한 시간 동안 메이크업을 말끔하게 지워주세요
 						추첨을 통해 제품을 선물로 드립니다
 					</div>
-					<button class="m-visual__button">GAME START</button>
+					<button class="m-visual__button" data-move="game" onclick="wmbt.move(this)">GAME START</button>
 				</div>
 				<div class="m-aligner">
 					<div class="c-section">

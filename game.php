@@ -1,8 +1,8 @@
 <?
 	include_once "./include/autoload.php";
 
-    $mnv_f = new mnv_function();
-    $my_db         = $mnv_f->Connect_MySQL();
+    // $mnv_f = new mnv_function();
+    // $my_db         = $mnv_f->Connect_MySQL();
     // $rs_tracking   = $mnv_f->InsertTrackingInfo($media, $gubun);
     // $mobileYN      = $mnv_f->MobileCheck();
     // $saveMedia     = $mnv_f->SaveMedia();
@@ -29,7 +29,7 @@
             <div class="c-content c-content--sub">
                 <div class="game__popup">
                     <div class="game__starts">
-                        <a href="#" class="game__start">게임시작</a>
+                        <a href="javascript:void(0)" class="game__start">게임시작</a>
                         <div class="game__start-txt"><img src="./images/pages/s-start__txt.png" alt="클릭 시 게임이 시작됩니다." /></div>
                     </div>
                 </div>
@@ -66,23 +66,42 @@
 								.game__step에 "game__step--active"클래스 추가해주면 활성화
 							-->
                             <div class="game__steps">
-                                <a href="#" class="game__step game__step--active">1</a>
-                                <a href="#" class="game__step">2</a>
-                                <a href="#" class="game__step">3</a>
+                                <a href="javascript:void(0)" id="step1" class="game__step game__step--active">1</a>
+                                <a href="javascript:void(0)" id="step2" class="game__step">2</a>
+                                <a href="javascript:void(0)" id="step3" class="game__step">3</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <?
-	include_once "./footer.php";
+<?
+    include_once "./footer.php";
+    
+    include_once "./popup/popup_try_again.php";
+    
+    include_once "./popup/popup_level1_clear.php";
+    
+	include_once "./popup/popup_level2_clear.php";
+    
+	include_once "./popup/popup_level3_clear.php";
+    
+	include_once "./popup/popup_winner_goods.php";
+    
+	include_once "./popup/popup_winner_kit.php";
+    
+	include_once "./popup/popup_winner_draw.php";
+    
+	include_once "./popup/popup_agree1.php";
+    
+	include_once "./popup/popup_agree2.php";
+
 ?>
                 <script type="text/javascript">
 
                     var count = 0;
                     var time = 30;
                     var gameTimer = null;
-                    function gameTimerExec() {
+                    function gameTimerExec(imageNum) {
                         gameTimer = setInterval(function() {
                             time--;
                             count+=1;
@@ -96,7 +115,19 @@
                             if (time < 1) {
                                 $('.gauge__adds').addClass('gauge__adds--active');
                                 clearInterval(gameTimer);
-                                alert("게임오버");
+                                switch(imageNum)
+                                {
+                                    case 0 :
+                                        wmbt.popupSelfOpen("popup_tryagain");
+                                    break;
+                                    case 1 :
+                                        wmbt.popupSelfOpen("popup_level1_clear");
+                                    break;
+                                    case 2 :
+                                        wmbt.popupSelfOpen("popup_level2_clear");
+                                    break;
+                                }
+                                // alert("게임오버");
                             }                            
                         }, 1000);  
                     }
@@ -105,7 +136,7 @@
                         $('.game__popup').addClass('game__popup--active');
                         $('.gauge__body').css('width', '0');
                         
-                        gameTimerExec();
+                        gameTimerExec(1);
 //                        var count = -1;
 //                        for (var time = 0; time <= 30; time++) {
 //                            gameTimer = setTimeout(function() {
@@ -159,8 +190,9 @@
                     }
                     function stageClear(imageNum, sizeValue, ratio) {
                         if(imageNum > 2) {
-                            alert("올 클리어");
+                            // alert("올 클리어");                            
                             clearInterval(gameTimer);
+                            wmbt.popupSelfOpen("popup_level3_clear");
                             return;
                         }
                         $('.game__image-' + imageNum).find('.stage-image').eraser('disable');
@@ -172,8 +204,10 @@
                         
                         var nextFlag = confirm("다음스테이지?");
                         if(nextFlag) {
-                            gameTimerExec();
+                            gameTimerExec(imageNum);
                             eraserSet(nextNum, nextSize, nextRatio);
+                            $(".game__step").removeClass("game__step--active");
+                            $("#step" + nextNum).addClass("game__step--active");
                         }else{
                             alert("인덱스로");
                         }
