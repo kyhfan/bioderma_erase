@@ -11,20 +11,9 @@
 ?>
 	<body>
 		<div class="wrap">
-			<div class="c-header">
-				<div class="c-header__aligner">
-					<h1 class="c-h1"><a href="index.php" class="c-h1__logo"><img src="./images/common/c-logo.png" alt="BIODERMA" /></a></h1>
-					<div class="c-sns">
-						<button class="c-sns__button c-sns__button--facebook">페이스북</button>
-						<button class="c-sns__button c-sns__button--kakao">카카오스토리</button>
-					</div>
-					<div class="c-events">
-						<button class="c-event c-event--1"><span>EVENT 1</span>건강한 피부만 남기다</button>
-						<button class="c-event c-event--2" onclick="alert('4월에 오픈됩니다')"><span>EVENT 2</span>투고 키트 샘플링</button>
-					</div>
-				</div>
-			</div>
-
+<?
+	include_once "./header.php";
+?>            
 			<div class="c-content">
 				<div class="m-visual">
 					<div class="is-hidden">
@@ -100,8 +89,11 @@
 					<div class="m-video__top">
 						<div class="m-video__text"><img src="./images/pages/m-text--1.png" alt="잔여물없이 말끔하게 지워야 진짜 맨얼굴! 건강한 피부만 남기는 모습, 영상으로도 확인하세요" /></div>
 						<a href="#" class="m-video__link">
-							<div class="m-video__image"><img src="./images/pages/m-video__image.png" alt="영상썸네일" /></div>
-						</a>
+							<div class="m-video__image">
+                                <!-- <img src="./images/pages/m-video__image.png" alt="영상썸네일" /> -->
+                                <iframe allowfullscreen="1" src="https://www.youtube.com/embed/K7ePWfdWeqk?controls=0&loop=1&playlist=K7ePWfdWeqk&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" width="1132" height="635"></iframe>
+                            </div>
+                        </a>
 					</div>
 					<div class="m-video__bottom">
 						<div class="m-video__bg">
@@ -119,15 +111,22 @@
 									<a href="#" class="m-video__percent"><img src="./images/pages/m-video__percent--3.png" alt="클렌징 후 부드러운 피부 1)" /></a>
 								</div>
 
-								<button class="m-video__button">스킨케어 클렌
-								저 구매하기</button>
+                                <a href="http://www.bioderma.co.kr/front/product_view.php?id=028703X" target="_blank">
+                                    <button class="m-video__button">스킨케어 클렌
+                                    저 구매하기</button>
+                                </a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 <?
-	include_once "./footer.php";
+    include_once "./footer.php";
+    
+    include_once "./popup/popup_agree1.php";
+    
+	include_once "./popup/popup_agree2.php";
+
 ?>		
 		</div>
 	</body>

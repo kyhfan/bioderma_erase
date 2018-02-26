@@ -1,8 +1,5 @@
 var wmbt;
 
-// $('[data-layer-popup]').on('click', function() {
-// 	console.log($(this));
-// });
 var bioderma = function() {
 	var _this = this;
 	this.init = function() {
