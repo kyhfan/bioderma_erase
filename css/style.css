@@ -42,3 +42,7 @@
 .main-section-product {height: 1323px; background: url(../images/main_section3_bg.jpg) 50% 0 no-repeat; text-align: center;}
 .main-section-product .main-product-wrap {display: inline-block; padding: 592px 0 0 355px;}
 .main-section-product .main-product-wrap .buy-link {display: block; background: url(../images/main_section3_product_buy.png); margin-top: 21px; width: 172px; height: 200px;}
+
+
+.sub-section-game {position: relative; height: 1143px; background: url(../images/sub_game_bg.png) 50% 100% no-repeat;}
+.contents-wrap-sub + .pre-popup {background: url(../images/sub_game_pre_bg.png) 50% 0 no-repeat; position: fixed; top: 116px; left: 0; right: 0; bottom: 0; z-index: 200;}

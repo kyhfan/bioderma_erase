@@ -175,16 +175,22 @@
 }
 .game__image {
 	position: relative;
+    width: 685px;
+    height: 725px;
 }
+.game__image .stage-image {position: absolute;}
 .game__image-1 {
 	background: url('../images/pages/game__image-1--after.png') no-repeat;
 }
+.game__image-1 #stageImg1 {left: 147px; top: 120px;}
 .game__image-2 {
 	background: url('../images/pages/game__image-2--after.png') no-repeat;
 }
+.game__image-2 #stageImg2 {left: 100px; top: 110px;}
 .game__image-3 {
 	background: url('../images/pages/game__image-3--after.png') no-repeat;
 }
+.game__image-3 #stageImg3 {left: 113px; top: 127px;}
 
 .game__steps {
 	position: absolute;
