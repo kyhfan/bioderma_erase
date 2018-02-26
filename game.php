@@ -78,7 +78,6 @@
 	include_once "./footer.php";
 ?>
                 <script type="text/javascript">
-
                     var count = 0;
                     var time = 30;
                     var gameTimer = null;
@@ -139,7 +138,6 @@
                     });
                     
                     function eraserSet(imageNum, sizeValue, ratio) {
-                        
                         ratio = ratio || 92;
 //                        ratio = 92;
                         setRatio = (ratio*0.01).toFixed(2);
