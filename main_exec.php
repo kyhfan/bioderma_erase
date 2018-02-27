@@ -23,7 +23,7 @@ switch ($_REQUEST['exec'])
 		}else{
             $mb_winner      = $mnv_f->winner_draw($level, $level_phone);
                 
-            $query		= "INSERT INTO member_info(mb_ipaddr, mb_name, mb_phone, mb_addr, mb_winner, mb_level, mb_gubun, mb_media, mb_regdate) values('".$_SERVER['REMOTE_ADDR']."','".$level_name."','".$level_phone."','".$level_addr."','".$mb_winner."','".$mb_level."','".$gubun."','".$_SESSION['ss_media']."',now())";
+            $query		= "INSERT INTO member_info(mb_ipaddr, mb_name, mb_phone, mb_addr, mb_winner, mb_level, mb_gubun, mb_media, mb_regdate) values('".$_SERVER['REMOTE_ADDR']."','".$level_name."','".$level_phone."','".$level_addr."','".$mb_winner."','".$level."','".$gubun."','".$_SESSION['ss_media']."',now())";
             $result		= mysqli_query($my_db, $query);
 
             if ($result)
