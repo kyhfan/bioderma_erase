@@ -70,6 +70,9 @@
                                 <a href="#" class="game__step">2</a>
                                 <a href="#" class="game__step">3</a>
                             </div>
+                            <div class="game-clear__msg">
+                                <span class="msg">CLEAR<i>!</i></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -81,6 +84,9 @@
                     var count = 0;
                     var time = 30;
                     var gameTimer = null;
+                    var sizeArray = [100, 80, 60];
+                    var ratioArray = [92, 97, 95];
+                    
                     function gameTimerExec() {
                         gameTimer = setInterval(function() {
                             time--;
@@ -92,7 +98,7 @@
                                 'width': ((count + 1) * 3.45) + '%'
                             }, 1000, 'linear');
 
-                            if (time < 1) {
+                            if (time <= 0) {
                                 $('.gauge__adds').addClass('gauge__adds--active');
                                 clearInterval(gameTimer);
                                 alert("게임오버");
@@ -139,19 +145,32 @@
                     
                     function eraserSet(imageNum, sizeValue, ratio) {
                         ratio = ratio || 92;
-//                        ratio = 92;
                         setRatio = (ratio*0.01).toFixed(2);
                         console.log(setRatio);
                         $('.game__image-' + imageNum).find('.stage-image').eraser({
                             size: sizeValue,
                             completeRatio: setRatio,
                             completeFunction: function() {
-                                console.log("clear");
                                 clearInterval(gameTimer);
-                                stageClear(imageNum, sizeValue, ratio);
+//                                console.log("clear");
+                                $('.game-clear__msg').css({
+                                    'opacity': 0,
+                                    'z-index': 9999
+                                }).animate({
+                                    'opacity': 1
+                                }, 1000, function() {
+                                    console.log("next");
+                                    $('.game-clear__msg').css({
+                                        'opacity': 0,
+                                        'z-index': -1
+                                    });
+                                    stageClear(imageNum, sizeValue, ratio);
+                                });
+//                                clearInterval(gameTimer);
+//                                stageClear(imageNum, sizeValue, ratio);
                             },
                             progressFunction: function(p) {
-//                                console.log(Math.round(p * 100) + '%');
+                                console.log(Math.round(p * 100) + '%');
                             }
                         });
                     }
@@ -163,18 +182,20 @@
                         }
                         $('.game__image-' + imageNum).find('.stage-image').eraser('disable');
                         var nextNum = imageNum+1;
-                        var nextSize = sizeValue-20;
-                        var nextRatio = ratio+2;
+                        var nextSize = sizeArray[imageNum];
+                        var nextRatio = ratioArray[imageNum];
                         $('[data-stage-num='+ imageNum +']').removeClass('game__box--active');
                         $('[data-stage-num='+ nextNum +']').addClass('game__box--active');
                         
-                        var nextFlag = confirm("다음스테이지?");
-                        if(nextFlag) {
-                            gameTimerExec();
-                            eraserSet(nextNum, nextSize, nextRatio);
-                        }else{
-                            alert("인덱스로");
-                        }
+//                        var nextFlag = confirm("다음스테이지?");
+//                        if(nextFlag) {
+//                            gameTimerExec();
+//                            eraserSet(nextNum, nextSize, nextRatio);
+//                        }else{
+//                            alert("인덱스로");
+//                        }
+                        gameTimerExec();
+                        eraserSet(nextNum, nextSize, nextRatio);
                         
                     }
 
