@@ -9,7 +9,7 @@
 					<ul class="c-footer__list">
 						<li>나오스코리아 유한회사</li>
 						<li>대표: 장이브데모트</li>
-						<li>사업자등록번호: 214-88-79685 (사업자정보확인)</li>
+						<li>사업자등록번호: 214-88-79685 <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=&apv_perm_no=2015321015330200215" target="_blank">(사업자정보확인)</a></li>
 					</ul>
 					<ul class="c-footer__list">
 						<li>주소: 서울특별시 서초구 서초중앙로 138 우림빌딩 7층 나오스코리아 유한회사</li>
