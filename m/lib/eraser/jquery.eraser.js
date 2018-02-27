@@ -198,6 +198,9 @@
             if (data.touchDown) {
                 var ta = event.originalEvent.changedTouches,
                     n = ta.length;
+                var cottonX = ($('.game__box--active').find('.game__cotton').width()/2);
+                var cottonY = ($('.game__box--active').find('.game__cotton').height()/2);
+                
                 while (n--) {
                     if (ta[n].identifier == data.touchID) {
                         var tx = ta[n].pageX - data.posX,
@@ -219,8 +222,13 @@
                         data.touchX = tx;
                         data.touchY = ty;
 
-						$('.game__cotton').css('left',(ta[n].pageX - data.posX-30)+'px');
-						$('.game__cotton').css('top',(ta[n].pageY - data.posY-30)+'px');
+                        
+//						$('.game__cotton').css('left',(ta[n].pageX - data.posX-30)+'px');
+//						$('.game__cotton').css('top',(ta[n].pageY - data.posY-30)+'px');
+                        $('.game__cotton').css('left',((ta[n].pageX - data.posX)+cottonX)+'px');
+                        $('.game__cotton').css('top',((ta[n].pageY - data.posY)+cottonY)+'px');
+//                        $('.game__cotton').css('left',((ta[n].pageX - data.posX)+cottonX)+'px');
+//                        $('.game__cotton').css('top',((ta[n].pageY - data.posY)+cottonY)+'px');
 
                         event.preventDefault();
                         break;

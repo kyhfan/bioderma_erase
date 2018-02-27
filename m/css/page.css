@@ -190,16 +190,16 @@
 	height: 57px;
 }
 .game__cotton.game__cotton-2 {
-	bottom: 15%;
-	left: 7%;
+	bottom: 24%;
+	left: 9%;
 	width: 47px;
 	height: 47px;
 }
 .game__cotton.game__cotton-3 {
-	bottom: 15%;
-	left: 7%;
+	bottom: 24.5%;
+	left: 10%;
 	width: 41px;
-	background: 41px;
+	height: 41px;
 }
 
 .game__cotton.game__cotton--active {
@@ -208,13 +208,32 @@
 .game__image {
 	position: relative;
 	max-width: 343px;
+    height: 421px !important;
 	margin: 0 auto;
 }
 .game__image img,
 .game__image canvas {
+    position: absolute;
 	display: block;
-	width: 100% !important;
-	height: 421px !important;
+    width: auto !important;
+}
+#stageImg1 {
+    width: 230px;
+    height: 318px !important;
+    top: 67px;
+    left: 59px;
+}
+#stageImg2 {
+    width: 243px;
+    height: 334px !important;
+    top: 54px;
+    left: 36px;
+}
+#stageImg3 {
+    width: 220px;
+    height: 320px !important;
+    top: 65px;
+    left: 45px;
 }
 .game__image-1 {
 	background: url('../images/pages/game__image-1--after.png') no-repeat;
@@ -222,7 +241,7 @@
 }
 .game__image-2 {
 	background: url('../images/pages/game__image-2--after.png') no-repeat;
-background-size: cover;
+    background-size: cover;
 }
 .game__image-3 {
 	background: url('../images/pages/game__image-3--after.png') no-repeat;
@@ -233,6 +252,27 @@ background-size: cover;
 	width: 100%;
 	font-size: 0;
 	text-align: center;
+}
+.game-clear__msg {
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    right: 3px;
+    bottom: 1px;
+    text-align: center;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    z-index: -1;
+}
+.game-clear__msg .msg {
+    font-size: 43px;
+    color: #ffdbea;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
 }
 .game__step {
 	display: inline-block;
@@ -534,8 +574,24 @@ background-size: cover;
 	}
 	.game__image {
 		width: 286px;
+        height: 351px !important;
 	}
 
+    #stageImg1 {
+        height: 265px !important;
+        top: 55px;
+        left: 50px;
+    }
+    #stageImg2 {
+        height: 278px !important;
+        top: 46px;
+        left: 30px;
+    }
+    #stageImg3 {
+        height: 266px !important;
+        top: 53px;
+        left: 37px;
+    }
 	.gauge {
 		max-width: 295px;
 		margin-top: 9px;
@@ -564,9 +620,12 @@ background-size: cover;
 		bottom: 22%;
 		left: 5.8%;
 	}
-	.game__image img,
+
+	
+/*
 	.game__image canvas {
 		height: 351px !important;
 	}
+*/
 
 }

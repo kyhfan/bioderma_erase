@@ -244,6 +244,10 @@
                         $('[data-stage-num='+ imageNum +']').removeClass('game__box--active');
                         $('[data-stage-num='+ nextNum +']').addClass('game__box--active');
                         
+                        gameTimerExec(imageNum);
+                        eraserSet(nextNum, nextSize, nextRatio);
+                        $(".game__step").removeClass("game__step--active");
+                        $("#step" + nextNum).addClass("game__step--active");
 //                        var nextFlag = confirm("다음스테이지?");
 //                        if(nextFlag) {
 //                            gameTimerExec();
@@ -251,8 +255,6 @@
 //                        }else{
 //                            alert("인덱스로");
 //                        }
-                        gameTimerExec(imageNum);
-                        eraserSet(nextNum, nextSize, nextRatio);
                         
                     }
 
