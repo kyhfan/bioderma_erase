@@ -230,6 +230,28 @@
 	height: 3px;
 	background: url('../images/pages/game__step--bg.png') no-repeat;
 }
+.game-clear__msg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    z-index: -1;
+}
+.game-clear__msg .msg {
+    font-size: 95px;
+    color: #ffdbea;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -66px;
+}
 
 .m-visual {
 	position: relative;
