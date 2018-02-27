@@ -467,6 +467,7 @@ a {
 	right: 0;
 	width: 0;
 	height: 0;
+	-webkit-appearance: none;
 }
 .c-agree__check:checked + label:before {
 	background: url('../images/common/c-agree__check--active.png') right center no-repeat;
