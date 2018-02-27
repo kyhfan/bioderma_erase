@@ -134,35 +134,47 @@
 			</div>
 
 			<script type="text/javascript">
-						// gauge
-						$('.game__start').on('click', function(){
-							$('.game__popup').addClass('game__popup--active');
-							$('.gauge__body').css('width','0');
+				// gauge
+				$('.game__start').on('click', function(){
+					$('.game__popup').addClass('game__popup--active');
+					$('.gauge__body').css('width','0');
 
-							var count = -1;
-							for ( var time=0 ; time <= 30; time++){
-									setTimeout(function(){
-										var gaugeWidths = $('.gauge__adds').css('width'),
-											  gaugeWidth = parseInt(gaugeWidths.replace('px',''));
-										$('.gauge__time').text(count+=1);
-										$('.gauge__adds').animate({'width': ((count+1)*3.45)+'%'},1000,'linear');
+					var second = 31,
+						  count = -1;
 
-										if ( count == 30){
-											$('.gauge__adds').addClass('gauge__adds--active');
-										}
-									},1000*time);
-								}
-						});
+					for ( var time=0 ; time <= 30; time++){
+						setTimeout(function(){
+							var gaugeWidths = $('.gauge__adds').css('width'),
+								  gaugeWidth = parseInt(gaugeWidths.replace('px',''));
+							$('.gauge__time').text(second-=1);
 
-						// eraser 
-						 $('.game__image img').eraser();
+							count+=1;
+							$('.gauge__adds').animate({'width': ((count+1)*3.45)+'%'},1000,'linear');
 
-						 $('.game__cotton').on('mouseover', function(){
-							var thisImgs = $(this).find('img').attr('src'),
-								  thisImg = thisImgs.replace('.png','.cur');
-							$(this).addClass('game__cotton--active');
-							$('.game__aligner').css( 'cursor', 'url('+thisImg+'), auto' );
-						 });
+							if ( count == 30){
+								$('.gauge__adds').addClass('gauge__adds--active');
+							}
+						},1000*time);
+					}
+				});
+
+				// eraser 
+				eraserSet(1,100);
+				eraserSet(2,80);
+				eraserSet(3,60);
+
+				 function eraserSet(imageNum, sizeValue) {
+					$('.game__image-'+imageNum).find('img').eraser({
+						size: sizeValue
+					});
+				 }
+
+				 $('.game__cotton').on('mouseover', function(){
+					var thisImgs = $(this).find('img').attr('src'),
+						  thisImg = thisImgs.replace('.png','.cur');
+					$(this).addClass('game__cotton--active');
+					$('.game__aligner').css( 'cursor', 'url('+thisImg+'), auto' );
+				 });
 			</script>
 		</div>
 	</body>

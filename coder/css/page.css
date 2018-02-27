@@ -124,6 +124,7 @@
 	text-align: right;
 }
 .game__start {
+	overflow: hidden;
 	display: inline-block;
 	width: 56px;
 	height: 56px;
@@ -193,6 +194,7 @@
 	width: 100%;
 	font-size: 0;
 	text-align: center;
+	pointer-events: none;
 	z-index: 10;
 }
 .game__step {

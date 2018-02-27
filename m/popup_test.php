@@ -112,9 +112,7 @@
 							<div class="m-video__txt m-video__txt-3"><em class="c-em">건강한 피부</em>만 남겨요</div>
 							<div class="m-video__txt m-video__txt-4"><em class="m-video__txt--bold">스킨케어 클렌저</em> 바이오더마 클렌징워터 </div>
 							<div class="m-video__buttons">
-                                <a href="http://www.bioderma.co.kr/front/product_view.php?id=028703X" target="_blank">
-                                    <button class="m-video__button"><img src="./images/pages/m-video__button.png" alt="스킨케어 클렌저 구매하기" /></button>
-                                </a>
+                                <button class="m-video__button" onclick="popupOpen('popup_level3_clear')"><img src="./images/pages/m-video__button.png" alt="스킨케어 클렌저 구매하기" /></button>
 							</div>
 							<div class="m-video__percents">
 								<a href="#" class="m-video__percent"><img src="./images/pages/m-video__percent--1.png" alt="100% 메이크업 클렌징력 1)" /></a>
@@ -130,10 +128,27 @@
 <?
     include_once "./footer.php";
     
+    include_once "./popup/popup_try_again.php";
+    
+    include_once "./popup/popup_level1_clear.php";
+    
+	include_once "./popup/popup_level2_clear.php";
+    
+	include_once "./popup/popup_level3_clear.php";
+    
+	include_once "./popup/popup_winner_goods.php";
+    
+	include_once "./popup/popup_winner_kit.php";
+    
+	include_once "./popup/popup_winner_draw.php";
+    
 	include_once "./popup/popup_agree1.php";
     
 	include_once "./popup/popup_agree2.php";
 ?>		
+			<div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:9999;-webkit-overflow-scrolling:touch;">
+				<img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="width:7%;cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()" alt="닫기 버튼">
+			</div>
 
 			<script type="text/javascript">
 				$('.m-visual__more').on('click', function(){

@@ -296,7 +296,7 @@
                 data = $this.data('eraser'),
                 tx = event.pageX - data.posX,
                 ty = event.pageY - data.posY;
-            console.log(data);
+            //console.log(data);
             tx *= data.scaleRatio;
             ty *= data.scaleRatio;
 

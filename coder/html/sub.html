@@ -111,19 +111,23 @@
 							$('.game__popup').addClass('game__popup--active');
 							$('.gauge__body').css('width','0');
 
-							var count = -1;
-							for ( var time=0 ; time <= 30; time++){
-									setTimeout(function(){
-										var gaugeWidths = $('.gauge__adds').css('width'),
-											  gaugeWidth = parseInt(gaugeWidths.replace('px',''));
-										$('.gauge__time').text(count+=1);
-										$('.gauge__adds').animate({'width': ((count+1)*3.45)+'%'},1000,'linear');
+							var second = 31,
+								  count = -1;
 
-										if ( count == 30){
-											$('.gauge__adds').addClass('gauge__adds--active');
-										}
-									},1000*time);
-								}
+							for ( var time=0 ; time <= 30; time++){
+								setTimeout(function(){
+									var gaugeWidths = $('.gauge__adds').css('width'),
+										  gaugeWidth = parseInt(gaugeWidths.replace('px',''));
+									$('.gauge__time').text(second-=1);
+
+									count+=1;
+									$('.gauge__adds').animate({'width': ((count+1)*3.45)+'%'},1000,'linear');
+
+									if ( count == 30){
+										$('.gauge__adds').addClass('gauge__adds--active');
+									}
+								},1000*time);
+							}
 						});
 
 						// eraser 

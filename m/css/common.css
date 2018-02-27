@@ -381,17 +381,19 @@ a {
 	height: 100%;
 	font-size: 14px;
 	outline: none;
+	padding-right: 20px;
 }
 
 .c-search__button {
 	display: block;
 	position: absolute;
 	top: 0;
-	left: 0;
-	width: 100%;
+	right: 0;
+	width: 10%;
 	height: 100%;
 	background: url('../images/common/c-search__button.png') 97% center no-repeat;
 	background-size: 16px auto;
+	margin-right: 2%;
 }
 
 .c-popup__noti {

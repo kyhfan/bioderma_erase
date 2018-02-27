@@ -11,5 +11,15 @@ $(document).ready(function(){
 
 		return false;
 	});
+
+	// header 
+	$(window).scroll(function(){
+		var scTop = $(this).scrollTop();
+		if ( scTop > 50 ){
+			$('.c-header--main').addClass('c-header--active');
+		}else {
+			$('.c-header--main').removeClass('c-header--active');
+		}
+	});
 	
 });
