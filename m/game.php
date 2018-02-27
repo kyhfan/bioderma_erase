@@ -1,48 +1,25 @@
-<!DOCTYPE html>
-<html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title></title>
-        <meta name="format-detection" content="telephone=no" />
+<?
+	include_once "../include/autoload.php";
 
-        <link rel="stylesheet" href="./css/common.css" />
-        <link rel="stylesheet" href="./css/page.css" />
+    $mnv_f = new mnv_function();
+    $my_db         = $mnv_f->Connect_MySQL();
+    $mobileYN      = $mnv_f->MobileCheck();
+    $obYN          = $mnv_f->BrowserCheck();
+    if ($mobileYN == "PC")
+	{
+		echo "<script>location.href='../index.php?media=".$media."';</script>";
+	}else{
+        $rs_tracking   = $mnv_f->InsertTrackingInfo($media, $gubun);
+        $saveMedia     = $mnv_f->SaveMedia();
+	}
 
-        <script src="./lib/jquery/jquery-1.9.1.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="./lib/placeholder/jquery.placeholder.min.js"></script>
-        <script src="./lib/gsap/TweenMax.min.js"></script>
-        <script src="./lib/gsap/jquery.gsap.min.js"></script>
-        <script src="./lib/eraser/jquery.eraser.js"></script>
-
-        <script src="./js/common.js"></script>
-    </head>
+	include_once "./head.php";
+?>
     <body>
         <div class="wrap wrap--sub">
-            <div class="c-header">
-                <div class="c-header__aligner">
-                    <h1 class="c-h1"><a href="#" class="c-h1__logo"><img src="./images/common/c-logo.png" alt="BIODERMA" /></a></h1>
-                    <a href="#" class="c-drawer__trigger">
-                        <span class="c-drawer__burger c-drawer__burger--top">메뉴</span>
-                        <span class="c-drawer__burger c-drawer__burger--middle">여</span>
-                        <span class="c-drawer__burger c-drawer__burger--bottom">닫기</span>
-                    </a>
-                </div>
-                <div class="c-drawer">
-                    <div class="c-drawer__aligner">
-                        <div class="c-events">
-                            <button class="c-event c-event--1"><span>EVENT 1</span>건강한 피부만 남기다</button>
-                            <button class="c-event c-event--2"><span>EVENT 2</span>투고 키트 샘플링</button>
-                        </div>
-                        <div class="c-sns">
-                            <button class="c-sns__button c-sns__button--facebook">페이스북</button>
-                            <button class="c-sns__button c-sns__button--kakao">카카오스토리</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<?
+	include_once "./header.php";
+?>            
 
             <div class="c-content c-content--sub">
                 <div class="game__popups ">
@@ -91,23 +68,27 @@
                 </div>
             </div>
 
-            <div class="c-footer">
-                <div class="c-footer__aligner">
-                    <ul class="c-footer__list">
-                        <li><a href="#">바이오더마 소개</a></li>
-                        <li><a href="#">온라인 고객센터</a></li>
-                    </ul>
-                    <ul class="c-footer__list c-footer__list--none">
-                        <li>나오스코리아 유한회사</li>
-                        <li>대표: 장이브데모트 &nbsp;사업자등록번호: 214-88-79685 (사업자정보확인)</li>
-                        <li>주소: 서울특별시 서초구 서초중앙로 138<br>우림빌딩 7층 나오스코리아 유한회사</li>
-                        <li>개인정보책임자: 김민정 &nbsp;대표번호: 02-523-7620</li>
-                        <li>통신판매업신고번호: 2015-서울서초-0215</li>
-                        <li>E-MAIL: bioderma@bioderma.kr</li>
-                    </ul>
-                    <div class="copyright">©2018  BIODERMA.  ALL RIGHT RESERVED.</div>
-                </div>
-            </div>
+<?
+    include_once "./footer.php";
+    
+    include_once "./popup/popup_try_again.php";
+    
+    include_once "./popup/popup_level1_clear.php";
+    
+	include_once "./popup/popup_level2_clear.php";
+    
+	include_once "./popup/popup_level3_clear.php";
+    
+	include_once "./popup/popup_winner_goods.php";
+    
+	include_once "./popup/popup_winner_kit.php";
+    
+	include_once "./popup/popup_winner_draw.php";
+    
+	include_once "./popup/popup_agree1.php";
+    
+	include_once "./popup/popup_agree2.php";
+?>		
 
             <script type="text/javascript">
                 
@@ -131,19 +112,19 @@
                         if (time <= 0) {
                             $('.gauge__adds').addClass('gauge__adds--active');
                             clearInterval(gameTimer);
-//                            switch(imageNum)
-//                            {
-//                                case 0 :
-//                                    wmbt.popupSelfOpen("popup_tryagain");
-//                                    break;
-//                                case 1 :
-//                                    wmbt.popupSelfOpen("popup_level1_clear");
-//                                    break;
-//                                case 2 :
-//                                    wmbt.popupSelfOpen("popup_level2_clear");
-//                                    break;
-//                            }
-                            alert("게임오버");
+                            switch(imageNum)
+                            {
+                                case 0 :
+                                    popupOpen("popup_tryagain");
+                                    break;
+                                case 1 :
+                                    popupOpen("popup_level1_clear");
+                                    break;
+                                case 2 :
+                                    popupOpen("popup_level2_clear");
+                                    break;
+                            }
+                            // alert("게임오버");
                         }                            
                     }, 1000);  
                 }
@@ -153,6 +134,39 @@
                     $('.gauge__body').css('width','0');
                     
                     gameTimerExec(1);
+
+                    $.ajax({
+                            type:"POST",
+                            data:{
+                                "exec"					: "game_click_info"
+
+                            },
+                            url: "../main_exec.php",
+                            success: function(response){
+                                var res_arr = response.split("||");
+
+                                switch(res_arr[1])
+                                {
+                                    case "blank" :
+                                        popupClose("popup_level" + level + "_clear");
+                                        popupOpen("popup_winner_draw");
+                                    break;
+                                    case "goods" :
+                                        popupClose("popup_level" + level + "_clear");
+                                        popupOpen("popup_winner_goods");
+                                    break;
+                                    case "kit" :
+                                        popupClose("popup_level" + level + "_clear");
+                                        popupOpen("popup_winner_kit");
+                                    break;
+                                    case "D" :
+                                        alert("이미 참여해 주셨습니다. 감사합니다.");
+                                        location.href = "index.php";
+                                    break;
+                                }
+                                // console.log(response);
+                            }
+                        });
 
 //                    var second = 31,
 //                        count = -1;
@@ -208,9 +222,9 @@
                 }
                 function stageClear(imageNum, sizeValue, ratio) {
                     if(imageNum > 2) {
-                         alert("올 클리어");                        
+                        // alert("올 클리어");                        
                         clearInterval(gameTimer);
-//                        wmbt.popupSelfOpen("popup_level3_clear");
+                        popupOpen("popup_level3_clear");
                         return;
                     }
                     $('.game__image-' + imageNum).find('.stage-image').eraser('disable');
