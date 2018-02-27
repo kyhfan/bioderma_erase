@@ -3,9 +3,15 @@
 
     $mnv_f = new mnv_function();
     $my_db         = $mnv_f->Connect_MySQL();
-    $rs_tracking   = $mnv_f->InsertTrackingInfo($media, $gubun);
     $mobileYN      = $mnv_f->MobileCheck();
-    $saveMedia     = $mnv_f->SaveMedia();
+    $obYN          = $mnv_f->BrowserCheck();
+    if ($mobileYN == "MOBILE")
+	{
+		echo "<script>location.href='m/index.php?media=".$media."';</script>";
+	}else{
+        $rs_tracking   = $mnv_f->InsertTrackingInfo($media, $gubun);
+        $saveMedia     = $mnv_f->SaveMedia();
+	}
 
 	include_once "./head.php";
 ?>

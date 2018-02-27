@@ -10,13 +10,20 @@
 						<button class="c-event c-event--2" onclick="alert('4월에 오픈됩니다')"><span>EVENT 2</span>투고 키트 샘플링</button>
 					</div>
 				</div>
-			</div>
-<div class="old-browser-alarm">
-    <div class="message">
-        캠페인 참여가 불가능한 구형 브라우저를 사용하고 계십니다.<br />
-        최신 브라우저를 설치 하시면 더욱 쾌적하게 인터넷을 사용 하실 수 있습니다.<br />
-        아래 링크를 클릭하여 최신 브라우저를 설치 하신 후 캠페인에 참여해 주세요.<br />
-        <a href="http://outdatedbrowser.com/ko" target="_blank">최신 브라우저 받기</a>
-    </div>
-    <a href="javascript:void(0)" class="c-popup__close">popup close</a>
-</div>
+            </div>
+<?
+    if ($obYN == "Y")
+    {
+?>            
+            <div class="old-browser-alarm">
+                <div class="message">
+                    캠페인 참여가 불가능한 구형 브라우저를 사용하고 계십니다.<br />
+                    최신 브라우저를 설치 하시면 더욱 쾌적하게 인터넷을 사용 하실 수 있습니다.<br />
+                    아래 링크를 클릭하여 최신 브라우저를 설치 하신 후 캠페인에 참여해 주세요.<br />
+                    <a href="http://outdatedbrowser.com/ko" target="_blank">최신 브라우저 받기</a>
+                </div>
+                <a href="javascript:void(0)" class="c-popup__close" onclick="$('.old-browser-alarm').hide();">popup close</a>
+            </div>
+<?
+    }
+?>

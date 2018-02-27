@@ -1,7 +1,8 @@
 <?
 	include_once "./include/autoload.php";
 
-    // $mnv_f      = new mnv_function();
+    $mnv_f      = new mnv_function();
+    $obYN          = $mnv_f->BrowserCheck();
     // $my_db      = $mnv_f->Connect_MySQL();
     // $rs_game    = $mnv_f->InsertTrackingInfo($media, $gubun);
     // $mobileYN      = $mnv_f->MobileCheck();

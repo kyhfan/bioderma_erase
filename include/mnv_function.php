@@ -30,6 +30,15 @@ class mnv_function extends mnv_dbi
 		return $check_mobile;
 	}
 
+	public function BrowserCheck()
+	{
+        if(stripos( $_SERVER['HTTP_USER_AGENT'], "MSIE 8" ) || stripos( $_SERVER['HTTP_USER_AGENT'], "MSIE 9" ))
+        	$OB	    = "Y";
+        else
+        	$OB	= "N";
+        return $OB;
+	}
+
 	public function SaveMedia()
 	{
         $_SESSION['ss_media']		= $_REQUEST['media'];
