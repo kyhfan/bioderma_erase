@@ -15,6 +15,8 @@ class mnv_dbi
 			exit('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
 		}
 
+		mysqli_query ($my_db,"set names utf8");
+
 		return $my_db;
 	}
 }

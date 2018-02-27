@@ -10,7 +10,8 @@ switch ($_REQUEST['exec'])
         $level          = $_REQUEST["level"];
 
         $mnv_f          = new mnv_function();
-        $my_db         = $mnv_f->Connect_MySQL();
+        $my_db          = $mnv_f->Connect_MySQL();
+        $gubun          = $mnv_f->MobileCheck();
 
         $dupli_query	= "SELECT * FROM member_info WHERE mb_phone='".$level_phone."'";
 		$dupli_result 	= mysqli_query($my_db, $dupli_query);
@@ -18,21 +19,31 @@ switch ($_REQUEST['exec'])
 
         if ($dupli_num > 0)
 		{
-			$flag = "D";
+			$flag = "D||D";
 		}else{
             $mb_winner      = $mnv_f->winner_draw($level, $level_phone);
                 
-            // $log_query		= "INSERT INTO ".$_gl['tracking_info_table']."(tracking_media, tracking_refferer, tracking_ipaddr, tracking_date, tracking_gubun) values('".$_SESSION['ss_media']."','".$_SERVER['HTTP_REFERER']."','".$_SERVER['REMOTE_ADDR']."',now(),'".$gubun."')";
-            // $log_result		= mysqli_query($my_db, $log_query);
+            $query		= "INSERT INTO member_info(mb_ipaddr, mb_name, mb_phone, mb_addr, mb_winner, mb_level, mb_gubun, mb_media, mb_regdate) values('".$_SERVER['REMOTE_ADDR']."','".$level_name."','".$level_phone."','".$level_addr."','".$mb_winner."','".$level."','".$gubun."','".$_SESSION['ss_media']."',now())";
+            $result		= mysqli_query($my_db, $query);
 
-            // if ($log_result)
-            //     $flag = "Y";
-            // else
-            //     $flag = "N";
+            if ($result)
+                $flag = "Y||".$mb_winner;
+            else
+                $flag = "N||".$mb_winner;
                 
 		}
 
-		echo $mb_winner;
-	break;
+		echo $flag;
+    break;
+    
+    case "game_click_info" :
+        $mnv_f          = new mnv_function();
+        $my_db          = $mnv_f->Connect_MySQL();
+        $gubun          = $mnv_f->MobileCheck();
+
+        $query		= "INSERT INTO game_info(game_ipaddr, game_gubun, game_media, game_regdate) values('".$_SERVER['REMOTE_ADDR']."','".$gubun."','".$_SESSION['ss_media']."',now())";
+        $result		= mysqli_query($my_db, $query);
+
+    break;
 
 }

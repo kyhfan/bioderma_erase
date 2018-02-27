@@ -375,6 +375,7 @@ a {
 	padding: 0 10px;
 	height: 36px;
 	display: table-cell;
+	padding-right: 35px;
 }
 .c-popup__input {
 	border: 0;
@@ -387,10 +388,14 @@ a {
 	display: block;
 	position: absolute;
 	top: 0;
-	left: 0;
-	width: 100%;
+	/* left: 0; */
+	right: 0;
+	/* width: 100%; */
+	width: 10%;
 	height: 100%;
-	background: url('../images/common/c-search__button.png') 97% center no-repeat;
+	/* background: url('../images/common/c-search__button.png') 97% center no-repeat; */
+	background: url('../images/common/c-search__button.png') center no-repeat;
+	margin-right: 2%;
 }
 
 .c-popup__noti {
@@ -428,6 +433,7 @@ a {
 	text-align: left;
 	font-weight: 300;
 	letter-spacing: -.75px;
+	cursor: pointer;
 }
 .c-agree__value {
 	display: table-cell;
@@ -461,6 +467,7 @@ a {
 	right: 0;
 	width: 0;
 	height: 0;
+	-webkit-appearance: none;
 }
 .c-agree__check:checked + label:before {
 	background: url('../images/common/c-agree__check--active.png') right center no-repeat;
@@ -613,7 +620,7 @@ a {
     transform: translateY(-50%);
 }
 .c-footer__list > li > a {
-	display: block;
+	display: inline-block;
 	color: #fff;
 	font-size: 13px;
 }
@@ -621,4 +628,23 @@ a {
 	margin-top: 10px;
 	color: #fff;
 	font-size: 12px;
+}
+
+.old-browser-alarm {
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	background: #585858;
+	z-index: 11;
+}
+.old-browser-alarm .message {
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+	margin: 10px 0;
+}
+.old-browser-alarm .message a{
+	color: #fff;
+	font-size: 15px;
+	text-decoration: underline;
 }

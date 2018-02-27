@@ -1,4 +1,5 @@
 <?
+    session_start();
     spl_autoload_register(function ($class) {
 
         // 프로젝트에 따른 네임스페이스 프리픽스

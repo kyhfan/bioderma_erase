@@ -11,20 +11,9 @@
 ?>
 	<body>
 		<div class="wrap">
-			<div class="c-header">
-				<div class="c-header__aligner">
-					<h1 class="c-h1"><a href="index.php" class="c-h1__logo"><img src="./images/common/c-logo.png" alt="BIODERMA" /></a></h1>
-					<div class="c-sns">
-						<button class="c-sns__button c-sns__button--facebook">페이스북</button>
-						<button class="c-sns__button c-sns__button--kakao">카카오스토리</button>
-					</div>
-					<div class="c-events">
-						<button class="c-event c-event--1"><span>EVENT 1</span>건강한 피부만 남기다</button>
-						<button class="c-event c-event--2" onclick="alert('4월에 오픈됩니다')"><span>EVENT 2</span>투고 키트 샘플링</button>
-					</div>
-				</div>
-			</div>
-
+<?
+	include_once "./header.php";
+?>            
 			<div class="c-content">
 				<div class="m-visual">
 					<div class="is-hidden">
@@ -32,7 +21,7 @@
 						제한 시간 동안 메이크업을 말끔하게 지워주세요
 						추첨을 통해 제품을 선물로 드립니다
 					</div>
-					<button class="m-visual__button">GAME START</button>
+					<button class="m-visual__button" data-move="game" onclick="wmbt.move(this)">GAME START</button>
 				</div>
 				<div class="m-aligner">
 					<div class="c-section">
@@ -89,8 +78,8 @@
 								<div class="m-noti__heading">※ 이벤트 유의사항</div>
 								<ul class="m-noti__list">
 									<li class="m-noti__item">본 행사는 2018년 3월 5일부터 3월 31일까지 진행되며, 기타 사유로 조기 종료할 수 있습니다.</li>
-									 <li class="m-noti__item">경품은 동일인에게 중복증정되지 않으며, 기타 내부 사유로 변경될 수 있습니다. </li>
-									 <li class="m-noti__item">1등 경품 중 클렌징워터는 <em class="c-em">센시비오/세비엄/하이드라비오 클렌징워터 3종 500ml(1명) / 250ml(2명) / 100ml(3명)</em> 으로 랜덤 선정됩니다. </li>
+									<li class="m-noti__item">경품은 동일인에게 중복증정되지 않으며, 기타 내부 사유로 변경될 수 있습니다. </li>
+									<li class="m-noti__item">1등 경품 중 클렌징워터는 <em class="c-em">센시비오/세비엄/하이드라비오 클렌징워터 3종 500ml(1명) / 250ml(2명) / 100ml(3명)</em> 으로 랜덤 선정됩니다. </li>
 								</ul>
 							</div>
 						</div>
@@ -99,9 +88,13 @@
 				<div class="m-video">
 					<div class="m-video__top">
 						<div class="m-video__text"><img src="./images/pages/m-text--1.png" alt="잔여물없이 말끔하게 지워야 진짜 맨얼굴! 건강한 피부만 남기는 모습, 영상으로도 확인하세요" /></div>
-						<a href="#" class="m-video__link">
-							<div class="m-video__image"><img src="./images/pages/m-video__image.png" alt="영상썸네일" /></div>
-						</a>
+						<!-- <a href="#" class="m-video__link"> -->
+						<div class="m-video__link">
+							<div class="m-video__image">
+                                <!-- <img src="./images/pages/m-video__image.png" alt="영상썸네일" /> -->
+                                <iframe allowfullscreen="1" src="https://www.youtube.com/embed/K7ePWfdWeqk?controls=0&loop=1&playlist=K7ePWfdWeqk&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" width="1131" height="636" style="position:relative;z-index:2"></iframe>
+                            </div>
+                        </div>
 					</div>
 					<div class="m-video__bottom">
 						<div class="m-video__bg">
@@ -119,48 +112,22 @@
 									<a href="#" class="m-video__percent"><img src="./images/pages/m-video__percent--3.png" alt="클렌징 후 부드러운 피부 1)" /></a>
 								</div>
 
-								<button class="m-video__button">스킨케어 클렌
-								저 구매하기</button>
+                                <a href="http://www.bioderma.co.kr/front/product_view.php?id=028703X" target="_blank">
+                                    <button class="m-video__button">스킨케어 클렌
+                                    저 구매하기</button>
+                                </a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 <?
-	include_once "./footer.php";
+    include_once "./footer.php";
+    
+    include_once "./popup/popup_agree1.php";
+    
+	include_once "./popup/popup_agree2.php";
 ?>		
 		</div>
 	</body>
 </html>
-<script>
-    // 정보 입력 및 즉석 당첨
-    function level_submit()
-    {
-        var level_name      = $("#level_name").val();
-        var level_phone     = $("#level_phone").val();
-        var level_addr      = $("#level_addr").val();
-        var level           = $("#level").val();
-
-        // 임시 변수값
-        level_name          = "김영훈";
-        level_phone         = "11111";
-        level_addr          = "테스트 주소";
-        level               = 2;
-
-        $.ajax({
-			type:"POST",
-			data:{
-				"exec"					: "level_input_info",
-				"level_name"			: level_name,
-				"level_phone"			: level_phone,
-				"level_addr"			: level_addr,
-				"level"			        : level
-
-			},
-			url: "./main_exec.php",
-			success: function(response){
-				console.log(response);
-			}
-		});
-    }
-</script>

@@ -13,6 +13,7 @@
 		<script src="./lib/jquery/jquery-1.9.1.min.js"></script>
 		<script src="./lib/placeholder/jquery.placeholder.min.js"></script>
 		<script src="./lib/eraser/jquery.eraser.js"></script>
+        <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 
 		<script src="./js/common.js"></script>
 	</head>
