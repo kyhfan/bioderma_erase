@@ -78,8 +78,8 @@
 								<div class="m-noti__heading">※ 이벤트 유의사항</div>
 								<ul class="m-noti__list">
 									<li class="m-noti__item">본 행사는 2018년 3월 5일부터 3월 31일까지 진행되며, 기타 사유로 조기 종료할 수 있습니다.</li>
-									 <li class="m-noti__item">경품은 동일인에게 중복증정되지 않으며, 기타 내부 사유로 변경될 수 있습니다. </li>
-									 <li class="m-noti__item">1등 경품 중 클렌징워터는 <em class="c-em">센시비오/세비엄/하이드라비오 클렌징워터 3종 500ml(1명) / 250ml(2명) / 100ml(3명)</em> 으로 랜덤 선정됩니다. </li>
+									<li class="m-noti__item">경품은 동일인에게 중복증정되지 않으며, 기타 내부 사유로 변경될 수 있습니다. </li>
+									<li class="m-noti__item">1등 경품 중 클렌징워터는 <em class="c-em">센시비오/세비엄/하이드라비오 클렌징워터 3종 500ml(1명) / 250ml(2명) / 100ml(3명)</em> 으로 랜덤 선정됩니다. </li>
 								</ul>
 							</div>
 						</div>
@@ -88,12 +88,13 @@
 				<div class="m-video">
 					<div class="m-video__top">
 						<div class="m-video__text"><img src="./images/pages/m-text--1.png" alt="잔여물없이 말끔하게 지워야 진짜 맨얼굴! 건강한 피부만 남기는 모습, 영상으로도 확인하세요" /></div>
-						<a href="#" class="m-video__link">
+						<!-- <a href="#" class="m-video__link"> -->
+						<div class="m-video__link">
 							<div class="m-video__image">
                                 <!-- <img src="./images/pages/m-video__image.png" alt="영상썸네일" /> -->
-                                <iframe allowfullscreen="1" src="https://www.youtube.com/embed/K7ePWfdWeqk?controls=0&loop=1&playlist=K7ePWfdWeqk&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" width="1132" height="635"></iframe>
+                                <iframe allowfullscreen="1" src="https://www.youtube.com/embed/K7ePWfdWeqk?controls=0&loop=1&playlist=K7ePWfdWeqk&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" width="1131" height="636" style="position:relative;z-index:2"></iframe>
                             </div>
-                        </a>
+                        </div>
 					</div>
 					<div class="m-video__bottom">
 						<div class="m-video__bg">
@@ -126,7 +127,6 @@
     include_once "./popup/popup_agree1.php";
     
 	include_once "./popup/popup_agree2.php";
-
 ?>		
 		</div>
 	</body>
