@@ -186,6 +186,7 @@
                 data.touchID = t.identifier;
                 data.touchX = tx;
                 data.touchY = ty;
+
                 event.preventDefault();
             }
         },
@@ -217,6 +218,9 @@
 
                         data.touchX = tx;
                         data.touchY = ty;
+
+						$('.game__cotton').css('left',(ta[n].pageX - data.posX-30)+'px');
+						$('.game__cotton').css('top',(ta[n].pageY - data.posY-30)+'px');
 
                         event.preventDefault();
                         break;
@@ -299,6 +303,10 @@
             //console.log(data);
             tx *= data.scaleRatio;
             ty *= data.scaleRatio;
+			
+			$('.game__cotton').css('left',(event.pageX - data.posX-30)+'px');
+			$('.game__cotton').css('top',(event.pageY - data.posY-30)+'px');
+
 
             if (data.enabled) {
 //                console.log("x:" + event.pageX + " " + "y:" + event.pageY);
