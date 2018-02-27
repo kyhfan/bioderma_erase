@@ -1,6 +1,6 @@
 			<div class="c-header">
 				<div class="c-header__aligner">
-					<h1 class="c-h1"><a href="#" class="c-h1__logo"><img src="./images/common/c-logo.png" alt="BIODERMA" /></a></h1>
+					<h1 class="c-h1"><a href="index.php" class="c-h1__logo"><img src="./images/common/c-logo.png" alt="BIODERMA" /></a></h1>
 					<a href="#" class="c-drawer__trigger">
 						<span class="c-drawer__burger c-drawer__burger--top">메뉴</span>
 						<span class="c-drawer__burger c-drawer__burger--middle">여</span>
