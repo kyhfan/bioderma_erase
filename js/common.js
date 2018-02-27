@@ -186,7 +186,7 @@ var bioderma = function() {
 						location.href = "index.php";
 					break;
 				}
-				console.log(response);
+				// console.log(response);
 			}
 		});
 		return false;

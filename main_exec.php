@@ -33,7 +33,7 @@ switch ($_REQUEST['exec'])
                 
 		}
 
-		echo $query;
+		echo $flag;
     break;
     
     case "game_click_info" :
