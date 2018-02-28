@@ -6,6 +6,7 @@ var bioderma = function() {
 		var forms;
 		forms = $('input');
 		forms.placeholder();
+		Kakao.init('45b1772fcb35228af4b3430ebf90a0d0');
 	},
 	this.popupOpen = function(me) {
 		var $this = $(me),
@@ -78,6 +79,37 @@ var bioderma = function() {
 			return false;
 		}
 		return;
+	},
+	this.sns_share = function(media) {
+		if (media == "fb")
+		{
+			var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.biodermaevent.com/?media=share_fb'),'sharer','toolbar=0,status=0,width=600,height=325');
+
+			$.ajax({
+				type   : "POST",
+				async  : false,
+				url    : "./main_exec.php",
+				data:{
+					"exec"          : "insert_share_info",
+					"sns_media"     : media,
+					"sns_flag"		: flag
+				}
+			});
+		}else{
+			Kakao.Story.share({
+				url: 'http://www.biodermaevent.com/?media=share_ks'
+			});
+			$.ajax({
+				type   : "POST",
+				async  : false,
+				url    : "./main_exec.php",
+				data:{
+					"exec" : "insert_share_info",
+					"sns_media" : media,
+					"sns_flag"		: flag
+				}
+			});
+		}
 	},
 	this.findAddr = function(level) {
 		new daum.Postcode({

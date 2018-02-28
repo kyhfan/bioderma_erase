@@ -659,6 +659,10 @@ a {
 	background: url('../images/common/c-sns__button--kakao.png') no-repeat;
 	background-size: 35px auto;
 }
+.c-sns__button.c-sns__button--kakaotalk {
+	background: url('../images/common/c-sns__button--kakaotalk.png') no-repeat;
+	background-size: 35px auto;
+}
 .c-sns__button + .c-sns__button {
 	margin-left: 15px;
 }

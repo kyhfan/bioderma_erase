@@ -16,6 +16,7 @@
 						<div class="c-sns">
 							<button class="c-sns__button c-sns__button--facebook">페이스북</button>
 							<button class="c-sns__button c-sns__button--kakao">카카오스토리</button>
+							<button class="c-sns__button c-sns__button--kakaotalk">카카오톡</button>
 						</div>
 					</div>
 				</div>
