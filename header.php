@@ -12,7 +12,7 @@
 				</div>
             </div>
 <?
-    if ($obYN == "Y")
+    if ($obYN == "N")
     {
 ?>            
             <div class="old-browser-alarm">

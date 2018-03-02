@@ -657,7 +657,7 @@ a {
 	width: 100%;
 	height: 100px;
 	background: #585858;
-	z-index: 11;
+	z-index: 9999;
 }
 .old-browser-alarm .message {
 	text-align: center;
