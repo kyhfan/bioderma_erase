@@ -3,7 +3,7 @@ $(document).ready(function(event){
 	var forms;
 	forms = $('input');
 	forms.placeholder();
-	Kakao.init('f6bbac9231097e7865ebbc98f31a7ffe');
+	Kakao.init('45b1772fcb35228af4b3430ebf90a0d0');
 
 	// drawer 
 	var drawer = drawer || (function() {
