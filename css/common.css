@@ -434,6 +434,7 @@ a {
 	font-weight: 300;
 	letter-spacing: -.75px;
 	cursor: pointer;
+	text-decoration: underline;
 }
 .c-agree__value {
 	display: table-cell;
