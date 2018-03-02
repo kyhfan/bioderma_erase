@@ -3,7 +3,8 @@ $(document).ready(function(event){
 	var forms;
 	forms = $('input');
 	forms.placeholder();
-	
+	Kakao.init('f6bbac9231097e7865ebbc98f31a7ffe');
+
 	// drawer 
 	var drawer = drawer || (function() {
 		var  trigger = $('.c-drawer__trigger'),
@@ -293,25 +294,6 @@ $(document).ready(function(event){
 				}
 			});
 		}else if (media == "kt"){
-			var kt_label = "";
-			var kt_image = "";
-			if (flag == "modern"){
-				kt_label 	= "[이브자리 추천] MODERN DESIGN\r\n\r\n우리 집 침실에 어울리는 모던한 침구는?\r\n2018 Spring 이브자리 디자인 어워즈에서 확인하세요";
-				kt_image	= "http://www.evezary-design.com/images/share_image_modern.jpg";
-			}else if (flag == "vintage"){
-				kt_label = "[이브자리 추천] VINTAGE DESIGN\r\n\r\n우리 집 침실에 필요한 빈티지 스타일 침구는?\r\n2018 Spring 이브자리 디자인 어워즈에서 확인하세요";
-				kt_image	= "http://www.evezary-design.com/images/share_image_vintage.jpg";
-			}else if (flag == "classic"){
-				kt_label = "[이브자리 추천] CLASSIC DESIGN\r\n\r\n우리 집에 어울리는 클래식한 침구는?\r\n2018 Spring 이브자리 디자인 어워즈에서 확인하세요";
-				kt_image	= "http://www.evezary-design.com/images/share_image_classic.jpg";
-			}else if (flag == "unique"){
-				kt_label = "[이브자리 추천] UNIQUE DESIGN\r\n\r\n침실 분위기를 바꿔 줄 유니크한 침구는?\r\n2018 Spring 이브자리 디자인 어워즈에서 확인하세요";
-				kt_image	= "http://www.evezary-design.com/images/share_image_unique.jpg";
-			}else{
-				kt_label = "[이브자리 추천] SCANDINAVIAN DESIGN\r\n\r\n북유럽 스타일 인테리어에 딱 맞는 침구는?\r\n2018 Spring 이브자리 디자인 어워즈에서 확인하세요";
-				kt_image	= "http://www.evezary-design.com/images/share_image_europe.jpg";
-			}
-
 			Kakao.Link.sendTalkLink({
 				label: '메이크업은 말끔하게 지우고, 건강한 피부만 남겨요!\r\n\r\n제한시간 30초!\r\n\r\n3개의 화려한 메이크업 말끔하게 지우면 바이오더마 정품 팡팡!',
 				image: {
