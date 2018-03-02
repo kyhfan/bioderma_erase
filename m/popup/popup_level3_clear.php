@@ -33,7 +33,7 @@
 										<label for="c-popup__input-2" class="c-popup__label">전화번호</label>
 									</div>
 									<div class="c-popup__value">
-										<input type="text" id="level3_phone" class="c-popup__input" />
+										<input type="tel" id="level3_phone" class="c-popup__input" />
 									</div>
 								</div>
 								<div class="c-popup__form c-popup__form--button">

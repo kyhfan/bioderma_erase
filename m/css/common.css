@@ -725,7 +725,7 @@ a {
 	display: none;
 }
 .c-footer__list > li > a {
-	display: block;
+	display: inline-block;
 	color: #fff;
 	font-size: 11px;
 }
