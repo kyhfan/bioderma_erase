@@ -93,8 +93,10 @@ $(document).ready(function(event){
 		$('.c-header').removeClass('c-header--scroll');
 	}
 	
-	var yt_width = $(window).width() - 56;
+	var yt_width = $(window).width() - 74;
+	var yt_height = (yt_width * 9) / 16;
 	$("#ytplayer").width(yt_width);
+	$("#ytplayer").height(yt_height);
 });
 
 	// 페이지 이동

@@ -101,12 +101,14 @@
 							<div class="m-video__txt m-video__txt-1">잔여물없이 말끔하게 지워야 진짜 맨얼굴!</div>
 							<div class="m-video__txt m-video__txt-2"><em class="c-em">건강한 피부만 남기는 모습</em><br />영상으로도 확인하세요</div>
 						</div>
-						<a href="#" class="m-video__link">
+						<!-- <a href="#" class="m-video__link"> -->
+						<div class="m-video__link">
 							<div class="m-video__image">
                                 <!-- <img src="./images/pages/m-video__image.png" alt="영상썸네일" /> -->
-                                <iframe allowfullscreen="1" src="https://www.youtube.com/embed/K7ePWfdWeqk?controls=0&loop=1&playlist=K7ePWfdWeqk&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer"></iframe>
+                                <iframe allowfullscreen="1" src="https://www.youtube.com/embed/K7ePWfdWeqk?controls=0&loop=1&playlist=K7ePWfdWeqk&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" style="position:relative;z-index:11;left:9px;top:7px"></iframe>
                             </div>
-						</a>						
+						<!-- </a>						 -->
+						</div>						
 						<div class="m-video__aligner">
 							<div class="m-video__txt m-video__txt-3"><em class="c-em">건강한 피부</em>만 남겨요</div>
 							<div class="m-video__txt m-video__txt-4"><em class="m-video__txt--bold">스킨케어 클렌저</em> 바이오더마 클렌징워터 </div>
