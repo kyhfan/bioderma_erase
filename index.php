@@ -83,7 +83,7 @@
 							<div class="m-noti">
 								<div class="m-noti__heading">※ 이벤트 유의사항</div>
 								<ul class="m-noti__list">
-									<li class="m-noti__item">본 행사는 2018년 3월 5일부터 3월 31일까지 진행되며, 기타 사유로 조기 종료할 수 있습니다.</li>
+									<li class="m-noti__item">본 행사는 2018년 3월 6일부터 3월 31일까지 진행되며, 기타 사유로 조기 종료할 수 있습니다.</li>
 									<li class="m-noti__item">경품은 동일인에게 중복증정되지 않으며, 기타 내부 사유로 변경될 수 있습니다. </li>
 									<li class="m-noti__item">1등 경품 중 클렌징워터는 <em class="c-em">센시비오/세비엄/하이드라비오 클렌징워터 3종 500ml(1명) / 250ml(2명) / 100ml(3명)</em> 으로 랜덤 선정됩니다. </li>
 								</ul>
