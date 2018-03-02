@@ -381,7 +381,8 @@ a {
 	height: 100%;
 	font-size: 14px;
 	outline: none;
-	padding-right: 20px;
+	/* padding-right: 20px; */
+	padding-right: 13%;
 }
 
 .c-search__button {
