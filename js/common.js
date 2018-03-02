@@ -7,6 +7,17 @@ var bioderma = function() {
 		forms = $('input');
 		forms.placeholder();
 		Kakao.init('45b1772fcb35228af4b3430ebf90a0d0');
+
+		// header 
+		$(window).scroll(function(){
+			var scTop = $(this).scrollTop();
+			if ( scTop > 50 ){
+				$('.c-header--main').addClass('c-header--active');
+			}else {
+				$('.c-header--main').removeClass('c-header--active');
+			}
+		});
+
 	},
 	this.popupOpen = function(me) {
 		var $this = $(me),
