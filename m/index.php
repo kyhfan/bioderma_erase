@@ -140,7 +140,9 @@
 				$('.m-visual__more').on('click', function(){
 					var scTop = $('.scrollTarget').offset().top;
 
-					$('html').animate({'scrollTop':(scTop-80)+'px'});
+					$('html, body').animate({scrollTop:(scTop-80)+'px'}, 1000);
+					// $('html, body').animate({scrollTop :  $('.section.'+nav).offset().top}, 1000);
+
 					return false;
 				});
 			</script>
