@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="gauge">
-                    <div class="gauge__time">30</div>
+                    <div class="gauge__time">20</div>
                     <div class="gauge__bars">
                         <div class="gauge__bar">
                             <div class="gauge__adds"><div class="gauge__add"></div></div>
@@ -102,7 +102,7 @@
             <script type="text/javascript">
                 
                 var count = 0;
-                var time = 30;
+                var time = 20;
                 var gameTimer = null;
                 var sizeArray = [57, 47, 41];
                 var ratioArray = [94, 98, 95];
@@ -115,7 +115,8 @@
                             gaugeWidth = parseInt(gaugeWidths.replace('px', ''));
                         $('.gauge__time').text(time);
                         $('.gauge__adds').animate({
-                            'width': ((count + 2) * 3.33) + '%'
+                            // 'width': ((count + 2) * 3.33) + '%'
+                            'width': ((count + 2) * 5.1) + '%'
                         }, 1000, 'linear');
 
                         if (time <= 0) {

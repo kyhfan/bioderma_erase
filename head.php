@@ -10,7 +10,7 @@
 		<meta property="og:title" content="메이크업은 말끔하게 지우고, 건강한 피부만 남겨요!">
 		<meta property="og:url" content="http://www.biodermaevent.com" />
 		<meta property="og:image" content="http://www.biodermaevent.com/images/share_image.jpg" />
-		<meta property="og:description" content="제한시간 30초! 3개의 화려한 메이크업 말끔하게 지우면 바이오더마 정품 팡팡!">
+		<meta property="og:description" content="제한시간 20초! 3개의 화려한 메이크업 말끔하게 지우면 바이오더마 정품 팡팡!">
 		
 		<link rel="stylesheet" href="./css/common.css" />
 		<link rel="stylesheet" href="./css/page.css" />

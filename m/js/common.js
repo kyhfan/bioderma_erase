@@ -295,7 +295,7 @@ $(document).ready(function(event){
 			});
 		}else if (media == "kt"){
 			Kakao.Link.sendTalkLink({
-				label: '메이크업은 말끔하게 지우고, 건강한 피부만 남겨요!\r\n\r\n제한시간 30초!\r\n\r\n3개의 화려한 메이크업 말끔하게 지우면 바이오더마 정품 팡팡!',
+				label: '메이크업은 말끔하게 지우고, 건강한 피부만 남겨요!\r\n\r\n제한시간 20초!\r\n\r\n3개의 화려한 메이크업 말끔하게 지우면 바이오더마 정품 팡팡!',
 				image: {
 					src: 'http://www.biodermaevent.com/images/share_image.jpg',
 					width: '1200',
