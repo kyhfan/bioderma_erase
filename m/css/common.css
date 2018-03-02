@@ -705,6 +705,8 @@ a {
 .c-footer {
 	padding: 15px 0;
 	background-color: #e30061;
+	position: relative;
+	z-index: 7;
 }
 .c-footer__aligner {
 	text-align: center;
