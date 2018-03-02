@@ -56,7 +56,7 @@
 						<div class="c-section c-section--small">
 							<div class="c-agrees">
 								<div class="c-agree">
-									<div class="c-agree__key" data-layer-popup="popup_agree1" onclick="wmbt.popupOpen(this);"> *  개인 정보 수집 및 이용약관보기</div>
+									<div class="c-agree__key" data-layer-popup="popup_agree1" onclick="wmbt.popupOpen(this);"> *  개인 정보 수집 및 이용 약관 보기</div>
 									<div class="c-agree__value">
 										<div class="c-agree__checks">
 											<input type="checkbox" name="level2_agree1" id="level2_agree1" class="c-agree__check" />
