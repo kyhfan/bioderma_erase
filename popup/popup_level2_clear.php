@@ -45,6 +45,11 @@
 										<a href="javascript:void(0)" class="c-search__button" onclick="wmbt.findAddr(2)">찾기버튼</a>
 									</div>
 								</div>
+								<div class="c-popup__form c-popup__form--button">
+									<div class="c-popup__value">
+										<input type="text" id="level2_addr2" class="c-popup__input"/>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="c-section c-section--small">

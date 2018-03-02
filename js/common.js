@@ -166,6 +166,7 @@ var bioderma = function() {
         var level_name      = $("#level" + level + "_name").val();
         var level_phone     = $("#level" + level + "_phone").val();
         var level_addr      = $("#level" + level + "_addr").val();
+        var level_addr2      = $("#level" + level + "_addr2").val();
 
 		if (level_name == "")
 		{
@@ -184,6 +185,13 @@ var bioderma = function() {
 		if (level_addr == "")
 		{
 			alert("주소를 입력해 주세요.");
+			return false;
+		}
+		
+		if (level_addr2 == "")
+		{
+			alert("상세 주소를 입력해 주세요.");
+			$("#level" + level + "_addr2").focus();
 			return false;
 		}
 		
@@ -206,6 +214,7 @@ var bioderma = function() {
 				"level_name"			: level_name,
 				"level_phone"			: level_phone,
 				"level_addr"			: level_addr,
+				"level_addr2"			: level_addr2,
 				"level"			        : level
 
 			},
@@ -228,7 +237,7 @@ var bioderma = function() {
 						wmbt.popupSelfOpen("popup_winner_kit");
 					break;
 					case "D" :
-						alert("이미 참여해 주셨습니다. 감사합니다.");
+						alert("내일 다시 참여해주세요.");
 						location.href = "index.php";
 					break;
 				}

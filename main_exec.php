@@ -7,13 +7,16 @@ switch ($_REQUEST['exec'])
         $level_name     = $_REQUEST["level_name"];
         $level_phone    = $_REQUEST["level_phone"];
         $level_addr     = $_REQUEST["level_addr"];
+        $level_addr2     = $_REQUEST["level_addr2"];
         $level          = $_REQUEST["level"];
+
+        $level_addr     = $level_addr." ".$level_addr2;
 
         $mnv_f          = new mnv_function();
         $my_db          = $mnv_f->Connect_MySQL();
         $gubun          = $mnv_f->MobileCheck();
 
-        $dupli_query	= "SELECT * FROM member_info WHERE mb_phone='".$level_phone."'";
+        $dupli_query	= "SELECT * FROM member_info WHERE mb_phone='".$level_phone."' AND mb_regdate like '%".date("Y-m-d")."%'";
 		$dupli_result 	= mysqli_query($my_db, $dupli_query);
 		$dupli_num		= mysqli_num_rows($dupli_result);
 
