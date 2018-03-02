@@ -144,7 +144,7 @@
                     $("#left_game_back").hide();
                     $("#right_game_back").hide();
                     
-                    gameTimerExec(1);
+                    gameTimerExec(0);
 
                     $.ajax({
                             type:"POST",

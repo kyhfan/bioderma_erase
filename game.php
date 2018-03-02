@@ -132,7 +132,7 @@
                         $('.game__popup').addClass('game__popup--active');
                         $('.gauge__body').css('width', '0');
                         
-                        gameTimerExec(1);
+                        gameTimerExec(0);
 
                         $.ajax({
                             type:"POST",
