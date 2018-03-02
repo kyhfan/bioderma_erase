@@ -118,7 +118,7 @@
 									<a href="#" class="m-video__percent"><img src="./images/pages/m-video__percent--3.png" alt="클렌징 후 부드러운 피부 1)" /></a>
 								</div>
 
-                                <a href="http://www.bioderma.co.kr/front/product_view.php?id=028703X" target="_blank">
+                                <a href="http://www.bioderma.co.kr/front/product_view.php?id=7000079" target="_blank">
                                     <button class="m-video__button">스킨케어 클렌
                                     저 구매하기</button>
                                 </a>

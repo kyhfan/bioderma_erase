@@ -112,7 +112,7 @@
 							<div class="m-video__txt m-video__txt-3"><em class="c-em">건강한 피부</em>만 남겨요</div>
 							<div class="m-video__txt m-video__txt-4"><em class="m-video__txt--bold">스킨케어 클렌저</em> 바이오더마 클렌징워터 </div>
 							<div class="m-video__buttons">
-                                <a href="http://www.bioderma.co.kr/front/product_view.php?id=028703X" target="_blank">
+                                <a href="http://www.bioderma.co.kr/front/product_view.php?id=7000079" target="_blank">
                                     <button class="m-video__button"><img src="./images/pages/m-video__button.png" alt="스킨케어 클렌저 구매하기" /></button>
                                 </a>
 							</div>
