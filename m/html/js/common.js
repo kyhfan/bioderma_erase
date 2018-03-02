@@ -3,7 +3,8 @@ $(document).ready(function(event){
 	var forms;
 	forms = $('input');
 	forms.placeholder();
-	
+	Kakao.init('45b1772fcb35228af4b3430ebf90a0d0');
+
 	// drawer 
 	var drawer = drawer || (function() {
 		var  trigger = $('.c-drawer__trigger'),
