@@ -9,8 +9,8 @@
 	{
 		echo "<script>location.href='m/index.php?media=".$media."';</script>";
 	}else{
-        $rs_tracking   = $mnv_f->InsertTrackingInfo($media, $gubun);
         $saveMedia     = $mnv_f->SaveMedia();
+        $rs_tracking   = $mnv_f->InsertTrackingInfo($media, $mobileYN);
 	}
 
 	include_once "./head.php";

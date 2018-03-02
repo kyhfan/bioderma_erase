@@ -102,8 +102,7 @@ var bioderma = function() {
 				url    : "./main_exec.php",
 				data:{
 					"exec"          : "insert_share_info",
-					"sns_media"     : media,
-					"sns_flag"		: flag
+					"sns_media"     : media
 				}
 			});
 		}else{
@@ -116,8 +115,7 @@ var bioderma = function() {
 				url    : "./main_exec.php",
 				data:{
 					"exec" : "insert_share_info",
-					"sns_media" : media,
-					"sns_flag"		: flag
+					"sns_media" : media
 				}
 			});
 		}
