@@ -21,12 +21,12 @@
 	include_once "./header.php";
 ?>            
 
-<div id="left_game_back" style="width:20px;height:100%;position:absolute;top:50px;background:rgba(0,0,0,0.5);z-index:6">
+<!-- <div id="left_game_back" style="width:20px;height:100%;position:absolute;top:50px;background:rgba(0,0,0,0.5);z-index:6">
 
 </div>
 <div id="right_game_back" style="width:20px;height:100%;right:0;position:absolute;top:50px;background:rgba(0,0,0,0.5);z-index:6">
 
-</div>
+</div> -->
             <div class="c-content c-content--sub">
                 <div class="game__popups ">
                     <div class="game__popup">
@@ -141,8 +141,8 @@
                 $('.game__start').on('click', function(event){
                     $('.game__popups').addClass('game__popups--active');
                     $('.gauge__body').css('width','0');
-                    $("#left_game_back").hide();
-                    $("#right_game_back").hide();
+                    // $("#left_game_back").hide();
+                    // $("#right_game_back").hide();
                     
                     gameTimerExec(0);
 
