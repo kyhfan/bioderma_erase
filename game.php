@@ -14,7 +14,7 @@
     <body>
         <div class="wrap">
 <?
-	// include_once "./header.php";
+	include_once "./header.php";
 ?>            
 
             <div class="c-content c-content--sub">
