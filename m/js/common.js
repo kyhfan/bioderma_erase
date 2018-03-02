@@ -244,7 +244,7 @@ $(document).ready(function(event){
 				}
 	
 				zipcode	= data.zonecode;
-				addr1		= fullRoadAddr;
+				addr1		= fullAddr;
 				// document.getElementById('mb_zipcode').value = zipcode; //5자리 새우편번호 사용
 				// document.getElementById('mb_addr1').value = "("+zipcode+") "+addr1;
 				// document.getElementById('mb_addr1').value = addr1;
