@@ -20,7 +20,6 @@
 <?
 	include_once "./header.php";
 ?>            
-
 			<div class="c-content c-content--main">
 				<div class="c-section">
 					<div class="m-visual">
@@ -37,7 +36,7 @@
 								<ul class="m-info__list">
 									<li class="m-info__item">
 										<div class="m-info__heading">기간</div>
-										<div class="m-info__data">2018.3.5 ~ 2018.3.31</div>
+										<div class="m-info__data">2018.3.6 ~ 2018.3.31</div>
 									</li>
 									<li class="m-info__item">
 										<div class="m-info__heading">발표</div>
