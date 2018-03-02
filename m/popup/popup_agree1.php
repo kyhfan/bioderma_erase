@@ -10,7 +10,7 @@
 						</div>
 						<div class="c-section">
 							<ul class="agree__list">
-								<li class="agree__item">◎수탁자 : (주)미니버타이징</li>
+								<li class="agree__item">◎수탁자 : 미니버타이징(주)</li>
 								<li class="agree__item">◎위탁하는 업무의 내용 : 이벤트 당첨자 확인, 경품발송, MMS발송 </li>
 							</ul>
 						</div>
