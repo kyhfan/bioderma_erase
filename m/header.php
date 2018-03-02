@@ -14,9 +14,9 @@
 							<button class="c-event c-event--2"><span>EVENT 2</span>투고 키트 샘플링</button>
 						</div>
 						<div class="c-sns">
-							<button class="c-sns__button c-sns__button--facebook">페이스북</button>
-							<button class="c-sns__button c-sns__button--kakao">카카오스토리</button>
-							<button class="c-sns__button c-sns__button--kakaotalk">카카오톡</button>
+							<button class="c-sns__button c-sns__button--facebook" onclick="sns_share('fb')">페이스북</button>
+							<button class="c-sns__button c-sns__button--kakao" onclick="sns_share('ks')">카카오스토리</button>
+							<button class="c-sns__button c-sns__button--kakaotalk"  onclick="sns_share('kt')">카카오톡</button>
 						</div>
 					</div>
 				</div>
