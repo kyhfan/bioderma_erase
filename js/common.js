@@ -41,6 +41,11 @@ var bioderma = function() {
 
 		return false;
 	},
+	this.popupMoveClose = function(me) {
+		if (confirm("이 창을 닫으면 메인으로 이동합니다. 이동하시겠습니까?"))
+			location.href = "index.php";
+		return false;
+	},
 	this.popupSelfClose = function(popup) {
 		$('html').removeClass('is-popup-open');
 		$('#' + popup).removeClass('c-popup--active');

@@ -1,6 +1,6 @@
 			<div id="popup_winner_kit" class="c-popup">
 				<div class="c-popup__aligner c-popup__aligner--line">
-					<a href="javascript:void(0)" class="c-popup__close" onclick="wmbt.popupClose(this)">popup close</a>
+					<a href="javascript:void(0)" class="c-popup__close" onclick="wmbt.popupMoveClose(this)">popup close</a>
 					<div class="c-popup__box">
 						<div class="c-section">
 							<div class="c-popup__txt c-popup__txt--large"><em class="c-em">축하합니다!</em></div>

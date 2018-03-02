@@ -1,6 +1,6 @@
 			<div id="popup_level2_clear" class="c-popup">
 				<div class="c-popup__aligner">
-					<a href="#" class="c-popup__close">popup close</a>
+					<a href="#" class="c-popup__close2">popup close</a>
 					<div class="c-popup__box">
 						<div class="c-section">
 							<div class="c-popup__heading">LEVEL <em class="c-em">2</em> CLEAR</div>

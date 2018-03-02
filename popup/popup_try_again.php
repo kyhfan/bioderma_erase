@@ -1,6 +1,6 @@
 			<div id="popup_tryagain" class="c-popup">
 				<div class="c-popup__aligner">
-					<a href="javascript:void(0)" class="c-popup__close" onclick="wmbt.popupClose(this)">popup close</a>
+					<a href="javascript:void(0)" class="c-popup__close" onclick="wmbt.popupMoveClose(this)">popup close</a>
 					<div class="c-popup__box">
 						<div class="c-section">
 							<div class="c-popup__heading">TRY AGAIN!</div>

@@ -1,6 +1,6 @@
 			<div id="popup_level1_clear" class="c-popup">
 				<div class="c-popup__aligner">
-					<a href="javascript:void(0)" class="c-popup__close" onclick="wmbt.popupClose(this)">popup close</a>
+					<a href="javascript:void(0)" class="c-popup__close" onclick="wmbt.popupMoveClose(this)">popup close</a>
 					<div class="c-popup__box">
 						<div class="c-section">
 							<div class="c-popup__heading">LEVEL <em class="c-em">1</em> CLEAR</div>

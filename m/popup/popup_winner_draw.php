@@ -1,6 +1,6 @@
 			<div id="popup_winner_draw" class="c-popup">
 				<div class="c-popup__aligner c-popup__aligner--line">
-					<a href="#" class="c-popup__close">popup close</a>
+					<a href="#" class="c-popup__close2">popup close</a>
 					<div class="c-popup__box">
 						<div class="c-section">
 							<div class="c-popup__txt c-popup__txt--large"><em class="c-em">다음 기회에!</em></div>
