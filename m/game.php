@@ -28,11 +28,11 @@
 
 </div> -->
             <div class="c-content c-content--sub">
-                <div class="game__popups ">
+                <!-- <div class="game__popups ">
                     <div class="game__popup">
                         <a href="#" class="game__start">게임시작</a>
                     </div>
-                </div>
+                </div> -->
                 <div class="gauge">
                     <div class="gauge__time">20</div>
                     <div class="gauge__bars">
@@ -78,6 +78,8 @@
     include_once "./footer.php";
     
     include_once "./popup/popup_try_again.php";
+    
+    include_once "./popup/popup_game_pre.php";
     
     include_once "./popup/popup_level1_clear.php";
     
@@ -139,7 +141,8 @@
                     }, 1000);  
                 }
                 // gauge
-                $('.game__start').on('click', function(event){
+                $('.game_start').on('click', function(event){
+                    popupClose("popup_game_pre");
                     $('.game__popups').addClass('game__popups--active');
                     $('.gauge__body').css('width','0');
                     // $("#left_game_back").hide();

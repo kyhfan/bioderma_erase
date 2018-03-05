@@ -523,7 +523,6 @@ a {
 	font-weight: 300;
 	letter-spacing: -.75px;
 	vertical-align: top;
-	text-decoration: underline;
 }
 .c-agree__value {
 	display: table-cell;
@@ -531,12 +530,13 @@ a {
 	vertical-align: top;
 }
 .c-agree__checks {
-	overflow: hidden;
 	position: relative;
+	min-height: 17px;
+	padding: 2px 0;
 }
 .c-agree__label {
 	width: 100%;
-	padding-right: 15px;
+	padding-left: 20px;
 	color: #717171;
 	font-size: 10px;
 	font-weight: 300;
@@ -546,12 +546,12 @@ a {
 	content: " ";
 	display: block;
 	position: absolute;
-	top: 3px;
-	right: 0;
-	width: 10px;
-	height: 9px;
-	background: url('../images/common/c-agree__check.png') right center no-repeat;
-	background-size: 10px auto;
+	top: 0;
+	left: 0;
+	width: 18px;
+	height: 17px;
+	background: url('../images/common/c-agree__check.png') left center no-repeat;
+	background-size: 18px auto;
 }
 .c-agree__check {
 	position: absolute;
@@ -563,7 +563,7 @@ a {
 }
 .c-agree__check:checked + label:before {
 	background: url('../images/common/c-agree__check--active.png') right center no-repeat;
-	background-size: 10px auto;
+	background-size: 18px auto;
 }
 
 .wrap {

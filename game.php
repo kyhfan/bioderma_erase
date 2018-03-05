@@ -18,12 +18,12 @@
 ?>            
 
             <div class="c-content c-content--sub">
-                <div class="game__popup">
+                <!-- <div class="game__popup">
                     <div class="game__starts">
                         <a href="javascript:void(0)" class="game__start">게임시작</a>
                         <div class="game__start-txt"><img src="./images/pages/s-start__txt.png" alt="클릭 시 게임이 시작됩니다." /></div>
                     </div>
-                </div>
+                </div> -->
                 <div class="c-content__aligner">
                     <div class="gauge">
                         <div class="gauge__time">20</div>
@@ -72,6 +72,8 @@
     include_once "./footer.php";
     
     include_once "./popup/popup_try_again.php";
+    
+    include_once "./popup/popup_game_pre.php";
     
     include_once "./popup/popup_level1_clear.php";
     
@@ -129,7 +131,8 @@
                         }, 1000);  
                     }
                     // gauge
-                    $('.game__start').on('click', function() {
+                    $('.game_start').on('click', function() {
+                        wmbt.popupSelfClose("popup_game_pre");
                         $('.game__popup').addClass('game__popup--active');
                         $('.gauge__body').css('width', '0');
                         

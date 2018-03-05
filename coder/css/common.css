@@ -428,6 +428,7 @@ a {
 	text-align: left;
 	font-weight: 300;
 	letter-spacing: -.75px;
+	vertical-align: middle;
 }
 .c-agree__value {
 	display: table-cell;
@@ -437,10 +438,11 @@ a {
 .c-agree__checks {
 	overflow: hidden;
 	position: relative;
+	padding: 4px 0;
 }
 .c-agree__label {
 	width: 100%;
-	padding-right: 25px;
+	padding-left: 25px;
 	color: #717171;
 	font-size: 12px;
 	font-weight: 300;
@@ -451,10 +453,10 @@ a {
 	display: block;
 	position: absolute;
 	top: 0;
-	right: 0;
-	width: 17px;
-	height: 16px;
-	background: url('../images/common/c-agree__check.png') right center no-repeat;
+	left: 0;
+	width: 22px;
+	height: 20px;
+	background: url('../images/common/c-agree__check.png') left top no-repeat;
 }
 .c-agree__check {
 	position: absolute;
@@ -465,7 +467,7 @@ a {
 	opacity: 0;
 }
 .c-agree__check:checked + label:before {
-	background: url('../images/common/c-agree__check--active.png') right center no-repeat;
+	background: url('../images/common/c-agree__check--active.png') right top no-repeat;
 }
 
 
