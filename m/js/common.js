@@ -207,7 +207,7 @@ $(document).ready(function(event){
 						popupOpen("popup_winner_kit");
 					break;
 					case "D" :
-						alert("내일 다시 참여해주세요.");
+						alert("오늘은 이미 참여하셨습니다. 내일 다시 참여해주세요.");
 						location.href = "index.php";
 					break;
 				}
