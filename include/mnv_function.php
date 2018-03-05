@@ -102,11 +102,11 @@ class mnv_function extends mnv_dbi
 	}
 	public function winner_draw2($level)
 	{
-		$kit_winner_count       = 100;	// 투고 키트 총 당첨 수량
+		$kit_winner_count       = 7000;	// 투고 키트 총 당첨 수량
 		$goods_winner_count     = 6;	// 정품 총 당첨 수량
 
-        $kit_array      = array("Y","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N");
-        // $kit_array      = array("Y");
+        // $kit_array      = array("Y","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N");
+        $kit_array      = array("Y","N");
 		shuffle($kit_array);
 		
 		$goods_array    = array(200000);
