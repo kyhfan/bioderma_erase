@@ -158,7 +158,7 @@ var bioderma = function() {
 				// document.getElementById('mb_addr1').value 	= fullRoadAddr;
 				document.getElementById('level' + level + '_addr').value 	= "(" + data.zonecode + ") " + fullRoadAddr;
 				$("#level" + level + "_addr").attr("readonly",false);
-				$("#level" + level + "_addr").focus();
+				$("#level" + level + "_addr2").focus();
 			}
 		}).open();	
 	},

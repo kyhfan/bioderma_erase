@@ -250,7 +250,7 @@ $(document).ready(function(event){
 				// document.getElementById('mb_addr1').value = addr1;
 				document.getElementById('level' + level + '_addr').value 	= "(" + zipcode + ") " + addr1;
 				$("#level" + level + "_addr").attr("readonly",false);
-				$("#level" + level + "_addr").focus();
+				$("#level" + level + "_addr2").focus();
 
 				// iframe을 넣은 element를 안보이게 한다.
 				// (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
