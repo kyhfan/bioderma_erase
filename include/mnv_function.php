@@ -44,13 +44,16 @@ class mnv_function extends mnv_dbi
         $_SESSION['ss_media']		= $_REQUEST['media'];
 	}
 
-	public function winner_draw($level, $level2_phone)
+	public function winner_draw($level)
 	{
 		$kit_winner_count       = 100;	// 투고 키트 총 당첨 수량
-		$goods_winner_count     = 30;	// 정품 총 당첨 수량
+		$goods_winner_count     = 6;	// 정품 총 당첨 수량
 
         $kit_array      = array(8);
-        $goods_array    = array(200000);
+        // $kit_array      = array("Y","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N");
+		// shuffle($kit_array);
+		
+		$goods_array    = array(200000);
 
         // 총 키트 당첨 수량 
 		$kit_query      = "SELECT mb_winner, count(mb_winner) FROM member_info WHERE  mb_winner='kit'";
@@ -94,6 +97,59 @@ class mnv_function extends mnv_dbi
                     }
                 }
             }
+        }
+        return $winner;
+	}
+	public function winner_draw2($level)
+	{
+		$kit_winner_count       = 7000;	// 투고 키트 총 당첨 수량
+		$goods_winner_count     = 6;	// 정품 총 당첨 수량
+
+        // $kit_array      = array("Y","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N");
+        $kit_array      = array("Y","N");
+		shuffle($kit_array);
+		
+		$goods_array    = array(200000);
+
+        // 총 키트 당첨 수량 
+		$kit_query      = "SELECT mb_winner, count(mb_winner) FROM member_info WHERE  mb_winner='kit'";
+		$kit_result     = mysqli_query($my_db, $kit_query);
+		$kit_num        = mysqli_num_rows($kit_result);
+        
+        // 총 정품 당첨 수량
+		$goods_query     = "SELECT mb_winner, count(mb_winner) FROM member_info WHERE  mb_winner='goods'";
+		$goods_result    = mysqli_query($my_db, $goods_query);
+		$goods_num       = mysqli_num_rows($goods_result);
+        
+        // 오늘 참여자 수
+		$today_query		= "SELECT * FROM member_info WHERE mb_regdate like '%".date("Y-m-d")."%'";
+		$today_result		= mysqli_query($my_db, $today_query);
+		$today_num		    = mysqli_num_rows($today_result);
+
+        $winner             = "blank";
+
+        if ($kit_num < $kit_winner_count)
+        {
+			if ($kit_array[0] == "Y")
+			{
+				$winner = "kit";
+			}else{
+				// 3레벨일 경우에만 정품 당첨 추첨
+				if ($level == 3)
+				{
+					if ($goods_num < $goods_winner_count)
+					{
+						foreach ($goods_array as $key => $val)
+						{
+							if ($today_num == $val)
+							{
+								$winner = "goods";
+								break;
+							}
+						}
+					}
+				}
+			}
         }
         return $winner;
 	}

@@ -24,7 +24,16 @@ switch ($_REQUEST['exec'])
 		{
 			$flag = "D||D";
 		}else{
-            $mb_winner      = $mnv_f->winner_draw($level, $level_phone);
+            $winner_query	= "SELECT * FROM member_info WHERE mb_phone='".$level_phone."' AND mb_winner NOT IN ('blank')";
+            $winner_result 	= mysqli_query($my_db, $winner_query);
+            $winner_num		= mysqli_num_rows($winner_result);
+
+            if ($winner_num > 0)
+            {
+                $mb_winner      = "blank";
+            }else{
+                $mb_winner      = $mnv_f->winner_draw2($level);
+            }
                 
             $query		= "INSERT INTO member_info(mb_ipaddr, mb_name, mb_phone, mb_addr, mb_winner, mb_level, mb_gubun, mb_media, mb_regdate) values('".$_SERVER['REMOTE_ADDR']."','".$level_name."','".$level_phone."','".$level_addr."','".$mb_winner."','".$level."','".$gubun."','".$_SESSION['ss_media']."',now())";
             $result		= mysqli_query($my_db, $query);
