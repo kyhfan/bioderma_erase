@@ -112,6 +112,70 @@ a {
 	opacity: 1;
 }
 
+.c-popup.game-pre {
+    padding: 0 15px;
+}
+.c-popup.game-pre .c-popup__box {
+    padding: 39px 0 12px;
+}
+.c-popup.game-pre .c-popup__heading {
+    
+}
+.c-popup.game-pre .c-popup__heading h3 {
+    color: #ff0063;
+    font-size: 22px;
+    font-weight: 300;
+    position: relative;
+    display: inline-block;
+    padding: 0 25px;
+}
+.c-popup.game-pre .c-popup__heading h3:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top:  50%;
+    left: 0;
+    width: 19px;
+    height: 17px;
+    background: url('../images/common/c-popup__txt--left.png') no-repeat;
+    background-size: 19px auto;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.c-popup.game-pre .c-popup__heading h3:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 19px;
+    height: 17px;
+    background: url('../images/common/c-popup__txt--right.png') no-repeat;
+    background-size: 19px auto;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.c-popup.game-pre .c-popup__image {
+    margin: 24px 0 15px;
+    text-align: center;
+}
+.c-popup.game-pre .c-popup__image img {
+    max-width: 220px;
+}
+.c-popup.game-pre .c-popup__buttons .c-popup__button {
+    background: none;
+    height: auto;
+    width: 66px;
+    padding: 0;
+    margin-left: 8px;
+}
+.c-popup.game-pre .c-popup__buttons .c-popup__button img {
+    width: 100%;
+}
+
+
 .c-popup__aligner {
 	overflow:hidden;
 	position: relative;

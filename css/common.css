@@ -133,6 +133,19 @@ a {
 	border-radius: 10px;
 	background-color: #fff;
 }
+
+.c-popup.game-pre .c-popup__aligner {
+    width: 704px;
+    height: 863px;
+    background: url(../images/common/c-popup__pre-game.png) no-repeat;
+}
+.c-popup.game-pre .c-popup__buttons {
+    margin-top: 670px;
+}
+.c-popup.game-pre .c-popup__button {
+    background: none;
+    padding: 0;
+}
 .c-popup__aligner.c-popup__aligner--line {
 	width: 686px;
 	padding-bottom: 29px;
