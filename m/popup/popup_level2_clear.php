@@ -33,7 +33,7 @@
 										<label for="c-popup__input-2" class="c-popup__label">전화번호</label>
 									</div>
 									<div class="c-popup__value">
-										<input type="tel" id="level2_phone" class="c-popup__input" />
+										<input type="tel" id="level2_phone" class="c-popup__input" onkeyup="only_num(this);chk_strlen(this);" />
 									</div>
 								</div>
 								<div class="c-popup__form c-popup__form--button">
@@ -57,7 +57,7 @@
 								- 입력하신 정보로 경품이 발송되니 정확하게 입력해주세요 
 								<br />- 부정확한 정보 입력으로 경품 미발송은 책임지지 않습니다
 								<br />- 부적절한 방법(타인명의사용 등)으로 이벤트 참여 시
-								<br />당첨이 취소됨을 알려드립니다.
+								<br />당첨이 취소됨을 알려드립니다
 							</div>
 						</div>
 						<div class="c-section c-section--small">
