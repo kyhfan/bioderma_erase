@@ -122,6 +122,7 @@ a {
 .c-popup.c-popup--active {
 	visibility: visible;
 	opacity: 1;
+	height: auto;
 }
 
 .c-popup__aligner {
