@@ -3,15 +3,15 @@
 
     $mnv_f = new mnv_function();
     $my_db         = $mnv_f->Connect_MySQL();
-    $mobileYN      = $mnv_f->MobileCheck();
-    $obYN          = $mnv_f->BrowserCheck();
-    if ($mobileYN == "PC")
-	{
-		echo "<script>location.href='../index.php?media=".$media."';</script>";
-	}else{
-        $rs_tracking   = $mnv_f->InsertTrackingInfo($media, $gubun);
-        $saveMedia     = $mnv_f->SaveMedia();
-	}
+    // $mobileYN      = $mnv_f->MobileCheck();
+    // $obYN          = $mnv_f->BrowserCheck();
+    // if ($mobileYN == "PC")
+	// {
+	// 	echo "<script>location.href='../index.php?media=".$media."';</script>";
+	// }else{
+    //     $rs_tracking   = $mnv_f->InsertTrackingInfo($media, $gubun);
+    //     $saveMedia     = $mnv_f->SaveMedia();
+	// }
 
 	include_once "./head.php";
 ?>
