@@ -113,9 +113,9 @@
 							
 							<div class="m-video__aligner">
 								<div class="m-video__percents">
-									<a href="#" class="m-video__percent"><img src="./images/pages/m-video__percent--1.png" alt="100% 메이크업 클렌징력 1)" /></a>
-									<a href="#" class="m-video__percent"><img src="./images/pages/m-video__percent--2.png" alt="100% 저자극 클렌징 1)" /></a>
-									<a href="#" class="m-video__percent"><img src="./images/pages/m-video__percent--3.png" alt="클렌징 후 부드러운 피부 1)" /></a>
+									<a href="http://www.bioderma.co.kr/front/product_view.php?id=7000079" target="_blank" class="m-video__percent"><img src="./images/pages/m-video__percent--1.png" alt="100% 메이크업 클렌징력 1)" /></a>
+									<a href="http://www.bioderma.co.kr/front/product_view.php?id=7000079" target="_blank" class="m-video__percent"><img src="./images/pages/m-video__percent--2.png" alt="100% 저자극 클렌징 1)" /></a>
+									<a href="http://www.bioderma.co.kr/front/product_view.php?id=7000079" target="_blank" class="m-video__percent"><img src="./images/pages/m-video__percent--3.png" alt="클렌징 후 부드러운 피부 1)" /></a>
 								</div>
 
                                 <a href="http://www.bioderma.co.kr/front/product_view.php?id=7000079" target="_blank">
