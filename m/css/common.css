@@ -945,4 +945,4 @@ a {
 html.popupOpened { height: 100%; overflow: hidden; }
 html.popupOpened body { height: 100%; overflow: hidden; }
 html.popupOpened body > .wrap { height: 100%; overflow: hidden; }
-html.popupOpened .c-popup-—active { -webkit-overflow-scrolling: touch; overflow-y: auto; }
+html.popupOpened .c-popup--active { -webkit-overflow-scrolling: touch; overflow-y: auto; }
