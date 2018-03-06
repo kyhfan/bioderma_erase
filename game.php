@@ -98,7 +98,7 @@
                     var gameTimer = null;
                     var sizeArray = [100, 80, 60];
                     var ratioArray = [92, 97, 95];
-                    
+                    wmbt.popupSelfOpen("popup_game_pre");
                     function gameTimerExec(imageNum) {
                         gameTimer = setInterval(function() {
                             time--;

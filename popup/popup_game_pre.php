@@ -1,4 +1,4 @@
-            <div id="popup_game_pre" class="c-popup game-pre c-popup--active">
+            <div id="popup_game_pre" class="c-popup game-pre">
                 <div class="c-popup__aligner">
                     <div class="c-section">
                         <div class="c-popup__buttons">
