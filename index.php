@@ -135,5 +135,11 @@
 	include_once "./popup/popup_agree2.php";
 ?>		
 		</div>
+<script type="text/javascript" src="http://wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "73500228899d2c";
+wcs_do();
+</script>		
 	</body>
 </html>
