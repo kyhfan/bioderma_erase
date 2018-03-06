@@ -58,4 +58,16 @@ switch ($_REQUEST['exec'])
 
     break;
 
+    case "insert_share_info" :
+        $mnv_f          = new mnv_function();
+        $my_db          = $mnv_f->Connect_MySQL();
+        $gubun          = $mnv_f->MobileCheck();
+        $sns_media		= $_REQUEST['sns_media'];
+
+        $query 		= "INSERT INTO share_info(sns_media, sns_gubun, sns_ipaddr, inner_media, sns_regdate) values('".$sns_media."','".$gubun."','".$_SERVER['REMOTE_ADDR']."','".$_SESSION['ss_media']."','".date("Y-m-d H:i:s")."')";
+        $result 	= mysqli_query($my_db, $query);
+
+    break;
+
+
 }
