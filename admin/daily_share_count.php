@@ -1,6 +1,9 @@
 <?php
 	// 설정파일
-	include_once "../config.php";
+	include_once "../include/autoload.php";
+
+	$mnv_f = new mnv_function();
+	$my_db         = $mnv_f->Connect_MySQL();
 /*
 	if (isset($_SESSION['ss_mb_id']) == false)
 	{
@@ -32,12 +35,12 @@
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query	= "SELECT sns_regdate FROM ".$_gl['share_info_table']." Group by substr(sns_regdate,1,10) order by sns_regdate desc";
+	$daily_date_query	= "SELECT sns_regdate FROM share_info Group by substr(sns_regdate,1,10) order by sns_regdate desc";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
 		$daily_date		= substr($date_daily_data['sns_regdate'],0,10);
-		$media_query	= "SELECT sns_media, COUNT( sns_media ) media_cnt FROM ".$_gl['share_info_table']." WHERE sns_regdate LIKE  '%".$daily_date."%' GROUP BY sns_media";
+		$media_query	= "SELECT sns_media, COUNT( sns_media ) media_cnt FROM share_info WHERE sns_regdate LIKE  '%".$daily_date."%' GROUP BY sns_media";
 		$media_res		= mysqli_query($my_db, $media_query);
 		
 		unset($media_name);
@@ -52,9 +55,9 @@
 		{
 			$media_name[]	= $media_daily_data['sns_media'];
 			$media_cnt[]	= $media_daily_data['media_cnt'];
-			$pc_query		= "SELECT * FROM ".$_gl['share_info_table']." WHERE sns_regdate LIKE  '%".$daily_date."%' AND sns_media='".$media_daily_data['sns_media']."' AND sns_gubun='PC'";
+			$pc_query		= "SELECT * FROM share_info WHERE sns_regdate LIKE  '%".$daily_date."%' AND sns_media='".$media_daily_data['sns_media']."' AND sns_gubun='PC'";
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-			$mobile_query	= "SELECT * FROM ".$_gl['share_info_table']." WHERE sns_regdate LIKE  '%".$daily_date."%' AND sns_media='".$media_daily_data['sns_media']."' AND sns_gubun='MOBILE'";
+			$mobile_query	= "SELECT * FROM share_info WHERE sns_regdate LIKE  '%".$daily_date."%' AND sns_media='".$media_daily_data['sns_media']."' AND sns_gubun='MOBILE'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
 			$pc_cnt[]		= $pc_count;
 			$mobile_cnt[]	= $mobile_count;

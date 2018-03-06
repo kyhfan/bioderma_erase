@@ -61,7 +61,7 @@
   <!-- Page Heading -->
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header">디자인 투표 참여자 목록</h1>
+        <h1 class="page-header">이벤트 참여자 목록</h1>
       </div>
     </div>
     <!-- /.row -->
@@ -72,21 +72,21 @@
             <form name="frm_execute" method="POST" onsubmit="return checkfrm()">
               <input type="hidden" name="pg" value="<?=$pg?>">
               <select name="search_type">
-                <option value="design_name" <?php if($search_type == "design_name"){?>selected<?php }?>>이름</option>
-                <option value="design_phone" <?php if($search_type == "design_phone"){?>selected<?php }?>>전화번호</option>
+                <option value="mb_name" <?php if($search_type == "mb_name"){?>selected<?php }?>>이름</option>
+                <option value="mb_phone" <?php if($search_type == "mb_phone"){?>selected<?php }?>>전화번호</option>
               </select>
               <input type="text" name="search_txt" value="<?php echo $search_txt?>">
               <input type="text" id="sDate" name="sDate" value="<?=$sDate?>"> - <input type="text" id="eDate" name="eDate" value="<?=$eDate?>">
 							<input type="submit" value="검색">
-							<a href="javascript:void(0)" id="excel_download_list">
+							<!-- <a href="javascript:void(0)" id="excel_download_list">
 								<span>엑셀 다운로드</span>
-							</a>
+							</a> -->
 			  <li align="right";>
 			  <?
-					$member = "SELECT count(idx) FROM ".$_gl['design_info_table']." WHERE 1";
+					$member = "SELECT count(idx) FROM member_info WHERE 1";
 					$res3 = mysqli_query($my_db, $member);
 					list($total_count)	= @mysqli_fetch_array($res3);
-					$uniqueMember = "SELECT count(*) FROM ".$_gl['design_info_table']." WHERE 1 GROUP BY design_phone";
+					$uniqueMember = "SELECT count(*) FROM member_info WHERE 1 GROUP BY mb_phone";
 					$resUnique = mysqli_query($my_db, $uniqueMember);
 					$unique_total_count	= mysqli_num_rows($resUnique);
 					echo  "전체 참여자수 : $total_count / 유니크 : $unique_total_count";
@@ -100,8 +100,8 @@
                 <th>순번</th>
                 <th>이름</th>
                 <th>전화번호</th>
-                <th>선택한 테마</th>
-                <th>선택한 제품</th>
+                <th>주소</th>
+                <th>당첨된 경품</th>
                 <th>유입매체</th>
                 <th>유입구분</th>
                 <th>참여일자</th>
@@ -112,19 +112,19 @@
 	$where = "";
 
 	if ($sDate != "")
-		$where	.= " AND design_regdate >= '".$sDate."' AND design_regdate <= '".$eDate." 23:59:59'";
+		$where	.= " AND mb_regdate >= '".$sDate."' AND mb_regdate <= '".$eDate." 23:59:59'";
 
 	if ($search_txt != "")
 	{
 		$where	.= " AND ".$search_type." like '%".$search_txt."%'";
 	}
-	$buyer_count_query = "SELECT count(*) FROM ".$_gl['design_info_table']." WHERE  1 ".$where."";
+	$buyer_count_query = "SELECT count(*) FROM member_info WHERE  1 ".$where."";
 	list($buyer_count) = @mysqli_fetch_array(mysqli_query($my_db, $buyer_count_query));
+	print_r($buyer_count);
 	$PAGE_CLASS = new Page($pg,$buyer_count,$page_size,$block_size);
-
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
 	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
-	$buyer_list_query = "SELECT * FROM ".$_gl['design_info_table']." WHERE 1 ".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
+	$buyer_list_query = "SELECT * FROM member_info WHERE 1 ".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
 	$res = mysqli_query($my_db, $buyer_list_query);
 
 	while ($buyer_data = @mysqli_fetch_array($res))
@@ -137,13 +137,13 @@
 ?>
               <tr>
                 <td><?php echo $PAGE_UNCOUNT--?></td>
-                <td><?php echo $buyer_info[$key]['design_name']?></td>
-                <td><?php echo $buyer_info[$key]['design_phone']?></td>
-                <td><?php echo $buyer_info[$key]['design_cate']?></td>
-                <td><?php echo $buyer_info[$key]['design_goods']?></td>
-                <td><?php echo $buyer_info[$key]['design_media']?></td>
-                <td><?php echo $buyer_info[$key]['design_gubun']?></td>
-                <td><?php echo $buyer_info[$key]['design_regdate']?></td>
+                <td><?php echo $buyer_info[$key]['mb_name']?></td>
+                <td><?php echo $buyer_info[$key]['mb_phone']?></td>
+                <td><?php echo $buyer_info[$key]['mb_addr']?></td>
+                <td><?php echo $buyer_info[$key]['mb_winner']?></td>
+                <td><?php echo $buyer_info[$key]['mb_media']?></td>
+                <td><?php echo $buyer_info[$key]['mb_gubun']?></td>
+                <td><?php echo $buyer_info[$key]['mb_regdate']?></td>
               </tr>
 <?php
 	}

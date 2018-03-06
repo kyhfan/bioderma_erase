@@ -13,7 +13,7 @@ if (isset($_SESSION['ss_mb_name']) == false)
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>이브자리 - 24개의 봄</title>
+    <title>바이오더마 - 클렌징워터</title>
 	<!-- jQuery Version 1.11.0 -->
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
@@ -71,7 +71,7 @@ if (isset($_SESSION['ss_mb_name']) == false)
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="entry_list.php">이브자리 - 24개의 봄</a>
+          <a class="navbar-brand" href="entry_list.php">바이오더마 - 클렌징워터</a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
@@ -96,9 +96,9 @@ if (isset($_SESSION['ss_mb_name']) == false)
                   <li>
                     <a href="daily_media_count.php">디자인 투표 참여자 수</a>
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="daily_media_count2.php">내 마음대로 부문 참여자 수</a>
-                  </li>
+                  </li> -->
                   <!-- <li>
                     <a href="daily_outlink_count.php">일자별 아웃링크 클릭 수</a>
                   </li> -->
@@ -114,11 +114,11 @@ if (isset($_SESSION['ss_mb_name']) == false)
                 </ul>
               </li>
               <li>
-                <a href="entry_list.php"><i class="fa fa-fw fa-table"></i> 디자인 투표 참여자 목록</a>
+                <a href="entry_list.php"><i class="fa fa-fw fa-table"></i> 이벤트 참여자 목록</a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="entry_list2.php"><i class="fa fa-fw fa-table"></i> 내 마음대로 부문 참여자 목록</a>
-              </li>
+              </li> -->
               <!--<li>
                 <a href="entry_list2.php"><i class="fa fa-fw fa-table"></i> 이름짓기 투표 참여자 목록</a>
               </li>

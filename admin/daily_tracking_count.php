@@ -1,6 +1,9 @@
 <?php
 	// 설정파일
-	include_once "../config.php";
+	include_once "../include/autoload.php";
+
+	$mnv_f = new mnv_function();
+	$my_db         = $mnv_f->Connect_MySQL();
 /*
 	if (isset($_SESSION['ss_mb_id']) == false)
 	{
@@ -33,12 +36,12 @@
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query	= "SELECT tracking_date FROM ".$_gl['tracking_info_table']." Group by substr(tracking_date,1,10) ORDER BY tracking_date DESC";
+	$daily_date_query	= "SELECT tracking_date FROM tracking_info Group by substr(tracking_date,1,10) ORDER BY tracking_date DESC";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
 		$daily_date		= substr($date_daily_data['tracking_date'],0,10);
-		$media_query	= "SELECT tracking_media, COUNT( tracking_media ) media_cnt FROM ".$_gl['tracking_info_table']." WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' GROUP BY tracking_media";
+		$media_query	= "SELECT tracking_media, COUNT( tracking_media ) media_cnt FROM tracking_info WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' GROUP BY tracking_media";
 		$media_res		= mysqli_query($my_db, $media_query);
 
 		unset($media_name);
@@ -64,10 +67,10 @@
 		{
 			$media_name[]	= $media_daily_data['tracking_media'];
 			$media_cnt[]	= $media_daily_data['media_cnt'];
-			$pc_query		= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='PC' AND tracking_refferer NOT LIKE  '%media=k%'  AND tracking_refferer NOT LIKE  '%media=f%' ";
+			$pc_query		= "SELECT * FROM tracking_info WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='PC' AND tracking_refferer NOT LIKE  '%media=k%'  AND tracking_refferer NOT LIKE  '%media=f%' ";
 			// $pc_query		= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='PC' ";
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-			$mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='MOBILE' AND tracking_refferer NOT LIKE  '%media=k%'  AND tracking_refferer NOT LIKE  '%media=f%'";
+			$mobile_query	= "SELECT * FROM tracking_info WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='MOBILE' AND tracking_refferer NOT LIKE  '%media=k%'  AND tracking_refferer NOT LIKE  '%media=f%'";
 			// $mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='MOBILE'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
 			// $pc_unique_query		= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='PC' GROUP BY tracking_ipaddr";
@@ -95,9 +98,9 @@
 ?>
                     <td rowspan="<?=$rowspan_cnt?>">
 											<?php echo $daily_date?>
-											<a id="excelDown" href="excel_download_tracking.php?date=<?=$daily_date?>">
+											<!-- <a id="excelDown" href="excel_download_tracking.php?date=<?=$daily_date?>">
 												<span>엑셀 다운로드</span>
-											</a>
+											</a> -->
 										</td>
 <?
 			}

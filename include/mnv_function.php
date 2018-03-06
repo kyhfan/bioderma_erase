@@ -6,7 +6,8 @@
 */
 class mnv_function extends mnv_dbi
 {
-    var $winner_flag;
+	var $winner_flag;
+	
 	public function InsertTrackingInfo($gubun)
 	{
 		global $my_db;
