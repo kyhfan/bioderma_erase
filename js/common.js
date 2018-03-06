@@ -24,6 +24,7 @@ var bioderma = function() {
 			val = $this.attr('data-layer-popup');
 
 		$("#"+val).addClass("c-popup--active");
+		$("html").css("overflow","hidden");
 
 		return false;
 	},
@@ -32,12 +33,14 @@ var bioderma = function() {
 		// 	val = $this.attr('data-layer-popup');
 
 		$("#" + popup).addClass("c-popup--active");
+		$("html").css("overflow","hidden");
 
 		return false;
 	},
 	this.popupClose = function(me) {
 		$('html').removeClass('is-popup-open');
 		$(me).parent().parent().removeClass('c-popup--active');
+		$("html").css("overflow","");
 
 		return false;
 	},
@@ -49,6 +52,7 @@ var bioderma = function() {
 	this.popupSelfClose = function(popup) {
 		$('html').removeClass('is-popup-open');
 		$('#' + popup).removeClass('c-popup--active');
+		$("html").css("overflow","");
 
 		return false;
 	},
