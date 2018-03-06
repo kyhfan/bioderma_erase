@@ -91,7 +91,7 @@
 											<label for="level2_agree1" class="c-agree__label">개인 정보 수집 및 이용에 동의합니다</label>
 										</div>
 									</div>
-									<div class="c-agree__key" style="text-decoration:underline" data-layer-popup="popup_agree1" onclick="wmbt.popupOpen(this);"> *  개인 정보 수집 및 이용약관보기</div>
+									<div class="c-agree__key" style="text-decoration:underline" data-layer-popup="popup_agree1" onclick="wmbt.popupOpen(this);"> *  개인 정보 수집 및 이용 약관 보기</div>
 								</div>
 								<div class="c-agree">
 									<div class="c-agree__value">
