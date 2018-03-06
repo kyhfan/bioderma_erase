@@ -13,7 +13,7 @@
 								<li class="agree__item">회사는 본 이벤트를 위하여 다음과 같이 고객님의 개인정보를 수집 및 이용합니다.</li>
 								<li class="agree__item">◎수집 항목 : 이름, 연락처, 주소</li>
 								<li class="agree__item">◎이용 목적 : 이벤트 진행을 위한 본인 확인, 경품 제공과 정보 공지 및 불만 처리 등을 위한 연락처 확보</li>
-								<li class="agree__item">◎보유 기간 : 이벤트 종료 후 3달이내 파기 </li>
+								<li class="agree__item">◎보유 기간 : 이벤트 종료 후 1년이내 파기 </li>
 							</ul>
 						</div>
 						<div class="c-section">
