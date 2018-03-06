@@ -7,7 +7,7 @@
     $obYN          = $mnv_f->BrowserCheck();
     if ($mobileYN == "MOBILE")
 	{
-		echo "<script>location.href='m/index.php?media=".$media."';</script>";
+		echo "<script>location.href='m/index.php?media=".$_REQUEST["media"]."';</script>";
 	}else{
         $saveMedia     = $mnv_f->SaveMedia();
 		$rs_tracking   = $mnv_f->InsertTrackingInfo($mobileYN);
