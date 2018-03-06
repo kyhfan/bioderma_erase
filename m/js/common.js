@@ -118,6 +118,7 @@ $(document).ready(function(event){
 	// popup open
 	function popupOpen(param) {
 		$("#"+param).addClass("c-popup--active");
+		$("#"+param).addClass("ios-fixed");
 
 		return false;
 	}
@@ -126,6 +127,7 @@ $(document).ready(function(event){
 	function popupClose(param) {
 		$('html').removeClass('is-popup-open');
 		$('#' + param).removeClass('c-popup--active');
+		$("#"+param).removeClass("ios-fixed");
 
 		return false;
 	}

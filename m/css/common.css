@@ -91,11 +91,15 @@ a {
     clip: rect(0,0,0,0);
 }
 
+.c-popup.ios-fixed {
+	position: fixed;
+}
+
 .c-popup {
 	visibility: hidden;
 	opacity: 0;
 	overflow-y: auto;
-	position: fixed;
+	/* position: fixed; */
 	top: 0;
 	left: 0;
 	width: 100%;
