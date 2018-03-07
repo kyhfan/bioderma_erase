@@ -67,10 +67,10 @@
 		{
 			$media_name[]	= $media_daily_data['tracking_media'];
 			$media_cnt[]	= $media_daily_data['media_cnt'];
-			$pc_query		= "SELECT * FROM tracking_info WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='PC' AND tracking_refferer NOT LIKE  '%media=k%'  AND tracking_refferer NOT LIKE  '%media=f%' ";
+			$pc_query		= "SELECT * FROM tracking_info WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='PC'";
 			// $pc_query		= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='PC' ";
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-			$mobile_query	= "SELECT * FROM tracking_info WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='MOBILE' AND tracking_refferer NOT LIKE  '%media=k%'  AND tracking_refferer NOT LIKE  '%media=f%'";
+			$mobile_query	= "SELECT * FROM tracking_info WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='MOBILE'";
 			// $mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='MOBILE'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
 			// $pc_unique_query		= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='PC' GROUP BY tracking_ipaddr";
