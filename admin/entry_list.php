@@ -120,13 +120,13 @@
 	}
 	$buyer_count_query = "SELECT count(*) FROM member_info WHERE  1 ".$where."";
 	list($buyer_count) = @mysqli_fetch_array(mysqli_query($my_db, $buyer_count_query));
-	print_r($buyer_count);
+	// print_r($buyer_count);
 	$PAGE_CLASS = new Page($pg,$buyer_count,$page_size,$block_size);
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
 	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
 	$buyer_list_query = "SELECT * FROM member_info WHERE 1 ".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
 	$res = mysqli_query($my_db, $buyer_list_query);
-
+print_r($buyer_list_query);
 	while ($buyer_data = @mysqli_fetch_array($res))
 	{
 		$buyer_info[] = $buyer_data;
