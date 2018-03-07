@@ -94,7 +94,7 @@ if (isset($_SESSION['ss_mb_name']) == false)
                     <a href="daily_tracking_count.php">일자별 사이트 유입자 수</a>
                   </li>
                   <li>
-                    <a href="daily_media_count.php">디자인 투표 참여자 수</a>
+                    <a href="daily_media_count.php">캠페인 참여자 수</a>
                   </li>
                   <!-- <li>
                     <a href="daily_media_count2.php">내 마음대로 부문 참여자 수</a>
