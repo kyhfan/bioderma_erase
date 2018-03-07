@@ -42,7 +42,8 @@ class mnv_function extends mnv_dbi
 
 	public function SaveMedia()
 	{
-        $_SESSION['ss_media']		= $_REQUEST['media'];
+		$_SESSION['ss_media']		= $_REQUEST['media'];
+		$_SESSION['ss_tracking']	= "Y";
 	}
 
 	public function winner_draw($level)
