@@ -55,6 +55,7 @@
 			}else{
 				$winner_blank	= $winner_daily_data['winner_cnt'];
 			}
+		}
 	
 ?>
                   <tr>
@@ -64,7 +65,6 @@
                     <td><?=number_format($winner_blank)?></td>
                   </tr>
 <?
-		}
 	}
 ?>
                 </tbody>
