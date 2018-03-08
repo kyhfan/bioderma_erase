@@ -44,7 +44,9 @@
 		$winner_res		= mysqli_query($my_db, $winner_query);
 		
 		unset($winner_cnt);
-		$total_winner_cnt = 0;
+		// $total_goods_cnt = 0;
+		// $total_kit_cnt = 0;
+		// $total_blank_cnt = 0;
 		while ($winner_daily_data = mysqli_fetch_array($winner_res))
 		{
 			if ($winner_daily_data['mb_winner'] == "goods")
@@ -57,6 +59,9 @@
 			}
 		}
 	
+		$total_goods_cnt 	= $total_goods_cnt + $winner_goods;
+		$total_kit_cnt 		= $total_kit_cnt + $winner_kit;
+		$total_blank_cnt 	= $total_blank_cnt + $winner_blank;
 ?>
                   <tr>
                     <td><?=$daily_date?></td>
@@ -67,6 +72,12 @@
 <?
 	}
 ?>
+                  <tr>
+                    <td>합 계</td>
+                    <td><?=number_format($total_goods_cnt)?></td>
+                    <td><?=number_format($total_kit_cnt)?></td>
+                    <td><?=number_format($total_blank_cnt)?></td>
+                  </tr>
                 </tbody>
               </table>
             </div>
