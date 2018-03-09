@@ -58,7 +58,7 @@
 										<div class="m-step__num">#2</div>워터가 적셔진 화장솜을 이용해 메이크업을 지워주세요
 									</li>
 									<li class="m-step__item">
-										<div class="m-step__num">#3</div>단계가 올라갈 수록 화장솜 크기는 작아집니다
+										<div class="m-step__num">#3</div>단계가 올라갈수록 화장솜 크기는 작아집니다
 									</li>
 									<li class="m-step__item">
 										<div class="m-step__num">#4</div>모든 메이크업을 말끔하게 지우고 건강한 피부만<br />남긴 분들에게는 추첨을 통해 선물을 드립니다 !
