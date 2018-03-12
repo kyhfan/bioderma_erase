@@ -28,7 +28,11 @@ switch ($_REQUEST['exec'])
             $winner_result 	= mysqli_query($my_db, $winner_query);
             $winner_num		= mysqli_num_rows($winner_result);
 
-            if ($winner_num > 0)
+            $winner2_query	= "SELECT * FROM member_info WHERE mb_addr like '%".$level_addr."%' AND mb_winner NOT IN ('blank')";
+            $winner2_result 	= mysqli_query($my_db, $winner2_query);
+            $winner2_num		= mysqli_num_rows($winner2_result);
+
+            if ($winner_num > 0 || $winner2_num > 0)
             {
                 $mb_winner      = "blank";
             }else{
