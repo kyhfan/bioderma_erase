@@ -186,6 +186,13 @@ var bioderma = function() {
 			return false;
 		}
 		
+		if (level_phone.length < 11)
+		{
+			alert("올바른 전화번호를 입력해 주세요.");
+			$("#level" + level + "_phone").focus();
+			return false;
+		}
+
 		if (level_addr == "")
 		{
 			alert("주소를 입력해 주세요.");
