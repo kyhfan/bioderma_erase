@@ -107,6 +107,7 @@ class mnv_function extends mnv_dbi
 		$goods_winner_count     = 6;	// 정품 총 당첨 수량
 
         $kit_array      = array("Y","N","N","N","N","N","N","N","N","N","N","N");
+        // $kit_array      = array("Y");
         // $kit_array      = array("Y","N");
 		shuffle($kit_array);
 		
