@@ -98,7 +98,7 @@
 						<div class="m-video__link">
 							<div class="m-video__image">
                                 <!-- <img src="./images/pages/m-video__image.png" alt="영상썸네일" /> -->
-                                <iframe allowfullscreen="1" src="https://www.youtube.com/embed/K7ePWfdWeqk?controls=0&loop=1&playlist=K7ePWfdWeqk&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" width="1131" height="636" style="position:relative;z-index:2"></iframe>
+                                <iframe allowfullscreen="1" src="https://www.youtube.com/embed/JkCGTXTn0oM?controls=0&loop=1&playlist=JkCGTXTn0oM&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" width="1131" height="636" style="position:relative;z-index:2"></iframe>
                             </div>
                         </div>
 					</div>
