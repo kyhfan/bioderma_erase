@@ -7,7 +7,7 @@
     $obYN          = $mnv_f->BrowserCheck();
     if ($mobileYN == "MOBILE")
 	{
-		echo "<script>location.href='m/index.php?media=".$_REQUEST["media"]."';</script>";
+		echo "<script>location.href='m/index.php?media=".$_REQUEST["media"]."&r=".$_REQUEST["r"]."';</script>";
 	}else{
         $saveMedia     = $mnv_f->SaveMedia();
 		$rs_tracking   = $mnv_f->InsertTrackingInfo($mobileYN);
@@ -141,5 +141,17 @@ if(!wcs_add) var wcs_add = {};
 wcs_add["wa"] = "73500228899d2c";
 wcs_do();
 </script>		
+<script type="text/javascript">
+$(document).ready(function(){
+<?
+	if ($_REQUEST["r"] == "v")
+	{
+?>
+			$('html, body').animate({scrollTop :  $(".m-video").offset().top -100}, 1000);
+<?		
+	}	
+?>
+});
+</script>
 	</body>
 </html>
