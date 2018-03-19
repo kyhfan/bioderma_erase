@@ -135,8 +135,7 @@
                         wmbt.popupSelfClose("popup_game_pre");
                         $('.game__popup').addClass('game__popup--active');
                         $('.gauge__body').css('width', '0');
-                        $('.game__aligner').css('cursor', 'url(' + thisImgs + '), url(' + thisImg + '), auto');
-
+                        
                         gameTimerExec(0);
 
                         $.ajax({
@@ -201,7 +200,7 @@
                         var thisImgs = $(this).find('img').attr('src'),
                             thisImg = thisImgs.replace('.png', '.cur');
 //                        $currentCotton.addClass('game__cotton--active');
-                        // $('.game__aligner').css('cursor', 'url(' + thisImgs + '), url(' + thisImg + '), auto');
+                        $('.game__aligner').css('cursor', 'url(' + thisImgs + '), url(' + thisImg + '), auto');
                     });
                     
                     function eraserSet(imageNum, sizeValue, ratio) {
