@@ -10,7 +10,7 @@
 						입력하셨던 정보로 매주 월요일에 일괄 발송될예정입니다</div>
 						</div>
 						<div class="c-section">
-							<div class="c-popup__image"><img src="../images/common/c-popup__image-2.png" alt="" /></div>
+							<div class="c-popup__image"><img src="./images/common/c-popup__image-2.png" alt="" /></div>
 						</div>
 						<div class="c-section">
 							<div class="c-popup__buttons c-popup__buttons--large">

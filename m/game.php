@@ -110,6 +110,7 @@
                 var ratioArray = [94, 98, 95];
                 
                 popupOpen("popup_game_pre");
+                // popupOpen("popup_winner_goods");
                 function gameTimerExec(imageNum) {
                     gameTimer = setInterval(function() {
                         time--;
