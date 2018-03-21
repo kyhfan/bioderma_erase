@@ -99,7 +99,6 @@
                     var sizeArray = [100, 80, 60];
                     var ratioArray = [92, 97, 95];
                     wmbt.popupSelfOpen("popup_game_pre");
-                    // wmbt.popupSelfOpen("popup_winner_goods");
                     function gameTimerExec(imageNum) {
                         gameTimer = setInterval(function() {
                             time--;
