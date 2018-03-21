@@ -111,7 +111,7 @@ class mnv_function extends mnv_dbi
         // $kit_array      = array("Y","N");
 		shuffle($kit_array);
 		
-		$goods_array    = array(1410);
+		$goods_array    = array(1407);
 
         // 총 키트 당첨 수량 
 		$kit_query      = "SELECT mb_winner, count(mb_winner) FROM member_info WHERE  mb_winner='kit'";
