@@ -199,6 +199,8 @@
                         $currentCotton.css('visibility', 'hidden');
                         var thisImgs = $(this).find('img').attr('src'),
                             thisImg = thisImgs.replace('.png', '.cur');
+						console.log(thisImgs);
+						console.log(thisImg);
 //                        $currentCotton.addClass('game__cotton--active');
                         $('.game__aligner').css('cursor', 'url(' + thisImgs + '), url(' + thisImg + '), auto');
                     });
