@@ -7,7 +7,7 @@
     $obYN          = $mnv_f->BrowserCheck();
     if ($mobileYN == "MOBILE")
 	{
-		echo "<script>location.href='m/index.php?media=".$_REQUEST["media"]."';</script>";
+		echo "<script>location.href='m/index.php?media=".$_REQUEST["media"]."&r=".$_REQUEST["r"]."';</script>";
 	}else{
         $saveMedia     = $mnv_f->SaveMedia();
 		$rs_tracking   = $mnv_f->InsertTrackingInfo($mobileYN);
@@ -98,7 +98,7 @@
 						<div class="m-video__link">
 							<div class="m-video__image">
                                 <!-- <img src="./images/pages/m-video__image.png" alt="영상썸네일" /> -->
-                                <iframe allowfullscreen="1" src="https://www.youtube.com/embed/K7ePWfdWeqk?controls=0&loop=1&playlist=K7ePWfdWeqk&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" width="1131" height="636" style="position:relative;z-index:2"></iframe>
+                                <iframe allowfullscreen="1" src="https://www.youtube.com/embed/JkCGTXTn0oM?controls=0&loop=1&playlist=JkCGTXTn0oM&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" width="1131" height="636" style="position:relative;z-index:2"></iframe>
                             </div>
                         </div>
 					</div>
@@ -141,5 +141,17 @@ if(!wcs_add) var wcs_add = {};
 wcs_add["wa"] = "73500228899d2c";
 wcs_do();
 </script>		
+<script type="text/javascript">
+$(document).ready(function(){
+<?
+	if ($_REQUEST["r"] == "v")
+	{
+?>
+			$('html, body').animate({scrollTop :  $(".m-video").offset().top -100}, 1000);
+<?		
+	}	
+?>
+});
+</script>
 	</body>
 </html>
