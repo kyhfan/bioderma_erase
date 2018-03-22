@@ -106,12 +106,12 @@ class mnv_function extends mnv_dbi
 		$kit_winner_count       = 7000;	// 투고 키트 총 당첨 수량
 		$goods_winner_count     = 6;	// 정품 총 당첨 수량
 
-        $kit_array      = array("Y","N","N","N","N","N","N","N","N");
+        $kit_array      = array("Y","N","N","N","N");
         // $kit_array      = array("Y");
         // $kit_array      = array("Y","N");
 		shuffle($kit_array);
 		
-		$goods_array    = array(3530);
+		$goods_array    = array(1310);
 
         // 총 키트 당첨 수량 
 		$kit_query      = "SELECT mb_winner, count(mb_winner) FROM member_info WHERE  mb_winner='kit'";
