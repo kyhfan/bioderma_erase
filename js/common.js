@@ -231,6 +231,7 @@ var bioderma = function() {
 			},
 			url: "./main_exec.php",
 			success: function(response){
+				console.log(response);
 				var res_arr = response.split("||");
 
 				switch(res_arr[1])
