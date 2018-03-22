@@ -46,7 +46,10 @@
 		unset($winner_cnt);
 		// $total_goods_cnt = 0;
 		// $total_kit_cnt = 0;
-		// $total_blank_cnt = 0;
+    // $total_blank_cnt = 0;
+    $winner_goods   = 0;
+    $winner_kit     = 0;
+    $winner_blank   = 0;
 		while ($winner_daily_data = mysqli_fetch_array($winner_res))
 		{
 			if ($winner_daily_data['mb_winner'] == "goods")
