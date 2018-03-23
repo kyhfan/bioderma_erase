@@ -1,14 +1,51 @@
 html, body {
     height: 100%;
+    font-family: "Noto Sans Korean", sans-serif;
 }
 body {
     margin: 0;
     padding: 0;
 }
-
 .wrap {
     position: relative;
     height: 100%;
+    width: 100%;
+}
+.main-header {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.main-header .header-wrap{
+    position: relative;
+    width: 1207px;
+    margin: 0 auto;
+    padding: 17px 0px;
+}
+.main-header .header-wrap .header-sns-area{
+    width: 100px;
+    position: absolute;
+}
+.main-header .header-wrap .header-logo {
+    position: absolute;
+    right: 0;
+}
+.main-header .header-wrap .header-navi {
+    position: absolute;
+    left: 362px;
+    height: 48px;
+}
+.main-header .header-wrap .header-navi div{
+    height: 48px;
+    width: 240px;
+    /* position: absolute; */
+    float: left;
+    background: url(../images/event2/event2_link_btn.png) no-repeat;
+}
+.main-header .header-wrap .header-navi div:first-child{
+    height: 48px;
+    margin-right: 15px;
+    background: url(../images/event2/event1_link_btn.png) no-repeat;
 }
 .main-section1 {
     position: absolute;
@@ -23,4 +60,21 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; */
+}
+.main-section1 .main-title {
+    position: relative;
+    top: 180px;
+    margin: 0 auto;
+    text-align: center;
+}
+.main-section1 .main-title span {
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+}
+.main-section1 .main-title span:first-child {
+    font-size: 80px;
+}
+.main-section1 .main-title span:last-child {
+    background: #eedac1;
 }
