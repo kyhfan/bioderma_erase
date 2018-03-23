@@ -6,7 +6,7 @@
 							<div class="c-popup__txt c-popup__txt--large"><em class="c-em">축하합니다!</em></div>
 						</div>
 						<div class="c-section c-section--small">
-							<div class="c-popup__txt-2">바이오더마 정품 3종 250ml에 당첨되셨습니다<br />
+							<div class="c-popup__txt-2">바이오더마 정품 3종 100ml에 당첨되셨습니다<br />
 						입력하셨던 정보로 매주 월요일에 일괄 발송될예정입니다</div>
 						</div>
 						<div class="c-section">
