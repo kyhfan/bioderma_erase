@@ -105,7 +105,7 @@ class mnv_function extends mnv_dbi
 	{
 		global $my_db;
 		$kit_winner_count       = 6000;	// 투고 키트 총 당첨 수량
-		$goods_winner_count     = 2;	// 정품 총 당첨 수량
+		$goods_winner_count     = 3;	// 정품 총 당첨 수량
 
         $kit_array      = array("Y","N","N","N","N","N","N","N","N","N");
         // $kit_array      = array("Y");
@@ -150,8 +150,8 @@ class mnv_function extends mnv_dbi
 						// 		break;
 						// 	}
 						// }
-						// $winner = "goods";
-						$winner = "blank";
+						$winner = "goods";
+						// $winner = "blank";
 					}
 				}
 			}
