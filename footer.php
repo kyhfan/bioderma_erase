@@ -16,7 +16,7 @@
 						<li>개인정보책임자: 김민정</li>
 					</ul>
 					<ul class="c-footer__list">
-						<li>이벤트 안내번호: 070-4888-1164</li>
+						<li>이벤트 안내번호: 070-4888-1164 (점심시간 :오후1시-2시)</li>
 						<li>통신판매업신고번호: 2015-서울서초-0215</li>
 						<li>E-MAIL: bioderma@bioderma.kr</li>
 					</ul>

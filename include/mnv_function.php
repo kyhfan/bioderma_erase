@@ -104,7 +104,7 @@ class mnv_function extends mnv_dbi
 	public function winner_draw2($level)
 	{
 		global $my_db;
-		$kit_winner_count       = 7000;	// 투고 키트 총 당첨 수량
+		$kit_winner_count       = 6000;	// 투고 키트 총 당첨 수량
 		$goods_winner_count     = 2;	// 정품 총 당첨 수량
 
         $kit_array      = array("Y","N","N","N","N","N","N","N","N","N");
