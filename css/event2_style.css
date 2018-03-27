@@ -4,6 +4,10 @@ html, body {
     padding: 0;
     font-family: "Noto Sans Korean", sans-serif;
 }
+ul {
+    list-style: none;
+}
+
 .wrap {
     position: relative;
     height: 100%;
@@ -100,13 +104,118 @@ html, body {
     background: url(../images/event2/header_gnb_icon3.png) no-repeat;
 }
 .main-section1 {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     height: 1032px;
     background: url(../images/event2/main_section1_bg.png) no-repeat;
 }
-.main-section1 .kit-image {
+.main-section1 .section1-wrap{
+    position: relative;
+    width: 1207px;
+    height: 100%;
+    margin: 0 auto;
+}
+.main-section1 .section1-wrap .main-title{
     position: absolute;
-    right: 125px;
+    top: 204px;
+}
+.main-section1 .section1-wrap .main-title .give_kit{
+    position: absolute;
+    width: 234px;
+    top: 500px;
+    left: 218px;
+}
+.main-section1 .section1-wrap .main-title .sub-title{
+    color: #e30061;
+    font-size: 103px;
+    letter-spacing: -5px;
+}
+.main-section1 .section1-wrap .main-title .sub-desc{
+    display: inline-block;
+    letter-spacing: -1.5px;
+    text-align: center;
+    font-size: 33px;
+}
+
+.main-section1 .section1-wrap .kit-image {
+    position: absolute;
+    right: -294px;
     top: 435px;
+}
+
+.main-section2 {
+    position: relative;
+    background: #fbedef;
+    width: 100% ;
+    height:3500px;
+}
+.main-section2 .section2-wrap{
+    position: relative;
+    width: 1207px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.main-section2 .section2-wrap .title{
+    /* position: absolute; */
+    padding-top: 156px;
+    margin: 0 auto;
+}
+.main-section2 .section2-wrap .title .sub-title1{
+    font-size: 60px;
+    color: #e30061;
+    letter-spacing: -3.6px;
+}
+.main-section2 .section2-wrap .title .sub-title2{
+    font-size: 60px;
+    letter-spacing: -3.6px;
+}
+.main-section2 .section2-wrap .title .sub-title3{
+    font-size: 35px;
+    letter-spacing: -1.8px;
+}
+.main-section2 .section2-wrap .kit-image{
+    width: 792px;
+    margin: 0 auto;
+}
+.main-section2 .section2-wrap .section2-notice{
+    margin-top: -70px;
+    font-size: 24px;
+    letter-spacing: -1px;
+}
+.main-section2 .section2-wrap .section2-notice2{
+    position: absolute;
+    left: 0;
+    text-align: left;
+}
+.main-section2 .section2-wrap .section2-notice2 div{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 17px;
+}
+.main-section2 .section2-wrap .section2-notice2 ul{
+    font-size: 24px;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+.main-section2 .section2-wrap .section2-notice div{
+    font-weight: bold;
+}
+.main-section2 .section2-wrap .section2-use-text {
+    position: absolute;
+    left: 24px;
+    font-size: 40px;
+    margin-top: 40px;
+}
+.main-section2 .section2-wrap .section2-use-img {
+    margin-top: 120px;
+}
+.main-section2 .section2-wrap .section2-use-exam-text {
+    position: absolute;
+    left: 24px;
+    font-size: 40px;
+    margin-top: 40px;
+}
+.main-section2 .section2-wrap .section2-use-exam-img {
+    margin-top: 97px;
 }
