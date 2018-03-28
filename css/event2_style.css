@@ -147,7 +147,7 @@ ul {
     position: relative;
     background: #fbedef;
     width: 100% ;
-    height:3500px;
+    height:3863px;
 }
 .main-section2 .section2-wrap{
     position: relative;
@@ -161,6 +161,12 @@ ul {
     padding-top: 156px;
     margin: 0 auto;
 }
+.main-section2 .section2-wrap .title2{
+    /* position: absolute; */
+    padding-top: 292px;
+    margin: 0 auto;
+    padding-bottom: 51px;
+}
 .main-section2 .section2-wrap .title .sub-title1{
     font-size: 60px;
     color: #e30061;
@@ -173,6 +179,15 @@ ul {
 .main-section2 .section2-wrap .title .sub-title3{
     font-size: 35px;
     letter-spacing: -1.8px;
+}
+.main-section2 .section2-wrap .title2 .sub-title1{
+    font-size: 60px;
+    color: #e30061;
+    letter-spacing: -3.6px;
+}
+.main-section2 .section2-wrap .title2 .sub-title2{
+    font-size: 32px;
+    letter-spacing: -3.6px;
 }
 .main-section2 .section2-wrap .kit-image{
     width: 792px;
@@ -219,3 +234,149 @@ ul {
 .main-section2 .section2-wrap .section2-use-exam-img {
     margin-top: 97px;
 }
+.main-section2 .section2-wrap .section2-best-content {
+    position: relative;
+    background: #fff;
+    width: 1207px;
+    height: 603px;
+}
+.main-section2 .section2-wrap .section2-best-content .image_area{
+    position: absolute;
+    width: 560px;
+    margin: 21px;
+}
+.main-section2 .section2-wrap .section2-best-content .content_area{
+    position: absolute;
+    width: 560px;
+    right: 0;
+    /* height: 130px; */
+}
+.main-section2 .section2-wrap .section2-best-content .content_area .profile_area{
+    width: 498px;
+    height: 130px;
+    border-width: 2px;
+    border-bottom-width:2px;
+    border-bottom-color:#e4e4e4;
+    border-bottom-style: solid;
+}
+.main-section2 .section2-wrap .section2-best-content .content_area .profile_area img{
+    float: left;
+    margin-top: 30px;
+    margin-left: 45px;
+}
+.main-section2 .section2-wrap .section2-best-content .content_area .profile_area span{
+    float: left;
+    font-size: 32px;
+    margin-top: 47px;
+    margin-left: 24px;
+}
+.main-section2 .section2-wrap .section2-best-content .content_area .desc_area{
+    width: 453px;
+    margin-left: 45px;
+    margin-top: 40px;
+    font-size: 38px;
+    text-align: left;
+}
+.main-section2 .section2-wrap .section2-best-content .content_area .color_area{
+    width: 12px;
+    height: 130px;
+    background: #7a5997;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.main-section2 .section2-wrap .section2-best-content .arrow_area{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 37px;
+    margin-right: 49px;
+}
+.main-section2 .section2-wrap .section2-best-content img{
+    margin-right: 13px;
+}
+.main-section3 {
+    height: 500px;
+}
+.main-section3 .section3-wrap{
+    position: relative;
+    width: 1207px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    top: -293px;
+}
+.main-section3 .section3-wrap .title{
+}
+.main-section3 .section3-wrap .title span{
+    font-size: 60px;
+    background: #ff0063;
+    color: #fff;
+    margin-right: 29px;
+}
+.main-section3 .section3-wrap .sub_title{
+    display: inline-block;
+    font-size: 35px;
+    color: #595757;
+    margin-top: 20px;
+}
+.main-section3 .section3-wrap .iframe_area{
+    height: 500px;
+    background: skyblue;
+}
+.main-footer {
+    background: #ff0063;
+    height: 155px;
+}
+
+.c-footer {
+	padding: 30px 0;
+	background-color: #e30061;
+}
+.c-footer__aligner {
+	width: 899px;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+}
+.c-footer__list {
+	font-size: 0;
+	text-align: center;
+}
+.c-footer__list + .c-footer__list {
+	margin-top: 5px;
+}
+.c-footer__list > li {
+	display: inline-block;
+	position: relative;
+	color: #fff;
+	font-size: 13px;
+}
+.c-footer__list > li + li {
+	padding-left: 10px;
+	margin-left: 8px;
+}
+.c-footer__list > li + li:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 1px;
+	height: 13px;
+	background-color: #fff;
+	 -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.c-footer__list > li > a {
+	display: inline-block;
+	color: #fff;
+	font-size: 13px;
+}
+.copyright {
+	margin-top: 10px;
+	color: #fff;
+	font-size: 12px;
+}
+
