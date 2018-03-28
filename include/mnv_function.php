@@ -150,8 +150,8 @@ class mnv_function extends mnv_dbi
 						// 		break;
 						// 	}
 						// }
-						$winner = "goods";
-						// $winner = "blank";
+						// $winner = "goods";
+						$winner = "blank";
 					}
 				}
 			}
