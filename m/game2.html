@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="./lib/swiper-4.2.0/dist/css/swiper.min.css">
+<!--	<link rel="stylesheet" href="./css/common.css" />-->
+	<link rel="stylesheet" href="./css/page.css" />
+	<link rel="stylesheet" href="./css/event2.css" />
+	<link type="image/icon" rel="shortcut icon" href="http://www.biodermaevent.com/images/favicon.ico" />
+	<script src="./lib/jquery/jquery-1.9.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
+	<script src="./lib/placeholder/jquery.placeholder.min.js"></script>
+	<script src="./lib/gsap/TweenMax.min.js"></script>
+	<script src="./lib/gsap/jquery.gsap.min.js"></script>
+	<script src="./lib/eraser/jquery.eraser.js"></script>
+	<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+	<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+	<script src="./lib/swiper-4.2.0/dist/js/swiper.min.js"></script>
+	<script src="./js/common.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114911663-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-114911663-1');
+	</script>		
+	<title>바이오더마 2차</title>
+</head>
+<body>
+	<div class="wrap wrap--sub">
+		<div class="c-header">
+			<div class="c-header__aligner">
+				<h1 class="c-h1"><a href="http://www.bioderma.co.kr/" target="_blank" class="c-h1__logo"><img src="./images/common/c-logo.png" alt="BIODERMA" /></a></h1>
+				<a href="#" class="c-drawer__trigger">
+					<span class="c-drawer__burger c-drawer__burger--top">메뉴</span>
+					<span class="c-drawer__burger c-drawer__burger--middle">열기</span>
+					<span class="c-drawer__burger c-drawer__burger--bottom">닫기</span>
+				</a>
+			</div>
+			<div class="c-drawer">
+				<div class="c-drawer__aligner">
+					<div class="c-events">
+						<button class="c-event c-event--1" onclick="alert('event')"><span>투고키트 이벤트</span></button>
+						<button class="c-event c-event--2" onclick="alert('test')"><span>메이크업 인지 테스트</span></button>
+						<button class="c-event c-event--3" onclick="alert('dram')"><span>바이오더마 웹드라마</span></button>
+					</div>
+					<div class="c-sns">
+						<button class="c-sns__button c-sns__button--facebook" onclick="sns_share('fb')">페이스북</button>
+						<button class="c-sns__button c-sns__button--kakao" onclick="sns_share('ks')">카카오스토리</button>
+						<button class="c-sns__button c-sns__button--kakaotalk"  onclick="sns_share('kt')">카카오톡</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div id="left_game_back" style="width:20px;height:100%;position:absolute;top:50px;background:rgba(0,0,0,0.5);z-index:6">
+
+</div>
+<div id="right_game_back" style="width:20px;height:100%;right:0;position:absolute;top:50px;background:rgba(0,0,0,0.5);z-index:6">
+
+</div> -->
+		<div class="c-content c-content--sub">
+			<!-- <div class="game__popups ">
+<div class="game__popup">
+<a href="#" class="game__start">게임시작</a>
+</div>
+</div> -->
+			<div class="gauge">
+				<div class="gauge__time">20</div>
+				<div class="gauge__bars">
+					<div class="gauge__bar">
+						<div class="gauge__adds"><div class="gauge__add"></div></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="game">
+				<div class="game__aligner">
+					<!-- 
+.game__box에 "game__box--active"클래스 추가해주면 활성화 
+-->
+					<div class="game__box game__box--active" data-stage-num="1">
+						<div class="game__image game__image-1"><img class="stage-image" id="stageImg1" src="./images/pages/game__image-1.png" alt="" /></div>
+						<a href="#" class="game__cotton game__cotton-1"><img src="./images/pages/cotton-1.png" alt="" /></a>
+					</div>
+					<div class="game__box" data-stage-num="2">
+						<div class="game__image game__image-2"><img class="stage-image" id="stageImg2" src="./images/pages/game__image-2.png" alt="" /></div>
+						<a href="#" class="game__cotton game__cotton-2"><img src="./images/pages/cotton-2.png" alt="" /></a>
+					</div>
+					<div class="game__box" data-stage-num="3">
+						<div class="game__image game__image-3"><img class="stage-image" id="stageImg3" src="./images/pages/game__image-3.png" alt="" /></div>
+						<a href="#" class="game__cotton game__cotton-3"><img src="./images/pages/cotton-3.png" alt="" /></a>
+					</div>
+					<!-- 
+.game__step에 "game__step--active"클래스 추가해주면 활성화
+-->
+					<div class="game-clear__msg">
+						<span class="msg">CLEAR<i>!</i></span>
+					</div>
+				</div>
+				<div class="game__steps">
+					<a href="#" id="step1" class="game__step game__step--active">1</a>
+					<a href="#" id="step2" class="game__step">2</a>
+					<a href="#" id="step3" class="game__step">3</a>
+				</div>
+			</div>
+		</div>
+		<div class="c-footer">
+			<div class="c-footer__aligner">
+				<ul class="c-footer__list">
+					<li><a href="http://www.bioderma.co.kr/page/brand_philosophy.php" target="_blank">바이오더마 소개</a></li>
+					<li><a href="http://www.bioderma.co.kr/front/board.php?bbs_id=notice" target="_blank">온라인 고객센터</a></li>
+				</ul>
+				<ul class="c-footer__list c-footer__list--none">
+					<li>나오스코리아 유한회사</li>
+					<li>대표: 장이브데모트</li>
+					<li>사업자등록번호: 214-88-79685 <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=&apv_perm_no=2015321015330200215" target="_blank">(사업자정보확인)</a></li>
+					<li>주소: 서울특별시 서초구 서초중앙로 138 우림빌딩 7층 <br>나오스코리아 유한회사</li>
+					<li>개인정보책임자: 김민정</li>
+					<li>이벤트 안내번호: 070-4888-1164</li>
+					<li>통신판매업신고번호: 2015-서울서초-0215</li>
+					<li>E-MAIL: bioderma@bioderma.kr</li>
+				</ul>
+				<div class="copyright">©2018  BIODERMA.  ALL RIGHT RESERVED.</div>
+			</div>
+		</div>
+	</div>
+	<!--
+<?
+include_once "./popup/popup_try_again.php";
+
+include_once "./popup/popup_game_pre.php";
+
+include_once "./popup/popup_level1_clear.php";
+
+include_once "./popup/popup_level2_clear.php";
+
+include_once "./popup/popup_level3_clear.php";
+
+include_once "./popup/popup_winner_goods.php";
+
+include_once "./popup/popup_winner_kit.php";
+
+include_once "./popup/popup_winner_draw.php";
+
+include_once "./popup/popup_agree1.php";
+
+include_once "./popup/popup_agree2.php";
+?>		
+-->
+	<div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:9999;-webkit-overflow-scrolling:touch;">
+		<img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="width:7%;cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()" alt="닫기 버튼">
+	</div>
+
+	<script type="text/javascript">
+
+		var count = 0;
+		var time = 20;
+		var gameTimer = null;
+		var sizeArray = [57, 47, 41];
+		var ratioArray = [94, 98, 95];
+
+		popupOpen("popup_game_pre");
+		function gameTimerExec(imageNum) {
+			gameTimer = setInterval(function() {
+				time--;
+				count+=1;
+				var gaugeWidths = $('.gauge__adds').css('width'),
+					gaugeWidth = parseInt(gaugeWidths.replace('px', ''));
+				$('.gauge__time').text(time);
+				$('.gauge__adds').animate({
+					// 'width': ((count + 2) * 3.33) + '%'
+					'width': ((count + 2) * 5.1) + '%'
+				}, 1000, 'linear');
+
+				if (time <= 0) {
+					$('.gauge__adds').addClass('gauge__adds--active');
+					clearInterval(gameTimer);
+					switch(imageNum)
+					{
+						case 0 :
+							popupOpen("popup_tryagain");
+							break;
+						case 1 :
+							popupOpen("popup_level1_clear");
+							break;
+						case 2 :
+							popupOpen("popup_level2_clear");
+							break;
+					}
+					// alert("게임오버");
+				}                            
+			}, 1000);  
+		}
+		// gauge
+		$('.game_start').on('click', function(event){
+			popupClose("popup_game_pre");
+			$('.game__popups').addClass('game__popups--active');
+			$('.gauge__body').css('width','0');
+			// $("#left_game_back").hide();
+			// $("#right_game_back").hide();
+
+			gameTimerExec(0);
+
+			$.ajax({
+				type:"POST",
+				data:{
+					"exec"					: "game_click_info"
+
+				},
+				url: "../main_exec.php",
+				success: function(response){
+					var res_arr = response.split("||");
+
+					switch(res_arr[1])
+					{
+						case "blank" :
+							popupClose("popup_level" + level + "_clear");
+							popupOpen("popup_winner_draw");
+							break;
+						case "goods" :
+							popupClose("popup_level" + level + "_clear");
+							popupOpen("popup_winner_goods");
+							break;
+						case "kit" :
+							popupClose("popup_level" + level + "_clear");
+							popupOpen("popup_winner_kit");
+							break;
+						case "D" :
+							alert("이미 참여해 주셨습니다. 감사합니다.");
+							location.href = "index.php";
+							break;
+					}
+					// console.log(response);
+				}
+			});
+
+			//                    var second = 31,
+			//                        count = -1;
+			//                    for ( var time = 0 ; time <= 30; time++){
+			//                        setTimeout(function(){
+			//                            $('.gauge__time').text(second-=1);
+			//                            count+=1;
+			//
+			//                            $('.gauge__adds').stop().animate({'width': (3.33*(count+2))+'%'},1000,'linear');
+			//
+			//                            if ( count == 30){
+			//                                $('.gauge__adds').addClass('gauge__adds--active');
+			//                            }
+			//                        },1000*time);
+			//                    }
+		});
+
+
+		// eraser 
+		eraserSet(1,57, 94);
+		//                eraserSet(2,37);
+		//                eraserSet(3,30);
+
+		function eraserSet(imageNum, sizeValue, ratio) {
+			ratio = ratio || 92;
+			setRatio = (ratio*0.01).toFixed(2);
+			$('.game__image-'+imageNum).find('.stage-image').eraser({
+				size: sizeValue,
+				completeRatio: setRatio,
+				completeFunction: function() {
+					clearInterval(gameTimer);
+					//                                console.log("clear");
+					$('.game-clear__msg').css({
+						'opacity': 0,
+						'z-index': 9999
+					}).animate({
+						'opacity': 1
+					}, 1000, function() {
+						console.log("next");
+						$('.game-clear__msg').css({
+							'opacity': 0,
+							'z-index': -1
+						});
+						stageClear(imageNum, sizeValue, ratio);
+					});
+					//                                clearInterval(gameTimer);
+					//                                stageClear(imageNum, sizeValue, ratio);
+				},
+				progressFunction: function(p) {
+					console.log(Math.round(p * 100) + '%');
+				}
+			});
+		}
+		function stageClear(imageNum, sizeValue, ratio) {
+			if(imageNum > 2) {
+				// alert("올 클리어");                        
+				clearInterval(gameTimer);
+				popupOpen("popup_level3_clear");
+				return;
+			}
+			$('.game__image-' + imageNum).find('.stage-image').eraser('disable');
+			var nextNum = imageNum+1;
+			var nextSize = sizeArray[imageNum];
+			var nextRatio = ratioArray[imageNum];
+			$('[data-stage-num='+ imageNum +']').removeClass('game__box--active');
+			$('[data-stage-num='+ nextNum +']').addClass('game__box--active');
+
+			gameTimerExec(imageNum);
+			eraserSet(nextNum, nextSize, nextRatio);
+			$(".game__step").removeClass("game__step--active");
+			$("#step" + nextNum).addClass("game__step--active");
+		}
+	</script>
+	<script type="text/javascript" src="http://wcs.naver.net/wcslog.js"></script>
+	<script type="text/javascript">
+		if(!wcs_add) var wcs_add = {};
+		wcs_add["wa"] = "73500228899d2c";
+		wcs_do();
+	</script>        
+</body>
+</html>
