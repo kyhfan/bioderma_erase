@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>PixiJS V4 Displacement Filter Demo - By MarkHawkinsDesigns.com</title>
+	
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.6.2/pixi.min.js"></script>	-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
+
+	
+	
+<style type="text/css">
+	
+	body{
+		background-color:#ffffff;
+	}
+	
+	
+	
+	canvas {
+/*		width:100%;*/
+		width:137px;
+		max-width:600px;
+	}
+</style>
+</head>
+<body>
+	
+	
+	
+	
+	
+	
+	
+<script>
+var size = [272, 315];
+var ratio = size[0] / size[1];
+var stage = new PIXI.Stage(0x333333, true);
+var renderer = PIXI.autoDetectRenderer(size[0], size[1], {antialias: true ,transparent: true});	
+
+// our animation speed	
+var speed = 0.5;
+	
+    // Append PixiJS to body		
+    document.body.appendChild(renderer.view);
+    
+    var stage = new PIXI.Container();
+ 	
+    // get our image background as a texture
+	var texture = PIXI.Texture.fromImage('./images/event_2/main_visual_btn.png');
+    // add it to a sprite
+    var image = new PIXI.Sprite(texture);
+
+    // get our displacement map (image)	
+    var displacementSprite = PIXI.Sprite.fromImage("./images/filters/water.png");
+    // set to repeat in a tiled patern
+   displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;	
+	
+
+	
+   // set filter to sprite container
+    var displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
+	
+	// Add our filter and sprites to stage	
+    stage.filters = [displacementFilter];
+    stage.addChild(displacementSprite);
+    stage.addChild(image);
+
+		
+    animate();
+    function animate() {
+        requestAnimationFrame(animate);
+
+        displacementSprite.x += speed;
+        displacementSprite.y += speed;
+
+        renderer.render(stage);
+    }
+	
+	</script>
+</body>
+</html>

@@ -511,6 +511,7 @@ a {
 .content-main .feed .best-wrapper .swiper-slide .profile .thumb {
 	width: 26px;
 	font-size: 12px;
+	border-radius: 50%;
 }
 .content-main .feed .best-wrapper .swiper-slide .profile span {
 	display: inline-block;
@@ -655,6 +656,109 @@ a {
 
 
 /* footer */
+
+
+/* popup */
+html.popup-opened,
+html.popup-opened body {
+	height: 100%;
+	overflow: hidden;
+}
+.popup-wrap {
+	position: fixed;
+	top: 0;
+/*	left: 0;*/
+	left: -200%;
+	opacity: 0;
+/*	opacity: 1;*/
+	z-index: 2000;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	font-size: 0;
+	line-height: 0;
+	text-align: center;
+	white-space: nowrap;
+	word-break: normal;
+	word-wrap: normal;
+	background: rgba(0, 0, 0, 0.8);
+	transition: opacity 0.2s;
+}
+.popup-wrap.is-opened {
+	left: 0;
+	opacity: 1;
+}
+.popup-wrap::before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.popup {
+	width: 320px;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+	border-radius: 4px;
+	background: #ffffff;
+	position: relative;
+	min-height: 255px;
+}
+.popup .popup-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	display: block;
+	width: 23px;
+	height: 23px;
+	padding: 8px;
+	background: url(../images/event_2/c-popup__close.png) no-repeat;
+	background-size: 23px auto;
+}
+.popup-video {
+	padding: 28px 0 17px;
+}
+.popup-video .title {
+	display: block;
+	width: 157px;
+	margin: 0 auto; 
+}
+.popup-video .area-video .wrapper {
+	background: url(../images/event_2/popup_frame_video.png) no-repeat;
+	background-size: 282px auto;
+	width: 282px;
+	height: 174px;
+	margin: 17px auto 0;
+	padding: 3px;
+}
+.popup-video .area-video .wrapper .video {
+	width: 100%;
+}
+.title.tt-deco {
+	position: relative;
+	box-sizing: content-box;
+	padding: 0 28px;
+}
+.title.tt-deco::before,
+.title.tt-deco::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -7px;
+	width: 16px;
+	height: 15px;
+}
+.title.tt-deco::before {
+	left: 0;
+	background: url(../images/event_2/title_deco_left.png) no-repeat;
+	background-size: 16px auto;
+}
+.title.tt-deco::after {
+	right: 0;
+	background: url(../images/event_2/title_deco_right.png) no-repeat;
+	background-size: 16px auto;
+}
+/* popup */
 
 
 @media screen and (max-width: 350px) {
