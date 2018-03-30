@@ -245,12 +245,18 @@ ul {
     width: 1207px;
     height: 603px;
 }
-.main-section2 .section2-wrap .section2-best-content .best_flag{
+.main-section2 .section2-wrap .best_flag {
+    position: absolute;
+    width: 113px;
+    z-index: 9;
+    margin-top: -26px
+}
+/* .main-section2 .section2-wrap .section2-best-content .best_flag{
     position: absolute;
     z-index: 3;
     left: 18px;
     top: -25px;
-}
+} */
 .main-section2 .section2-wrap .section2-best-content .image_area{
     position: absolute;
     width: 560px;
@@ -302,6 +308,19 @@ ul {
     right: 0;
     margin-bottom: 37px;
     margin-right: 49px;
+    z-index: 5;
+    width: 141px;
+}
+.main-section2 .section2-wrap .section2-best-content .arrow_area .button-prev{
+    float: left;
+    width: 63px;
+    margin-right: 13px;
+    cursor: pointer;
+}
+.main-section2 .section2-wrap .section2-best-content .arrow_area .button-next{
+    float: left;
+    width: 63px;
+    cursor: pointer;
 }
 .main-section2 .section2-wrap .section2-best-content img{
     margin-right: 13px;
