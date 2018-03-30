@@ -5,80 +5,6 @@
 	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<meta name="format-detection" content="telephone=no" />
-	<style>
-		#btn-temp {
-			display: block;
-			width:136px;
-			margin: 0 auto;
-			position: relative;
-			left: 4px;
-		}
-		#btn-temp:after {
-			content: "";
-			position: absolute;
-			z-index: 0;
-			pointer-events: none;
-			bottom: -16px;
-			left: -43px;
-			width: 205px;
-			height: 227px;
-			background: url(./images/event_2/main_visual_btn_shadow.png) no-repeat;
-			background-size: 205px auto;
-		}
-		#btn-temp .txt {
-			background: url(./images/event_2/main_visual_btn_text_test.png) no-repeat;
-			background-size: 76px auto;
-			width: 76px;
-			height: 48px;
-			position: absolute;
-			z-index: 2;
-			top: 32px;
-			left: 22px;
-			pointer-events: none;
-		}
-		#btn-temp .obj {
-			background: url(./images/event_2/main_visual_btn_hand_test.png) no-repeat;
-			background-size: 18px auto;
-			width: 18px;
-			height: 24px;
-			position: absolute;
-			z-index: 2;
-			top: 87px;
-			left: 51px;
-			pointer-events: none;
-			animation-name: fingerMotion;
-			animation-duration: 2.2s;
-			animation-delay: 1s;
-			animation-iteration-count: infinite;
-		}
-		@keyframes fingerMotion {
-			0% {
-				transform: translateY(0);
-			}
-			10% {
-				transform: translateY(-5px);
-			}
-			20% {
-				transform: translateY(0);
-			}
-			30% {
-				transform: translateY(-5px);
-			}
-			40% {
-				transform: translateY(0);
-			}
-			100% {
-				transform: translateY(0);
-			}
-			]
-		}
-		canvas {
-			width:100%;
-			position: relative;
-			z-index: 1;
-/*			max-width:600px;*/
-		}
-	</style>
 	<link rel="stylesheet" href="./lib/swiper-4.2.0/dist/css/swiper.min.css">
 	<link rel="stylesheet" href="./css/event2.css" />
 	<link type="image/icon" rel="shortcut icon" href="http://www.biodermaevent.com/images/favicon.ico" />
@@ -142,7 +68,8 @@
 					<span class="txt"></span>
 					<span class="obj"></span>
 				</a>
-<!--				<button class="btn-get">투고키트 받기</button>-->
+				<button class="btn-get">투고키트 받기<span class="txt"></span>
+					<span class="obj"></span></button>
 				<button class="btn-more">더보기</button>
 			</section>
 			<section class="howto">
@@ -319,21 +246,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="popup-wrap">
-		<div class="popup popup-video">
-			<div class="title tt-deco">
-				<img src="./images/event_2/popup_title_video.png" alt="메이크업 인지 테스트">
-			</div>
-			<div class="area-video">
-				<div class="wrapper">
-					<div class="video">
-						<img src="./images/event_2/popup_video_sample.jpg" alt="">
-					</div>
-				</div>
-			</div>
-			<a class="popup-close" href="javascript:void(0)"></a>
-		</div>
-	</div>
+	
 	<script type="text/javascript">
 		$(document).ready(function() {
 			var mySwiper = new Swiper ('.swiper-container', {
@@ -348,126 +261,6 @@
 			})
 		});
 		
-//		var app = new PIXI.Application(window.innerWidth, window.innerHeight);
-//		document.body.appendChild(app.view);
-//
-//		var stage = new PIXI.Container();
-//		var renderer = PIXI.autoDetectRenderer(272, 316, {antialias: true ,transparent: true});
-//		renderer.autoResize = true;
-//		var btnTemp = document.getElementById('btn-temp');
-////		app.stage.appendChild(renderer.view);
-//		btnTemp.appendChild(renderer.view);  
-//
-//		// load assets
-//		PIXI.loader
-//			.add("./images/event_2/main_visual_btn_test2.png")
-//			.add("./images/event_2/map.png")
-//			.load(setup);
-//
-//		var ripples = [];
-//
-//		function setup() {
-//			// background
-//			var bg = new PIXI.Sprite(PIXI.loader.resources["./images/event_2/main_visual_btn_test2.png"].texture);
-//			bg.anchor.set(0.5);
-//			bg.scale.set(1);
-//			bg.position.set(renderer.view.width/2, renderer.view.height/2);
-//			stage.addChild(bg);
-//
-//			// add new ripple each time mouse is clicked
-//			renderer.view.addEventListener('mousedown', function(ev) {
-//				ripples.push(new Ripple(ev.clientX, ev.clientY));
-//				stage.filters = ripples.map(function(f) { return f.filter; });
-//			}, false);
-//
-//			gameLoop();
-//		}
-//
-//		function gameLoop() {
-//			requestAnimationFrame(gameLoop);
-//
-//			// update ripples
-//			for(var i=0; i<ripples.length; i++) {
-//				ripples[i].update();
-//			}
-//
-//			renderer.render(stage);
-//		}
-//
-//		function Ripple(x, y) {
-//			// sprite
-//			this.sprite = new PIXI.Sprite(PIXI.loader.resources["./images/event_2/map.png"].texture);
-//			this.sprite.anchor.set(0.5);
-//			console.log(this.sprite.anchor);
-//			this.sprite.position.set(x-67, y-260);
-//			this.sprite.scale.set(0.1);
-//			stage.addChild(this.sprite);
-//			// filter
-//			this.filter = new PIXI.filters.DisplacementFilter(this.sprite);
-//		}
-//
-//		Ripple.prototype.update = function() {
-//			this.sprite.scale.x += 0.015;
-//			this.sprite.scale.y += 0.015;
-//			if(this.sprite.scale.x > 5 && this.sprite.scale.y > 5) {
-//				ripples.pop();
-//			}
-//		}
-//		
-		
-		
-		var size = [272, 315];
-		var ratio = size[0] / size[1];
-		var stage = new PIXI.Stage(0x333333, true);
-		var renderer = PIXI.autoDetectRenderer(size[0], size[1], {antialias: true ,transparent: true});	
-		var btnTemp = document.getElementById('btn-temp');
-
-
-		// our animation speed	
-		var speed = 1;
-
-		// Append PixiJS to body		
-		btnTemp.appendChild(renderer.view);
-
-		var stage = new PIXI.Container();
-
-
-		// get our image background as a texture
-		var texture = PIXI.Texture.fromImage('./images/event_2/main_visual_btn_test2.png');
-		// add it to a sprite
-		var image = new PIXI.Sprite(texture);
-
-		// get our displacement map (image)	
-		var displacementSprite = PIXI.Sprite.fromImage("./images/filters/water.png");
-		
-		// add
-		displacementSprite.anchor.set(0.5);
-		displacementSprite.scale.set(1.7);
-		displacementSprite.position.set((btnTemp.innerWidth / 2)-13.5, (btnTemp.innerHeight / 2)-31);
-//		displacementSprite.position.set((btnTemp.innerWidth / 2)-50, (btnTemp.innerHeight / 2)-50);
-		
-		// set to repeat in a tiled patern
-		displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;	
-
-		// set filter to sprite container
-		var displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
-
-		// Add our filter and sprites to stage	
-		stage.filters = [displacementFilter];
-		stage.addChild(displacementSprite);
-		stage.addChild(image);
-
-
-		animate();
-		function animate() {
-			requestAnimationFrame(animate);
-
-			displacementSprite.x += speed;
-			displacementSprite.y += speed;
-
-			renderer.render(stage);
-		}
-
 
 	</script>
 </body>

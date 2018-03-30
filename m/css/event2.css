@@ -310,6 +310,8 @@ a {
 .c-content--sub {
 /*	background: url('../images/pages/c-sub.png') no-repeat 35% bottom, linear-gradient(to top, #e3e3e3, #fbfbfb,#e3e3e3);*/
 	background: none;
+	position: relative;
+	padding: 50px 10px 0px 10px;
 /*	background: url(../images/event_2/sub_ev2_bg.jpg) 12% top no-repeat;*/
 }
 .content-main section .area-title {text-align: center;}
@@ -369,6 +371,32 @@ a {
 	background: url(../images/event_2/main_visual_btn.png) no-repeat;
 	background-size: 136px auto;
 	text-indent: -9999px;
+}
+.content-main .visual .btn-get .txt {
+	background: url(../images/event_2/main_visual_btn_text_test.png) no-repeat;
+	background-size: 76px auto;
+	width: 76px;
+	height: 48px;
+	position: absolute;
+	z-index: 2;
+	top: 32px;
+	left: 22px;
+	pointer-events: none;
+}
+.content-main .visual .btn-get .obj {
+	background: url(../images/event_2/main_visual_btn_hand_test.png) no-repeat;
+	background-size: 18px auto;
+	width: 18px;
+	height: 24px;
+	position: absolute;
+	z-index: 2;
+	top: 87px;
+	left: 51px;
+	pointer-events: none;
+	animation-name: fingerMotion;
+	animation-duration: 2.2s;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
 }
 .content-main .visual .btn-more {
 	display: inline-block;
@@ -583,6 +611,26 @@ a {
 	width: 100%;
 }
 
+.c-content--sub .game {
+	padding-bottom: 10px;
+}
+
+.c-content--sub .wrapper.video {
+	padding: 121px 0 179px;
+}
+.c-content--sub .wrapper.video .title {
+	width: 176px;
+	margin: 0 auto 17px;
+}
+.c-content--sub .wrapper.video .area-video .wrapper {
+	background: url(../images/event_2/popup_frame_video.png) no-repeat;
+	background-size: 100% auto;
+	padding: 3px;
+}
+.c-content--sub .wrapper.video .area-video .wrapper .video {
+	width: 100%;
+}
+
 /* footer */
 .c-footer {
 	padding: 15px 0;
@@ -666,6 +714,33 @@ a {
 
 /* footer */
 
+/* public */
+.title.tt-deco {
+	position: relative;
+	box-sizing: content-box;
+	padding: 0 30px;
+}
+.title.tt-deco::before,
+.title.tt-deco::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+	width: 20px;
+	height: 17px;
+}
+.title.tt-deco::before {
+	left: 0;
+	background: url(../images/event_2/title_deco_left.png) no-repeat;
+	background-size: 20px auto;
+}
+.title.tt-deco::after {
+	right: 0;
+	background: url(../images/event_2/title_deco_right.png) no-repeat;
+	background-size: 20px auto;
+}
+/* public */
+
 
 /* popup */
 html.popup-opened,
@@ -724,51 +799,99 @@ html.popup-opened body {
 	background: url(../images/event_2/c-popup__close.png) no-repeat;
 	background-size: 23px auto;
 }
-.popup-video {
-	padding: 28px 0 17px;
-}
-.popup-video .title {
-	display: block;
-	width: 157px;
-	margin: 0 auto; 
-}
-.popup-video .area-video .wrapper {
-	background: url(../images/event_2/popup_frame_video.png) no-repeat;
-	background-size: 282px auto;
-	width: 282px;
-	height: 174px;
-	margin: 17px auto 0;
-	padding: 3px;
-}
-.popup-video .area-video .wrapper .video {
-	width: 100%;
-}
-.title.tt-deco {
-	position: relative;
-	box-sizing: content-box;
-	padding: 0 28px;
-}
-.title.tt-deco::before,
-.title.tt-deco::after {
-	content: "";
-	position: absolute;
-	top: 50%;
-	margin-top: -7px;
-	width: 16px;
-	height: 15px;
-}
-.title.tt-deco::before {
-	left: 0;
-	background: url(../images/event_2/title_deco_left.png) no-repeat;
-	background-size: 16px auto;
-}
-.title.tt-deco::after {
-	right: 0;
-	background: url(../images/event_2/title_deco_right.png) no-repeat;
-	background-size: 16px auto;
-}
+
 /* popup */
 
+/* animation */
+@keyframes fingerMotion {
+	0% {
+		transform: translateY(0);
+	}
+	10% {
+		transform: translateY(-5px);
+	}
+	20% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(-5px);
+	}
+	40% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+/* animation */
+@media ( max-width: 380px ){
+	.c-content--sub {
+		padding: 50px 10px 0px 10px;
+	}
+	.game__popup {
+		width: 318px;
+		margin: 0 auto;
+		background-size: 318px auto;
+	}
+	.game__image {
+		width: 286px;
+		height: 351px !important;
+	}
+
+	#stageImg1 {
+		height: 265px !important;
+		top: 55px;
+		left: 50px;
+	}
+	#stageImg2 {
+		height: 278px !important;
+		top: 46px;
+		left: 30px;
+	}
+	#stageImg3 {
+		height: 266px !important;
+		top: 53px;
+		left: 37px;
+	}
+	.gauge {
+		max-width: 295px;
+		margin-top: 9px;
+	}
+	.game__step + .game__step {
+		margin-left: 50px;
+	}
+	.game__step {
+		width: 25px;
+		padding: 5px 1px 9px 0;
+		background-size: 25px auto;
+	}
+	.game__step.game__step--active {
+		background-size: 25px auto;	
+	}
+	.game__step + .game__step:before {
+		top: 12px;
+		left: -48px;
+		width: 45px;
+	}
+	.game__aligner {
+		max-width: 290px;
+	}
+
+	.game__cotton.game__cotton-1 {
+		/*		bottom: 22%;*/
+		bottom: 29%;
+		/*		left: 5.8%;*/
+		left: 60.8%;
+	}
+
+
+	/*
+	.game__image canvas {
+	height: 351px !important;
+	}
+	*/
+
+}
 
 @media screen and (max-width: 350px) {
 	.content-main .howto .area-title .sub {
