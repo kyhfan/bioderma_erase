@@ -160,8 +160,16 @@ a {
 .c-popup.event-end .c-popup__buttons {
 	position: absolute;
 	left: 50%;
-	bottom: 60px;
-	margin-left: -56px;
+	bottom: 100px;
+	margin-left: -81px;
+}
+.c-popup.event-end .c-popup__button {
+	width: 163px;
+	height: 188px;
+	padding: 0 11px 39px 0;
+	background: url(../images/common/c-popup__button_end.png);
+	font-size: 32px;
+	
 }
 
 .c-popup__aligner.c-popup__aligner--line {

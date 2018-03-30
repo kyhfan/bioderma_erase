@@ -27,8 +27,17 @@
 						제한 시간 동안 메이크업을 말끔하게 지워주세요
 						추첨을 통해 제품을 선물로 드립니다
 					</div>
-					<button class="m-visual__button" data-move="game" onclick="wmbt.move(this)">GAME START</button>
-<!--					<button class="m-visual__button" data-layer-popup="popup_event_end" onclick="wmbt.popupOpen(this)">GAME START</button>-->
+<?
+					if(date("Y-m-d H:i:s") > '2018-03-31 23:59:59') {
+?>	
+						<button class="m-visual__button" data-layer-popup="popup_event_end" onclick="wmbt.popupOpen(this)">GAME START</button>
+<?					
+					}else{
+?>
+						<button class="m-visual__button" data-move="game" onclick="wmbt.move(this)">GAME START</button>
+<?
+					}
+?>
 				</div>
 				<div class="m-aligner">
 					<div class="c-section">

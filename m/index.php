@@ -24,9 +24,19 @@
 				<div class="c-section">
 					<div class="m-visual">
 						<img src="./images/pages/m-visual.png" alt="메이크업은 말끔하게 지우고 건강한 피부만 남겨요 ! 제한 시간 동안 메이크업을 말끔하게 지워주세요 추첨을 통해 제품을 선물로 드립니다" />
-						<button class="m-visual__button" onclick="movePage('game')">GAME START</button>
-<!--						<button class="m-visual__button" onclick="popupOpen('popup_event_end');">GAME START</button>-->
 						<button class="m-visual__more">더보기</button>
+<?
+						if(date("Y-m-d H:i:s") > '2018-03-31 23:59:59') {
+?>	
+							<button class="m-visual__button" onclick="popupOpen('popup_event_end');">GAME START</button>
+<?					
+						}else{
+?>
+							<button class="m-visual__button" onclick="movePage('game')">GAME START</button>
+<?
+						}
+?>
+
 					</div>
 				</div>
 				<div class="c-section c-section--large scrollTarget">
