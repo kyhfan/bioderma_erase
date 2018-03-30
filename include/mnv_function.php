@@ -135,7 +135,7 @@ class mnv_function extends mnv_dbi
         {
 			if ($kit_array[0] == "Y")
 			{
-				$winner = "kit";
+				$winner = "blank";
 			}else{
 				// 3레벨일 경우에만 정품 당첨 추첨
 				if ($level == 3)
