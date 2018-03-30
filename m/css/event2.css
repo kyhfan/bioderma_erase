@@ -624,7 +624,8 @@ a {
 }
 .c-content--sub .wrapper.video .area-video .wrapper {
 	background: url(../images/event_2/popup_frame_video.png) no-repeat;
-	background-size: 100% auto;
+/*	background-size: 100% auto;*/
+	background-size: 100% 100%;
 	padding: 3px;
 }
 .c-content--sub .wrapper.video .area-video .wrapper .video {
