@@ -178,6 +178,23 @@ a {
 .c-popup.game-pre .c-popup__buttons .c-popup__button img {
     width: 100%;
 }
+.c-popup.event-end .c-popup__aligner {
+	border-radius: 0;
+	background: none;
+	margin: 100px auto 60px;
+}
+.c-popup.event-end .c-popup__aligner .c-popup__box {
+	padding: 0;
+}
+.c-popup.event-end .c-popup__aligner .c-popup__box img {
+	max-width: 100%;
+}
+.c-popup.event-end .c-popup__aligner .c-popup__box .c-popup__buttons {
+	position: absolute;
+	bottom: 22px;
+	left: 50%;
+	margin-left: -40px;
+}
 
 
 .c-popup__aligner {
@@ -503,6 +520,8 @@ a {
 	font-weight: 300;
 	letter-spacing: -.5px;
 }
+
+
 
 .c-agrees {	
 	width: 300px;

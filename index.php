@@ -28,6 +28,7 @@
 						추첨을 통해 제품을 선물로 드립니다
 					</div>
 					<button class="m-visual__button" data-move="game" onclick="wmbt.move(this)">GAME START</button>
+<!--					<button class="m-visual__button" data-layer-popup="popup_event_end" onclick="wmbt.popupOpen(this)">GAME START</button>-->
 				</div>
 				<div class="m-aligner">
 					<div class="c-section">
@@ -130,6 +131,8 @@
 <?
     include_once "./footer.php";
     
+	include_once "./popup/popup_event_end.php";
+			
     include_once "./popup/popup_agree1.php";
     
 	include_once "./popup/popup_agree2.php";

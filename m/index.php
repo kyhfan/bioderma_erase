@@ -25,6 +25,7 @@
 					<div class="m-visual">
 						<img src="./images/pages/m-visual.png" alt="메이크업은 말끔하게 지우고 건강한 피부만 남겨요 ! 제한 시간 동안 메이크업을 말끔하게 지워주세요 추첨을 통해 제품을 선물로 드립니다" />
 						<button class="m-visual__button" onclick="movePage('game')">GAME START</button>
+<!--						<button class="m-visual__button" onclick="popupOpen('popup_event_end');">GAME START</button>-->
 						<button class="m-visual__more">더보기</button>
 					</div>
 				</div>
@@ -131,6 +132,8 @@
 <?
     include_once "./footer.php";
     
+	include_once "./popup/popup_event_end.php";
+			
 	include_once "./popup/popup_agree1.php";
     
 	include_once "./popup/popup_agree2.php";

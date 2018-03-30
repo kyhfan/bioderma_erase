@@ -149,6 +149,21 @@ a {
 	width: auto;
 	height: auto;
 }
+
+.c-popup.event-end .c-popup__box {
+	padding: 0;
+}
+.c-popup.event-end .c-popup__aligner {
+	width: 686px;
+	background: none; 
+}
+.c-popup.event-end .c-popup__buttons {
+	position: absolute;
+	left: 50%;
+	bottom: 60px;
+	margin-left: -56px;
+}
+
 .c-popup__aligner.c-popup__aligner--line {
 	width: 686px;
 	padding-bottom: 29px;
