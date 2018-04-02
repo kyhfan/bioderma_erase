@@ -38,9 +38,22 @@ ul {
     padding: 7px 5px;
     font-size: 0;
 }
-.main-header .header-wrap .header-sns-area img:first-child{
+.main-header .header-wrap .header-sns-area .share_fb_btn{
+    width: 34px;
+    height: 34px;
+    background: url(../images/event2/share_facebook_btn.png);
+    border: 0;
     margin-right: 9px;
 }
+.main-header .header-wrap .header-sns-area .share_ks_btn{
+    width: 34px;
+    height: 34px;
+    background: url(../images/event2/share_kakaostory_btn.png);
+    border: 0;
+}
+/* .main-header .header-wrap .header-sns-area img:first-child{
+    margin-right: 9px;
+} */
 .main-header .header-wrap .header-logo {
     position: absolute;
     right: 0;
@@ -56,7 +69,8 @@ ul {
     width: 208px;
     float: left;
     margin-right: 19px;
-	font-size: 0;
+    font-size: 0;
+    border: 0;
     background: url(../images/event2/header_gnb_button1.png) no-repeat;
 }
 .main-header .header-wrap .header-navi .navi1 > span{
@@ -70,8 +84,9 @@ ul {
     display: inline-block;
     width: 30px;
     height: 30px;
-    margin-left: 25px;
-    margin-top: 9px;
+    /* margin-left: 25px;
+    margin-top: 9px; */
+    margin-top: -3px;
     margin-right: 15px;
     background: url(../images/event2/header_gnb_icon1.png) no-repeat;
 }
@@ -79,7 +94,8 @@ ul {
     height: 48px;
     width: 240px;
     float: left;
-	font-size: 0;
+    font-size: 0;
+    border: 0;
     margin-right: 19px;
     background: url(../images/event2/header_gnb_button2.png) no-repeat;
 }
@@ -94,8 +110,9 @@ ul {
     display: inline-block;
     width: 29px;
     height: 31px;
-    margin-left: 27px;
-    margin-top: 8px;
+    /* margin-left: 27px; */
+    /* margin-top: 8px; */
+    margin-top: -3px;
     margin-right: 20px;
     background: url(../images/event2/header_gnb_icon2.png) no-repeat;
 }
@@ -103,7 +120,8 @@ ul {
     height: 48px;
     width: 240px;
     float: left;
-	font-size: 0;
+    font-size: 0;
+    border: 0;
     margin-right: 50px;
     background: url(../images/event2/header_gnb_button3.png) no-repeat;
 }
@@ -118,8 +136,9 @@ ul {
     display: inline-block;
     width: 29px;
     height: 31px;
-    margin-left: 27px;
-    margin-top: 8px;
+    /* margin-left: 27px;
+    margin-top: 8px; */
+    margin-top: -3px;
     margin-right: 20px;
     background: url(../images/event2/header_gnb_icon3.png) no-repeat;
 }
@@ -350,13 +369,19 @@ ul {
 .main-section2 .section2-wrap .section2-best-content .arrow_area .button-prev{
     float: left;
     width: 63px;
+    height: 62px;
     margin-right: 13px;
-    cursor: pointer;
+    border: 0;
+    background: url(../images/event2/best_prev_arrow.png);
+    /* cursor: pointer; */
 }
 .main-section2 .section2-wrap .section2-best-content .arrow_area .button-next{
     float: left;
     width: 63px;
-    cursor: pointer;
+    height: 62px;
+    border: 0;
+    background: url(../images/event2/best_next_arrow.png);
+    /* cursor: pointer; */
 }
 .main-section2 .section2-wrap .section2-best-content img{
     margin-right: 13px;
