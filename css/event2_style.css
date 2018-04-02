@@ -1,5 +1,6 @@
+/*
 html, body {
-    /* height: 100%; */
+     height: 100%; 
     margin: 0;
     padding: 0;
     font-family: "Noto Sans Korean", sans-serif;
@@ -7,6 +8,7 @@ html, body {
 ul {
     list-style: none;
 }
+*/
 
 .wrap {
     position: relative;
@@ -50,10 +52,12 @@ ul {
     width: 208px;
     float: left;
     margin-right: 19px;
+	font-size: 0;
     background: url(../images/event2/header_gnb_button1.png) no-repeat;
 }
 .main-header .header-wrap .header-navi .navi1 > span{
     font-size: 18px;
+	font-weight: 700;
     color: #fefefe;
     margin-bottom: -8px;
 }
@@ -70,12 +74,14 @@ ul {
     height: 48px;
     width: 240px;
     float: left;
+	font-size: 0;
     margin-right: 19px;
     background: url(../images/event2/header_gnb_button2.png) no-repeat;
 }
 .main-header .header-wrap .header-navi .navi2 > span{
     font-size: 18px;
     color: #fefefe;
+	font-weight: 700;
     margin-bottom: -8px;
 }
 .main-header .header-wrap .header-navi .navi2 > span:first-child{
@@ -91,12 +97,14 @@ ul {
     height: 48px;
     width: 240px;
     float: left;
+	font-size: 0;
     margin-right: 50px;
     background: url(../images/event2/header_gnb_button3.png) no-repeat;
 }
 .main-header .header-wrap .header-navi .navi3 > span{
     font-size: 18px;
     color: #fefefe;
+	font-weight: 700;
     margin-bottom: -8px;
 }
 .main-header .header-wrap .header-navi .navi3 > span:first-child{
@@ -180,14 +188,17 @@ ul {
     font-size: 60px;
     color: #e30061;
     letter-spacing: -3.6px;
+	font-weight: 700;
 }
 .main-section2 .section2-wrap .title .sub-title2{
     font-size: 60px;
     letter-spacing: -3.6px;
+	font-weight: 300;
 }
 .main-section2 .section2-wrap .title .sub-title3{
     font-size: 35px;
     letter-spacing: -1.8px;
+	font-weight: 300;
 }
 .main-section2 .section2-wrap .title2 .sub-title1{
     font-size: 60px;
@@ -205,7 +216,13 @@ ul {
 .main-section2 .section2-wrap .section2-notice{
     margin-top: -70px;
     font-size: 24px;
+	color: #333333;
     letter-spacing: -1px;
+	opacity: 0.8;
+}
+.main-section2 .section2-wrap .section2-notice ul li {
+	font-size: 24px;
+	font-weight: 400;
 }
 .main-section2 .section2-wrap .section2-notice2{
     position: absolute;
@@ -223,13 +240,14 @@ ul {
     margin-top: 5px;
 }
 .main-section2 .section2-wrap .section2-notice div{
-    font-weight: bold;
+    font-weight: 800;
 }
 .main-section2 .section2-wrap .section2-use-text {
     position: absolute;
     left: 24px;
     font-size: 40px;
     margin-top: 40px;
+	color: #434343;
 }
 .main-section2 .section2-wrap .section2-use-img {
     margin-top: 120px;
@@ -239,6 +257,7 @@ ul {
     left: 24px;
     font-size: 40px;
     margin-top: 40px;
+	color: #434343;
 }
 .main-section2 .section2-wrap .section2-use-exam-img {
     margin-top: 97px;
@@ -343,16 +362,21 @@ ul {
 .main-section3 .section3-wrap .title{
 }
 .main-section3 .section3-wrap .title span{
+	display: inline-block;
     font-size: 60px;
+	padding: 0 16px 5px;
     background: #ff0063;
     color: #fff;
     margin-right: 29px;
+}
+.main-section3 .section3-wrap .title span:last-child {
+	margin-right: 0;
 }
 .main-section3 .section3-wrap .sub_title{
     display: inline-block;
     font-size: 35px;
     color: #595757;
-    margin-top: 20px;
+    margin: 20px 0 40px;
 }
 .main-section3 .section3-wrap .iframe_area{
     height: 500px;
