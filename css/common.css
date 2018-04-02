@@ -626,6 +626,9 @@ a {
 .c-content {
 	position: relative;
 }
+.wrap--sub .c-content.c-content--sub {
+	background: none;
+}
 .c-content.c-content--sub {
 	max-height: 1003px;
 	padding: 90px 0 45px 0;

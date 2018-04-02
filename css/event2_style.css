@@ -14,6 +14,10 @@ ul {
     width: 100%;
     min-width: 1207px;
 }
+.wrap--sub {
+	background: url(../images/event2/sub_bg_event2.jpg) 50% -100px;
+	background-size: cover;
+}
 .main-header {
     position: absolute;
     width: 100%;
@@ -358,6 +362,24 @@ ul {
     background: #ff0063;
     height: 155px;
 }
+
+.wrap--sub .c-content__aligner {
+	width: 1000px;
+	margin: 0 auto;
+}
+.wrap--sub .c-content__aligner .video-wrapper {
+	text-align: center;
+	padding: 83px 0 70px;
+}
+.wrap--sub .c-content__aligner .video-wrapper .video {
+	background: url(../images/event2/sub_video_background.png);
+	background-size: cover;
+	padding: 12px;
+	width: 992px;
+	margin: 55px auto 0;
+	box-sizing: border-box;
+}
+
 
 .c-footer {
 	padding: 30px 0;

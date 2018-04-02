@@ -14,6 +14,7 @@
 		
 		<link rel="stylesheet" href="./css/common.css" />
 		<link rel="stylesheet" href="./css/page.css" />
+		<link rel="stylesheet" href="./css/event2_style.css" />
 		<link type="image/icon" rel="shortcut icon" href="http://www.biodermaevent.com/images/favicon.ico" />
 		<script src="./lib/jquery/jquery-1.9.1.min.js"></script>
 		<script src="./lib/placeholder/jquery.placeholder.min.js"></script>
