@@ -13,7 +13,9 @@
     //     $saveMedia     = $mnv_f->SaveMedia();
 	// }
 
-	include_once "./head.php";
+    include_once "./head.php";
+    
+    echo "<script>location.href='index.php';</script>";
 ?>
     <body>
         <div class="wrap wrap--sub">
