@@ -35,7 +35,11 @@ ul {
 .main-header .header-wrap .header-sns-area{
     width: 100px;
     position: absolute;
-    padding: 7px 0px;
+    padding: 7px 5px;
+    font-size: 0;
+}
+.main-header .header-wrap .header-sns-area img:first-child{
+    margin-right: 9px;
 }
 .main-header .header-wrap .header-logo {
     position: absolute;
@@ -44,7 +48,7 @@ ul {
 }
 .main-header .header-wrap .header-navi {
     position: absolute;
-    right: 120px;
+    left: 224px;
     height: 48px;
 }
 .main-header .header-wrap .header-navi .navi1{
@@ -129,32 +133,27 @@ ul {
     /* height: 100%; */
     margin: 0 auto;
 }
-.main-section1 .section1-wrap .main-title{
-    /* position: absolute;
-    top: 204px; */
-}
-.main-section1 .section1-wrap .main-title .give_kit{
+.main-section1 .section1-wrap .give_kit{
     position: absolute;
-    width: 234px;
-    /* top: 500px;
-    left: 218px; */
-    margin-top: -17%;
-    z-index: 3;
-    margin-left: 25%;
-    background: url(../images/event2/main_section1_start_on.png)
+    top: 703px;
+    left: 700px;
+    width: 257px;
+    height: 298px;
+    background: url(../images/event2/main_section1_start_off.png) no-repeat;
+    border: 0;
+	-webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+	-webkit-transition: all .4s;
+	-ms-transition: all .4s;
+	transition: all .4s;
 }
-.main-section1 .section1-wrap .main-title .sub-title{
-    color: #e30061;
-    font-size: 103px;
-    letter-spacing: -5px;
+.main-section1 .section1-wrap .give_kit:hover,
+.main-section1 .section1-wrap .give_kit:focus {
+    top: 663px;
+    background: url(../images/event2/main_section1_start_on.png) no-repeat;
+    /* border: 0; */
 }
-.main-section1 .section1-wrap .main-title .sub-desc{
-    display: inline-block;
-    letter-spacing: -1.5px;
-    text-align: center;
-    font-size: 33px;
-}
-
 .main-section1 .section1-wrap .kit-image {
     position: absolute;
     right: -294px;
