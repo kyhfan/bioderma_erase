@@ -8,13 +8,13 @@ $obYN          = $mnv_f->BrowserCheck();
 // $mobileYN      = $mnv_f->MobileCheck();
 // $saveMedia     = $mnv_f->SaveMedia();
 
-include_once "./head.php";
+include_once "./head2.php";
 ?>
 
 <body>
 	<div class="wrap wrap--sub">
 		<?
-		include_once "./header.php";
+		include_once "./header2.php";
 		?>            
 
 		<div class="c-content c-content--sub">

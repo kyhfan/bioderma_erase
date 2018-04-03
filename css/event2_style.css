@@ -10,6 +10,9 @@ ul {
 }
 */
 
+button {
+    outline: none;
+}
 .wrap {
     position: relative;
     /* height: 100%; */
@@ -227,12 +230,14 @@ ul {
 .main-section2 .section2-wrap .title .sub-title2{
     font-size: 60px;
     letter-spacing: -3.6px;
-	font-weight: 300;
+    font-weight: 300;
+    color: #333333;
 }
 .main-section2 .section2-wrap .title .sub-title3{
     font-size: 35px;
     letter-spacing: -1.8px;
-	font-weight: 300;
+    font-weight: 300;
+    color: #333333;
 }
 .main-section2 .section2-wrap .title .sub-title3 span{
     font-weight: 500;
@@ -245,6 +250,7 @@ ul {
 .main-section2 .section2-wrap .title2 .sub-title2{
     font-size: 32px;
     letter-spacing: -3.6px;
+    color: #595757;
 }
 .main-section2 .section2-wrap .kit-image{
     width: 792px;
@@ -259,7 +265,8 @@ ul {
 }
 .main-section2 .section2-wrap .section2-notice ul li {
 	font-size: 24px;
-	font-weight: 200;
+    font-weight: 200;
+    color: #333333;
 }
 .main-section2 .section2-wrap .section2-notice2{
     position: absolute;
@@ -271,15 +278,18 @@ ul {
     font-weight: 700;
     margin-left: 20px;
     margin-top: 17px;
+    color: #434343;
 }
 .main-section2 .section2-wrap .section2-notice2 ul{
     font-size: 24px;
     font-weight: 200;
     padding-left: 20px;
     margin-top: 5px;
+    color: #464646;
 }
 .main-section2 .section2-wrap .section2-notice div{
     font-weight: 700;
+    color: #333333;
 }
 .main-section2 .section2-wrap .section2-use-text {
     font-size: 40px;
@@ -340,6 +350,7 @@ ul {
     font-size: 32px;
     margin-top: 47px;
     margin-left: 24px;
+    color: #595757;
 }
 .main-section2 .section2-wrap .section2-best-content .content_area .desc_area{
     width: 453px;
@@ -348,6 +359,7 @@ ul {
     font-size: 38px;
     text-align: left;
     letter-spacing: -4px;
+    color: #595757;
 }
 .main-section2 .section2-wrap .section2-best-content .content_area .color_area{
     width: 12px;
@@ -387,7 +399,7 @@ ul {
     margin-right: 13px;
 }
 .main-section3 {
-    height: 500px;
+    /* height: 500px; */
 }
 .main-section3 .section3-wrap{
     position: relative;
@@ -417,8 +429,8 @@ ul {
     margin: 20px 0 40px;
 }
 .main-section3 .section3-wrap .iframe_area{
-    height: 500px;
-    background: skyblue;
+    /* height: 500px;
+    background: skyblue; */
 }
 .main-footer {
     background: #ff0063;
