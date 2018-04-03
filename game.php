@@ -1,6 +1,6 @@
 <?
 	include_once "./include/autoload.php";
-
+    
     $mnv_f      = new mnv_function();
     $obYN          = $mnv_f->BrowserCheck();
     // $my_db      = $mnv_f->Connect_MySQL();
@@ -9,6 +9,8 @@
     // $saveMedia     = $mnv_f->SaveMedia();
 
     include_once "./head.php";
+
+    echo "<script>location.href='index.php';</script>";
 ?>
 
     <body>

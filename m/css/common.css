@@ -191,7 +191,7 @@ a {
 }
 .c-popup.event-end .c-popup__aligner .c-popup__box .c-popup__buttons {
 	position: absolute;
-	bottom: 35px;
+	bottom: 13px;
 	left: 50%;
 	margin-left: -40px;
 }
