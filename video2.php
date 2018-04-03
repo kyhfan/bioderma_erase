@@ -18,12 +18,6 @@ include_once "./head2.php";
 		?>            
 
 		<div class="c-content c-content--sub">
-			<!-- <div class="game__popup">
-<div class="game__starts">
-<a href="javascript:void(0)" class="game__start">게임시작</a>
-<div class="game__start-txt"><img src="./images/pages/s-start__txt.png" alt="클릭 시 게임이 시작됩니다." /></div>
-</div>
-</div> -->
 			<div class="c-content__aligner">
 				<div class="video-wrapper">
 					<div class="title">
@@ -31,7 +25,8 @@ include_once "./head2.php";
 					</div>
 					<div class="video">
 						<div class="player">
-							<img src="./images/event2/sub_video_sample.jpg" alt="">
+							<!-- <img src="./images/event2/sub_video_sample.jpg" alt=""> -->
+							<iframe allowfullscreen="1" src="https://www.youtube.com/embed/JkCGTXTn0oM?controls=0&loop=1&playlist=JkCGTXTn0oM&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" width="971" height="589" style="position:relative;z-index:2"></iframe>
 						</div>
 					</div>
 				</div>
