@@ -216,6 +216,9 @@
 			$(document).ready(function() {
 				var mySwiper = new Swiper ('.swiper-container', {
 					// Optional parameters
+//					freeMode: true,
+//					freeModeMinimumVelocity: 0.5,
+//					freeModeSticky: true,
 					direction: 'horizontal',
 					loop: true,
 					// Navigation arrows
