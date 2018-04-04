@@ -8,13 +8,13 @@ $obYN          = $mnv_f->BrowserCheck();
 // $mobileYN      = $mnv_f->MobileCheck();
 // $saveMedia     = $mnv_f->SaveMedia();
 
-include_once "./head.php";
+include_once "./head2.php";
 ?>
 
 <body>
 	<div class="wrap wrap--sub">
 		<?
-		include_once "./header.php";
+		include_once "./header2.php";
 		?>            
 
 		<div class="c-content c-content--sub">
@@ -81,7 +81,7 @@ include_once "./head.php";
 
 		include_once "./popup/popup_level3_clear.php";
 
-		include_once "./popup/popup_winner_goods.php";
+		// include_once "./popup/popup_winner_goods.php";
 
 		include_once "./popup/popup_winner_kit.php";
 
@@ -121,9 +121,11 @@ include_once "./head.php";
 								break;
 							case 1 :
 								wmbt.popupSelfOpen("popup_level1_clear");
+								// wmbt.popupSelfOpen("popup_tryagain");
 								break;
 							case 2 :
 								wmbt.popupSelfOpen("popup_level2_clear");
+								// wmbt.popupSelfOpen("popup_tryagain");
 								break;
 						}
 						// alert("게임오버");
@@ -144,31 +146,7 @@ include_once "./head.php";
 						"exec"					: "game_click_info"
 
 					},
-					url: "./main_exec.php",
-					success: function(response){
-						var res_arr = response.split("||");
-
-						switch(res_arr[1])
-						{
-							case "blank" :
-								wmbt.popupSelfClose("popup_level" + level + "_clear");
-								wmbt.popupSelfOpen("popup_winner_draw");
-								break;
-							case "goods" :
-								wmbt.popupSelfClose("popup_level" + level + "_clear");
-								wmbt.popupSelfOpen("popup_winner_goods");
-								break;
-							case "kit" :
-								wmbt.popupSelfClose("popup_level" + level + "_clear");
-								wmbt.popupSelfOpen("popup_winner_kit");
-								break;
-							case "D" :
-								alert("이미 참여해 주셨습니다. 감사합니다.");
-								location.href = "index.php";
-								break;
-						}
-						console.log(response);
-					}
+					url: "./main_exec.php"
 				});
 
 				//                        var count = -1;

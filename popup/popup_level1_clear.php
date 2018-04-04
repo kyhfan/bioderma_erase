@@ -21,8 +21,8 @@
 						</div>
 						<div class="c-section">
 							<div class="c-popup__buttons">
-								<button class="c-popup__button" data-move="game" onclick="wmbt.move(this)">재도전</button>
-								<button class="c-popup__button" data-move="index" onclick="wmbt.move(this)">확인</button>
+								<button class="c-popup__button" data-move="game2" onclick="wmbt.move(this)">재도전</button>
+								<button class="c-popup__button" data-move="index2" onclick="wmbt.move(this)">확인</button>
 							</div>
 						</div>
 					</div>
