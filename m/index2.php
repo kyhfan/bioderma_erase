@@ -34,7 +34,7 @@
 						<span class="obj"></span></button>
 					<button class="btn-more">더보기</button>
 				</section>
-				<section class="howto">
+				<section class="howto scrollTarget">
 					<div class="area-title">
 						<img class="title" src="./images/event_2/main_howto_title.png" alt="당신의 일상 속 투고키트가 어떻게 쓰이고 있는지 보여주세요">
 						<p class="sub">가장 많은 LIKE를 받은 10분께는 바이오더마에서 빅프라이즈를 드립니다</p>
@@ -228,7 +228,15 @@
 					},
 				})
 			});
+			
+			$('.btn-more').on('click', function(){
+				var scTop = $('.scrollTarget').offset().top;
 
+				$('html, body').animate({scrollTop:(scTop-40)+'px'}, 500);
+				// $('html, body').animate({scrollTop :  $('.section.'+nav).offset().top}, 1000);
+
+				return false;
+			});
 
 		</script>
 		<script type="text/javascript">
