@@ -154,7 +154,7 @@ include_once "./popup/popup_agree2.php";
 			// gauge
 			$('.game_start').on('click', function(event){
 				popupClose("popup_game_pre");
-				$('.game__popups').addClass('game__popups--active');
+//				$('.game__popups').addClass('game__popups--active');
 				$('.gauge__body').css('width','0');
 				// $("#left_game_back").hide();
 				// $("#right_game_back").hide();
@@ -167,31 +167,7 @@ include_once "./popup/popup_agree2.php";
 						"exec"					: "game_click_info"
 
 					},
-					url: "../main_exec.php",
-					success: function(response){
-						var res_arr = response.split("||");
-
-						switch(res_arr[1])
-						{
-							case "blank" :
-								popupClose("popup_level" + level + "_clear");
-								popupOpen("popup_winner_draw");
-								break;
-							case "goods" :
-								popupClose("popup_level" + level + "_clear");
-								popupOpen("popup_winner_goods");
-								break;
-							case "kit" :
-								popupClose("popup_level" + level + "_clear");
-								popupOpen("popup_winner_kit");
-								break;
-							case "D" :
-								alert("이미 참여해 주셨습니다. 감사합니다.");
-								location.href = "index.php";
-								break;
-						}
-						// console.log(response);
-					}
+					url: "../main_exec.php"
 				});
 
 				//                    var second = 31,
