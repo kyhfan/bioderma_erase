@@ -24,7 +24,7 @@
                             <span>메이크업 인지 테스트</span>
                         </div> -->
                         <!-- <button class="navi3" data-move="video2" onclick="wmbt.move(this)"> -->
-                        <button class="navi3" data-move="video2" onclick="alert('웹드라마 '지울 수밖에 없는 사랑'은 4월 11일 오픈됩니다.')">
+                        <button class="navi3" data-move="video2" onclick="alert('웹드라마 \'지울 수밖에 없는 사랑\'은 4월 11일 오픈됩니다.')">
                             <span></span>
                             <span>바이오더마 웹드라마</span>
                         </button>
