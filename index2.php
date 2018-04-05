@@ -50,6 +50,10 @@
                             <li>- 제세공과금 규정에 비동의시, 경품을 지급할 수 없어 당첨이 취소됩니다</li>
                             <li>- 지난 당첨자는 선발에서 제외됩니다</li>
                         </ul>
+                        <div>
+                            <button class="gift-info" data-layer-popup="popup_gift_info" onclick="wmbt.popupOpen(this)"></button>
+                            <!-- <img src="./images/event2/gift_info_btn.png" alt="경품안내"> -->
+                        </div>
                     </div>
                     <div class="section2-use-text">
                         참여 방법
@@ -66,6 +70,8 @@
                     <div class="section2-notice2">
                         <div>※ 이벤트 유의사항</div>
                         <ul>
+                            <li>- 투고키트가 드러나지 않는 사진은 무효처리 됩니다</li>
+                            <li>- 세가지 해시태그 모두 입력해야 이벤트 참여 완료됩니다</li>
                             <li>- 참여 예시에 부합하지 않는 사진은 참여가 인정되지 않습니다</li>
                             <li>- 비공개 계정일 경우 컨텐츠가 노출되지 않아 참여가 인정되지 않습니다</li>
                             <li>- 이벤트 종료 후 해시태그를 삭제하거나 비공개 계정으로 전환할 경우 참여가 인정되지 않습니다</li>
@@ -180,6 +186,9 @@
 				</div>
 			</div>
         </div>
+<?
+		include_once "./popup/popup_gift_info.php";
+?>        
         <script type="text/javascript">
             $(document).ready(function() {
                 var mySwiper = new Swiper ('.swiper-container', {

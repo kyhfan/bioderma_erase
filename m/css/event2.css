@@ -433,11 +433,20 @@ a {
 	position: relative;
 	max-width: 320px;
 	height: 58px;
-	margin: -28px auto 30px; 
+	margin: -28px auto 12px; 
 	font-size: 10px;
 	color: #363636;
 	background: url(../images/event_2/main_howo_txt_caution.png) no-repeat;
 	background-size: 320px auto;
+}
+.content-main .howto .gift-info-area{
+	margin-bottom: 30px;
+}
+.content-main .howto .gift-info-area .gift-info{
+	background: url(../images/event_2/gift_info_btn.png) no-repeat;
+	background-size: 178px auto;
+	width: 178px;
+	height: 37px;
 }
 .content-main .howto .txt-caution * {
 	border: 0;
@@ -461,9 +470,9 @@ a {
 }
 .content-main .howto .txt-caution._02 {
 	max-width: 644px;
-	height: 32px;
+	height: 68px;
 	background: url(../images/event_2/main_howo_txt_caution_02.png) no-repeat;
-	background-size: 202px auto;
+	background-size: 320px auto;
 	margin: 8px auto 0; 
 }
 
@@ -904,4 +913,8 @@ html.popup-opened body {
 	.c-footer__list > li br {
 		display: inherit;
 	}
+}
+
+#popup_gift_info {
+	padding: 0 10px;
 }

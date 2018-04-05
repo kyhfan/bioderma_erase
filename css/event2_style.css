@@ -263,6 +263,14 @@ button {
     letter-spacing: -1px;
 	opacity: 0.8;
 }
+.main-section2 .section2-wrap .section2-notice .gift-info{
+    background: url(../images/event2/gift_info_btn.png);
+    width: 355px;
+    height: 74px;
+}
+.main-section2 .section2-wrap .section2-notice ul{
+    margin-bottom: 16px;
+}
 .main-section2 .section2-wrap .section2-notice ul li {
 	font-size: 24px;
     font-weight: 200;

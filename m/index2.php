@@ -51,6 +51,9 @@
 							<li>- 제세공과금 규정에 비동의시, 경품을 지급할 수 없어 당첨이 취소됩니다</li>
 						</ul>
 					</div>
+					<div class="gift-info-area">
+						<button class="gift-info" onclick="popupOpen('popup_gift_info');"></button>
+					</div>
 					<div class="area area-step">
 						<h5>참여 방법</h5>
 						<img src="./images/event_2/main_howto_step.png" alt="">
@@ -212,7 +215,9 @@
 				</div>
 			</div>
 		</div>
-
+<?
+	include_once "./popup/popup_gift_info.php";
+?>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				var mySwiper = new Swiper ('.swiper-container', {
