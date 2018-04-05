@@ -1,7 +1,7 @@
 			<div id="popup_gift_info" class="c-popup">
 				<div class="c-popup__aligner c-popup__aligner--line">
-					<a href="#" class="c-popup__close">popup close</a>
-					<div class="c-popup__box c-popup__box--small" style="padding: 35px 20px 5px 20px">
+					<a href="javascript:void(0)" class="c-popup__close" onclick="popupClose()">popup close</a>
+					<div class="c-popup__box c-popup__box--small" style="padding: 35px 10px 5px 10px">
 						<!-- <div class="c-section">
 							<div class="c-popup__txt c-popup__txt--large"><em class="c-em">축하합니다!</em></div>
 						</div>
