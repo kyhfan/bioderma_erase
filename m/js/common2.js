@@ -80,7 +80,7 @@ $(document).ready(function(event){
 	// popup close
 	$('.c-popup__close2').on('click', function(){
 		if (confirm("이 창을 닫으면 메인으로 이동합니다. 이동하시겠습니까?"))
-			location.href = "index.php";
+			location.href = "index2.php";
 
 		return false;
 	});
