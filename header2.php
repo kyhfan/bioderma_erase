@@ -34,7 +34,7 @@
                         </div> -->
                     </div>
                     <div class="header-logo">
-                        <a href="http://www.bioderma.co.kr/"><img src="./images/event2/header_logo.png" alt="로고"></a>
+                        <a href="http://www.bioderma.co.kr/" target="_blank"><img src="./images/event2/header_logo.png" alt="로고"></a>
                     </div>
                 </div>
             </div>
