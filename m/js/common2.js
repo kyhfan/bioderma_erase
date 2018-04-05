@@ -27,13 +27,12 @@ $(document).ready(function(event){
 		});
 
 		function toggle(event) {
-			TweenMax.killAll();
+			TweenMax.killChildTweensOf($('.c-header'));
 
 			if (isOpened) {
 				$('html').removeClass('is-popup-open');
 				$('.c-header').removeClass('c-header--active');
 				closeMotion();
-				$('.gauge__adds').stop();
 
 				isOpened = false;
 

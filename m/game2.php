@@ -125,10 +125,11 @@ include_once "./popup/popup_agree2.php";
 					time--;
 					count+=1;
 					var gaugeWidths = $('.gauge__adds').css('width'),
-						gaugeWidth = parseInt(gaugeWidths.replace('px', ''));
+						gaugeWidth = parseInt(gaugeWidths.replace('px', '')),
+						per = (count + 2) * 5.1 + '%';
 					$('.gauge__time').text(time);
+
 					$('.gauge__adds').animate({
-						// 'width': ((count + 2) * 3.33) + '%'
 						'width': ((count + 2) * 5.1) + '%'
 					}, 1000, 'linear');
 
@@ -151,7 +152,7 @@ include_once "./popup/popup_agree2.php";
 					}                            
 				}, 1000);  
 			}
-			// gauge
+
 			$('.game_start').on('click', function(event){
 				popupClose("popup_game_pre");
 //				$('.game__popups').addClass('game__popups--active');
