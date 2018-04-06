@@ -322,7 +322,7 @@ function sns_share(media)
 		});
 	}else if (media == "kt"){
 		Kakao.Link.sendTalkLink({
-			label: '[투고키트 이벤트]\r\n바이오더마가 또!\r\n#투고키트를 1000명에게 드립니다\r\n\r\n지난 이벤트에서 투고키트를 받지 못하신 분들에게다시 한 번, 투고키트를 증정합니다!',
+			label: '[투고키트 이벤트]\r\n바이오더마가 또!\r\n#투고키트를 1000명에게 드립니다\r\n\r\n지난 이벤트에서 투고키트를 받지 못하신 분들에게 다시 한 번, 투고키트를 증정합니다!',
 			image: {
 				src: 'http://www.biodermaevent.com/images/event2/share01.jpg',
 				width: '1200',
