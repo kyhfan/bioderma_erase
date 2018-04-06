@@ -226,7 +226,7 @@ function levelSubmit(level) {
 					break;
 				case "D" :
 					alert("오늘은 이미 참여하셨습니다. 내일 다시 참여해주세요.");
-					location.href = "index.php";
+					location.href = "index2.php";
 					break;
 			}
 		}
