@@ -189,6 +189,7 @@ button {
     top: 50%; */
     margin-top: 8%;
     background: url(../images/event2/main_section1_start_on.png) no-repeat;
+	background-size: cover;
     /* border: 0; */
 }
 .main-section1 .section1-wrap .kit-image {
