@@ -167,16 +167,16 @@
 ?>        
         <script type="text/javascript">
             $(document).ready(function() {
-                var mySwiper = new Swiper ('.swiper-container', {
-                    // Optional parameters
-                    direction: 'horizontal',
-                    loop: true,
-                    // Navigation arrows
-                    navigation: {
-                        nextEl: '.button-next',
-                        prevEl: '.button-prev',
-                    },
-                })
+                // var mySwiper = new Swiper ('.swiper-container', {
+                //     // Optional parameters
+                //     direction: 'horizontal',
+                //     loop: true,
+                //     // Navigation arrows
+                //     navigation: {
+                //         nextEl: '.button-next',
+                //         prevEl: '.button-prev',
+                //     },
+                // })
             });
 
             (function(d, s) {

@@ -86,6 +86,7 @@
 								<div class="swiper-wrapper2">
 									<!-- Slides -->
 									<div class="swiper-slide">
+									<!-- <div class="swiper-slide2"> -->
 										<div class="profile">
 											<a href="javascript:void(0)">
 												<img class="thumb" src="./images/event_2/main_feed_thumb_sample.png" alt="">
@@ -178,19 +179,14 @@
 ?>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				var mySwiper = new Swiper ('.swiper-container', {
-					// Optional parameters
-//					freeMode: true,
-//					freeModeMinimumVelocity: 0.5,
-//					freeModeSticky: true,
-					direction: 'horizontal',
-					loop: true,
-					// Navigation arrows
-					navigation: {
-						nextEl: '.button-next',
-						prevEl: '.button-prev',
-					},
-				})
+// 				var mySwiper = new Swiper ('.swiper-container', {
+// \					direction: 'horizontal',
+// 					loop: true,
+// \					navigation: {
+// 						nextEl: '.button-next',
+// 						prevEl: '.button-prev',
+// 					},
+// 				})
 			});
 			
 			$('.btn-more').on('click', function(){

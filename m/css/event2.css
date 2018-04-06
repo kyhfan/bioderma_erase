@@ -570,8 +570,8 @@ a {
 	padding: 22px 0 39px 8px;
 }
 .content-main .feed .best-wrapper .swiper-slide .txt-wrap .inner {
-	height: 75px;
-	overflow-y: auto;
+	/* height: 75px; */
+	/* overflow-y: auto; */
 	font-size: 15px;
 	font-weight: 500;
 	color: #585858;
