@@ -1,8 +1,8 @@
             <div class="main-header">
                 <div class="header-wrap">
                     <div class="header-sns-area">
-                        <button class="share_fb_btn"></button>
-                        <button class="share_ks_btn"></button>
+                        <button class="share_fb_btn" onclick="wmbt.sns_share('fb');"></button>
+                        <button class="share_ks_btn" onclick="wmbt.sns_share('ks');"></button>
                         <!-- <img src="./images/event2/share_facebook_btn.png" alt="페이스북 공유 버튼">
                         <img src="./images/event2/share_kakaostory_btn.png" alt="카카오스토리 공유 버튼"> -->
                     </div>
