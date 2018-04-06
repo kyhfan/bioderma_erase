@@ -81,7 +81,9 @@
 							<!-- Slider main container -->
 							<div class="best-slider swiper-container">
 								<!-- Additional required wrapper -->
-								<div class="swiper-wrapper">
+								<!-- 2개 이상일때는 2 지우기 -->
+								<!-- <div class="swiper-wrapper"> -->
+								<div class="swiper-wrapper2">
 									<!-- Slides -->
 									<div class="swiper-slide">
 										<div class="profile">
@@ -89,7 +91,7 @@
 												<img class="thumb" src="./images/event_2/main_feed_thumb_sample.png" alt="">
 											</a>
 											<a href="javascript:void(0)">
-												<span>bioderma_kr</span>
+												<span>Biodermaevent</span>
 											</a>
 										</div>
 										<div class="main-img">
@@ -99,67 +101,23 @@
 										</div>	
 										<div class="txt-wrap">
 											<div class="inner">
-												요즘 출근 할 때 무조건 챙기는<br>
-												바이오더마 투고키트<br>
-												점심 후 무너진 메이크업<br>
-												걱정안해도 되서 완전 편함!
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="profile">
-											<a href="javascript:void(0)">
-												<img class="thumb" src="./images/event_2/main_feed_thumb_sample.png" alt="">
-											</a>
-											<a href="javascript:void(0)">
-												<span>bioderma_kr</span>
-											</a>
-										</div>
-										<div class="main-img">
-											<a href="javascript:void(0)">
-												<img src="./images/event_2/main_feed_img_sample.jpg" alt="">
-											</a>
-										</div>	
-										<div class="txt-wrap">
-											<div class="inner">
-												요즘 출근 할 때 무조건 챙기는<br>
-												바이오더마 투고키트<br>
-												점심 후 무너진 메이크업<br>
-												걱정안해도 되서 완전 편함!
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="profile">
-											<a href="javascript:void(0)">
-												<img class="thumb" src="./images/event_2/main_feed_list_sample.jpg" alt="">
-											</a>
-											<a href="javascript:void(0)">
-												<span>bioderma_kr</span>
-											</a>
-										</div>
-										<div class="main-img">
-											<a href="javascript:void(0)">
-												<img src="./images/event_2/main_feed_img_sample.jpg" alt="">
-											</a>
-										</div>	
-										<div class="txt-wrap">
-											<div class="inner">
-												요즘 출근 할 때 무조건 챙기는<br>
-												바이오더마 투고키트<br>
-												점심 후 무너진 메이크업<br>
-												걱정안해도 되서 완전 편함!
+												메이크업은 말끔하게 지우고<br>
+												건강한 피부만 남기는 바이오더마!<br>
+												이제 밖에서도 간편하게<br>
+												투고키트로 즐길 수 있어서 최고<br><br>
+												#바이오더마 #클렌징워터<br>
+												#투고키트 #클렌징지존
 											</div>
 										</div>
 									</div>
 								</div>
 								<!-- If we need navigation buttons -->
-								<div class="button-prev">
+								<!-- <div class="button-prev">
 									<img src="./images/event_2/main_feed_nav_prev.png" alt="이전">
 								</div>
 								<div class="button-next">
 									<img src="./images/event_2/main_feed_nav_next.png" alt="다음">
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>

@@ -322,7 +322,7 @@ function sns_share(media)
 		});
 	}else if (media == "kt"){
 		Kakao.Link.sendTalkLink({
-			label: '#투고키트 사람들 다 있고 나만 없어...\r\n\r\n지난 이벤트에서 투고키트를 받지 못하셨다면 주목!\r\n\r\n바이오더마가 다시 한 번, 투고키트를 증정합니다.\r\n\r\n이미 받았어도 주목하세요!\r\n\r\n후기를 올려주시면 바이오더마 정품을 드립니다.\r\n\r\n기간: 2018년 4월 9일 ~ 4월 30일',
+			label: '지난 이벤트에서 투고키트를 받지 못하신 분들에게\r\n\r\n다시 한 번, 투고키트를 증정합니다!',
 			image: {
 				src: 'http://www.biodermaevent.com/images/event2/share01.jpg',
 				width: '1200',
