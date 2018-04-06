@@ -322,15 +322,15 @@ function sns_share(media)
 		});
 	}else if (media == "kt"){
 		Kakao.Link.sendTalkLink({
-			label: '메이크업은 말끔하게 지우고, 건강한 피부만 남겨요!\r\n\r\n제한시간 20초!\r\n\r\n3개의 화려한 메이크업 말끔하게 지우면 바이오더마 정품 팡팡!',
+			label: '#투고키트 사람들 다 있고 나만 없어...\r\n\r\n지난 이벤트에서 투고키트를 받지 못하셨다면 주목!\r\n\r\n바이오더마가 다시 한 번, 투고키트를 증정합니다.\r\n\r\n이미 받았어도 주목하세요!\r\n\r\n후기를 올려주시면 바이오더마 정품을 드립니다.\r\n\r\n기간: 2018년 4월 9일 ~ 4월 30일',
 			image: {
-				src: 'http://www.biodermaevent.com/images/share_image.jpg',
+				src: 'http://www.biodermaevent.com/images/event2/share01.jpg',
 				width: '1200',
 				height: '630'
 			},
 			webButton: {
 				text: "BIODERMA",
-				url: 'http://www.biodermaevent.com/m/?media=kt' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+				url: 'http://www.biodermaevent.com/m/index2.php?media=kt' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 			}
 		});
 		$.ajax({
