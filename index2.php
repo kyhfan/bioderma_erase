@@ -72,7 +72,7 @@
                         <ul>
                             <li>- 투고키트가 드러나지 않는 사진은 무효처리 됩니다</li>
                             <li>- 세가지 해시태그 모두 입력해야 이벤트 참여 완료됩니다</li>
-                            <li>- 참여 예시에 부합하지 않는 사진은 참여가 인정되지 않습니다</li>
+                            <li>- 참여 예시에 부합하지 않는 사진으로 참여시 당첨 선발에서 제외됩니다</li>
                             <li>- 비공개 계정일 경우 컨텐츠가 노출되지 않아 참여가 인정되지 않습니다</li>
                             <li>- 이벤트 종료 후 해시태그를 삭제하거나 비공개 계정으로 전환할 경우 참여가 인정되지 않습니다</li>
                         </ul>
@@ -90,60 +90,36 @@
                     </div>
                     <div class="section2-best-content swiper-container">
                         <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
+                        <!-- 2개 이상일때는 2 지우기 -->
+                        <!-- <div class="swiper-wrapper"> -->
+                        <div class="swiper-wrapper2">
                             <!-- Slides -->
                             <div class="swiper-slide">
                                 <div class="image_area">
-                                    <img src="./images/event2/sample_best_image.png" alt="">
+                                    <img src="./images/event2/sample_best_image.jpg" alt="">
                                 </div>
                                 <div class="content_area">
                                     <div class="profile_area">
                                         <img src="./images/event2/sample_best_profileimage.png" alt="">
-                                        <span>bioderma_kr</span>
+                                        <span>Biodermaevent</span>
                                     </div>
                                     <div class="desc_area">
-                                        요즘 출근 할 때 무조건 챙기는<br>
-                                        바이오더마 투고키트<br>
-                                        점심 후 무너진 메이크업<br>
-                                        걱정안해도되서 완전 편함!
-                                    </div>
-                                    <div class="color_area">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <!-- <div class="best_flag">
-                                    <img src="./images/event2/best_flag.png" alt="">
-                                </div> -->
-                                <div class="image_area">
-                                    <img src="./images/event2/sample_best_image.png" alt="">
-                                </div>
-                                <div class="content_area">
-                                    <div class="profile_area">
-                                        <img src="./images/event2/sample_best_profileimage.png" alt="">
-                                        <span>bioderma_kr</span>
-                                    </div>
-                                    <div class="desc_area">
-                                        요즘 출근 할 때 무조건 챙기는<br>
-                                        바이오더마 투고키트<br>
-                                        점심 후 무너진 메이크업<br>
-                                        걱정안해도되서 완전 편함!
+                                        메이크업은 말끔하게 지우고<br>
+                                        건강한 피부만 남기는 바이오더마!<br>
+                                        이제 밖에서도 간편하게<br>
+                                        투고키트로 즐길 수 있어서 최고<br><br>
+                                        #바이오더마 #클렌징워터<br>
+                                        #투고키트 #클렌징지존
                                     </div>
                                     <div class="color_area">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="arrow_area">
+                        <!-- <div class="arrow_area">
                             <button class="button-prev"></button>
                             <button class="button-next"></button>
-                            <!-- <div class="button-prev">
-                                <img src="./images/event2/best_prev_arrow.png" alt="">
-                            </div>
-                            <div class="button-next">
-                                <img src="./images/event2/best_next_arrow.png" alt="">
-                            </div> -->
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -178,7 +154,7 @@
 						<li>개인정보책임자: 김민정</li>
 					</ul>
 					<ul class="c-footer__list">
-						<li>이벤트 안내번호: 070-4888-1164 (점심시간 :오후1시-2시)</li>
+						<li>이벤트 안내번호: 02-523-7676</li>
 						<li>통신판매업신고번호: 2015-서울서초-0215</li>
 						<li>E-MAIL: bioderma@bioderma.kr</li>
 					</ul>
@@ -191,16 +167,16 @@
 ?>        
         <script type="text/javascript">
             $(document).ready(function() {
-                var mySwiper = new Swiper ('.swiper-container', {
-                    // Optional parameters
-                    direction: 'horizontal',
-                    loop: true,
-                    // Navigation arrows
-                    navigation: {
-                        nextEl: '.button-next',
-                        prevEl: '.button-prev',
-                    },
-                })
+                // var mySwiper = new Swiper ('.swiper-container', {
+                //     // Optional parameters
+                //     direction: 'horizontal',
+                //     loop: true,
+                //     // Navigation arrows
+                //     navigation: {
+                //         nextEl: '.button-next',
+                //         prevEl: '.button-prev',
+                //     },
+                // })
             });
 
             (function(d, s) {

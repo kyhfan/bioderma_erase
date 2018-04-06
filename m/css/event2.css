@@ -570,8 +570,8 @@ a {
 	padding: 22px 0 39px 8px;
 }
 .content-main .feed .best-wrapper .swiper-slide .txt-wrap .inner {
-	height: 75px;
-	overflow-y: auto;
+	/* height: 75px; */
+	/* overflow-y: auto; */
 	font-size: 15px;
 	font-weight: 500;
 	color: #585858;
@@ -913,6 +913,14 @@ html.popup-opened body {
 	.c-footer__list > li br {
 		display: inherit;
 	}
+	.content-main .howto .txt-caution._02 {
+		max-width: 644px;
+		height: 68px;
+		background: url(../images/event_2/main_howo_txt_caution_02.png) no-repeat;
+		background-size: 266px auto;
+		margin: 8px auto 0; 
+	}
+	
 }
 
 #popup_gift_info {

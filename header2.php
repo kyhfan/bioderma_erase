@@ -1,8 +1,8 @@
             <div class="main-header">
                 <div class="header-wrap">
                     <div class="header-sns-area">
-                        <button class="share_fb_btn"></button>
-                        <button class="share_ks_btn"></button>
+                        <button class="share_fb_btn" onclick="wmbt.sns_share('fb');"></button>
+                        <button class="share_ks_btn" onclick="wmbt.sns_share('ks');"></button>
                         <!-- <img src="./images/event2/share_facebook_btn.png" alt="페이스북 공유 버튼">
                         <img src="./images/event2/share_kakaostory_btn.png" alt="카카오스토리 공유 버튼"> -->
                     </div>
@@ -23,7 +23,8 @@
                             <span></span>
                             <span>메이크업 인지 테스트</span>
                         </div> -->
-                        <button class="navi3" data-move="video2" onclick="wmbt.move(this)">
+                        <!-- <button class="navi3" data-move="video2" onclick="wmbt.move(this)"> -->
+                        <button class="navi3" data-move="video2" onclick="alert('웹드라마 \'지울 수밖에 없는 사랑\'은 4월 11일 오픈됩니다.')">
                             <span></span>
                             <span>바이오더마 웹드라마</span>
                         </button>
@@ -33,7 +34,7 @@
                         </div> -->
                     </div>
                     <div class="header-logo">
-                        <img src="./images/event2/header_logo.png" alt="로고">
+                        <a href="http://www.bioderma.co.kr/" target="_blank"><img src="./images/event2/header_logo.png" alt="로고"></a>
                     </div>
                 </div>
             </div>
