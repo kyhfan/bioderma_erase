@@ -309,7 +309,7 @@ function sns_share(media)
 {
 	if (media == "fb")
 	{
-		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.biodermaevent.com/?media=share_fb'),'sharer','toolbar=0,status=0,width=600,height=325');
+		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.biodermaevent.com/index2.php?media=share_fb'),'sharer','toolbar=0,status=0,width=600,height=325');
 
 		$.ajax({
 			type   : "POST",
@@ -344,7 +344,7 @@ function sns_share(media)
 		});
 	}else{
 		Kakao.Story.share({
-			url: 'http://www.biodermaevent.com/?media=share_ks'
+			url: 'http://www.biodermaevent.com/index2.php?media=share_ks'
 		});
 		$.ajax({
 			type   : "POST",
