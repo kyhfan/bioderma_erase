@@ -1,11 +1,11 @@
 <?
 	include_once "../include/autoload.php";
 
-    $mnv_f = new mnv_function();
-    $my_db         = $mnv_f->Connect_MySQL();
-    $mobileYN      = $mnv_f->MobileCheck();
-    $obYN          = $mnv_f->BrowserCheck();
-    if ($mobileYN == "PC")
+	$mnv_f = new mnv_function();
+	$my_db         = $mnv_f->Connect_MySQL();
+	$mobileYN      = $mnv_f->MobileCheck();
+	$obYN          = $mnv_f->BrowserCheck();
+	if ($mobileYN == "PC")
 	{
 		echo "<script>location.href='../index.php?media=".$_REQUEST["media"]."&r=".$_REQUEST["r"]."';</script>";
 	}else{
@@ -13,171 +13,201 @@
 		$rs_tracking   = $mnv_f->InsertTrackingInfo($mobileYN);
 	}
 
-	include_once "./head.php";
+	include_once "./head2.php";
 ?>
 	<body>
-		<div class="wrap wrap--sub">
+		<div class="wrap">
 <?
-	include_once "./header.php";
-?>            
-			<div class="c-content c-content--main">
-				<div class="c-section">
-					<div class="m-visual">
-						<img src="./images/pages/m-visual.png" alt="메이크업은 말끔하게 지우고 건강한 피부만 남겨요 ! 제한 시간 동안 메이크업을 말끔하게 지워주세요 추첨을 통해 제품을 선물로 드립니다" />
-						<button class="m-visual__more">더보기</button>
-<?
-						if(date("Y-m-d H:i:s") > '2018-03-31 23:59:59') {
-?>	
-							<button class="m-visual__button" onclick="popupOpen('popup_event_end');">GAME START</button>
-<?					
-						}else{
+			include_once "./header2.php";
 ?>
-							<button class="m-visual__button" onclick="movePage('game')">GAME START</button>
-<?
-						}
-?>
-
+			<div class="content content-main">
+				<section class="visual">
+					<div class="area-title">
+						<img class="title" src="./images/event_2/main_title.png" alt="#TO GO KIT">
+						<img class="title-kr" src="./images/event_2/main_title_kr.png" alt="투고키트 이벤트">
+						<p class="sub">지난 이벤트에서 투고키트를 받지 못하신 분들에게<br>다시 한 번, 투고키트를 증정합니다</p>
 					</div>
-				</div>
-				<div class="c-section c-section--large scrollTarget">
-					<div class="m-inner">
-						<div class="c-section">
-							<div class="m-infos__info">
-								<div class="m-heading">이벤트 안내</div>
-								<ul class="m-info__list">
-									<li class="m-info__item">
-										<div class="m-info__heading">기간</div>
-										<div class="m-info__data">2018.3.6 ~ 2018.3.31</div>
-									</li>
-									<li class="m-info__item">
-										<div class="m-info__heading">발표</div>
-										<div class="m-info__data">즉석 당첨</div>
-									</li>
-									<li class="m-info__item">
-										<div class="m-info__heading">배송</div>
-										<div class="m-info__data">매주 월요일 일괄 발송</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="c-section c-section--s-large">
-							<div class="m-infos__step">
-								<ul class="m-step__list">
-									<li class="m-step__item">
-										<div class="m-step__num">#1</div>제한 시간은 20초 입니다
-									</li>
-									<li class="m-step__item">
-										<div class="m-step__num">#2</div>화장솜을 이용해 화장을 지워주세요
-									</li>
-									<li class="m-step__item">
-										<div class="m-step__num">#3</div>단계가 올라갈수록 화장솜의 크기는 작아집니다
-									</li>
-									<li class="m-step__item">
-										<div class="m-step__num">#4</div>모든 메이크업을 말끔하게 지우고 건강한 피부만 남긴 분들에게는 추첨을 통해 선물을 드립니다!
-									</li>
-								</ul>
-							</div>
-						</div>
+					<div class="kit">
+						<img src="./images/event_2/main_visual_kit.png">
 					</div>
-				</div>
-				<div class="c-section c-section--large">
-					<div class="m-inner">
-						<div class="m-heading">경품 안내</div>
-
-						<div class="m-prize">
-							<div class="m-prize__image">
-								<img src="./images/pages/m-prize__image-1.png" alt="#3단계 까지 모두 클리어! 모두 말끔하게 지우신 분들 중 추첨을 통해 바이오더마 클렌징워터 정품 증정" />
-							</div>
-							<div class="m-prize__image">
-								<img src="./images/pages/m-prize__image-2.png" alt="#2단계 까지 모두 클리어! 모두 말끔하게 지우신 분들 중 추첨을 통해 바이오더마 투-고 키트 증정" />
-							</div>
-							<div class="m-noti">
-								<div class="m-noti__heading">※ 이벤트 유의사항</div>
-								<ul class="m-noti__list">
-									<li class="m-noti__item">본 행사는 2018년 3월 6일부터 3월 31일까지 진행되며, 기타 사유로 조기 종료할 수 있습니다.</li>
-									 <li class="m-noti__item">경품은 동일인에게 중복증정되지 않으며, 기타 내부 사유로 변경될 수 있습니다. </li>
-									 <li class="m-noti__item">1등 경품 중 클렌징워터는 <em class="c-em">센시비오/세비엄/하이드라비오 클렌징워터 3종 500ml(1명) / 250ml(2명) / 100ml(3명)</em> 으로 랜덤 선정됩니다. </li>
-								</ul>
-							</div>
-						</div>
+					<button class="btn-get" onclick="movePage('game2')" type="button">투고키트 받기<span class="txt"></span>
+						<span class="obj"></span></button>
+					<button class="btn-more">더보기</button>
+				</section>
+				<section class="howto scrollTarget">
+					<div class="area-title">
+						<img class="title" src="./images/event_2/main_howto_title.png" alt="당신의 일상 속 투고키트가 어떻게 쓰이고 있는지 보여주세요">
+						<p class="sub">가장 많은 LIKE를 받은 10분께는 바이오더마에서 빅프라이즈를 드립니다</p>
 					</div>
-				</div>
-
-				<div class="m-video">
-					<div class="m-video__bg">
-						<img src="./images/pages/m-video__bg.png" alt="" />
-					</div>	
-					<div class="m-video__top">
-						<div class="m-video__text">
-							<div class="m-video__txt m-video__txt-1">잔여물없이 말끔하게 지워야 진짜 맨얼굴!</div>
-							<div class="m-video__txt m-video__txt-2"><em class="c-em">건강한 피부만 남기는 모습</em><br />영상으로도 확인하세요</div>
-						</div>
-						<!-- <a href="#" class="m-video__link"> -->
-						<div class="m-video__link">
-							<div class="m-video__image">
-                                <!-- <img src="./images/pages/m-video__image.png" alt="영상썸네일" /> -->
-                                <iframe allowfullscreen="1" src="https://www.youtube.com/embed/JkCGTXTn0oM?controls=0&loop=1&playlist=JkCGTXTn0oM&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" style="position:relative;z-index:11;left:9px;top:7px"></iframe>
-                            </div>
-						<!-- </a>						 -->
-						</div>						
-						<div class="m-video__aligner">
-							<div class="m-video__txt m-video__txt-3"><em class="c-em">건강한 피부</em>만 남겨요</div>
-							<div class="m-video__txt m-video__txt-4"><em class="m-video__txt--bold">스킨케어 클렌저</em> 바이오더마 클렌징워터 </div>
-							<div class="m-video__buttons">
-                                <a href="http://www.bioderma.co.kr/front/product_view.php?id=7000079" target="_blank">
-                                    <button class="m-video__button"><img src="./images/pages/m-video__button.png" alt="스킨케어 클렌저 구매하기" /></button>
-                                </a>
+					<div class="kit">
+						<img src="./images/event_2/main_howto_kit.jpg">
+					</div>
+					<div class="txt-caution">
+						<p>※ 이벤트 유의사항</p>
+						<ul>
+							<li>- 최종 당첨자는 컨텐츠 LIKE 수와 내부 심사 기준에 따라 선정됩니다</li>
+							<li>- 부정한 방법으로 이벤트 참여시 (ex 좋아요 구매) 당첨 선발에서 제외됨을 알려드립니다</li>
+							<li>- 세가지 해시태그를 모두 입력하지 않으면 당첨 선발에서 제외됩니다</li>
+							<li>- 제세공과금 규정에 비동의시, 경품을 지급할 수 없어 당첨이 취소됩니다</li>
+						</ul>
+					</div>
+					<div class="gift-info-area">
+						<button class="gift-info" onclick="popupOpen('popup_gift_info');"></button>
+					</div>
+					<div class="area area-step">
+						<h5>참여 방법</h5>
+						<img src="./images/event_2/main_howto_step.png" alt="">
+					</div>
+					<div class="area area-ex">
+						<h5>참여 예시</h5>
+						<img src="./images/event_2/main_howto_ex.png" alt="">
+					</div>
+					<div class="txt-caution _02">
+						<p>※ 이벤트 유의사항</p>
+						<ul>
+							<li>- 참여 예시에 부합하지 않는 사진은 참여가 인정되지 않습니다</li>
+                            <li>- 비공개 계정일 경우 컨텐츠가 노출되지 않아 참여가 인정되지 않습니다</li>
+                            <li>- 이벤트 종료 후 해시태그를 삭제하거나 비공개 계정으로 전환할 경우 참여가 인정되지 않습니다</li>
+						</ul>
+					</div>
+				</section>
+				<section class="feed">
+					<div class="area-title">
+						<img class="title" src="./images/event_2/main_feed_title.png" alt="WEEKLY BEST CONTENT">
+						<p class="sub">게시물은 매주 월요일 정오에 업데이트 됩니다</p>
+					</div>
+					<div class="weekly-best">
+						<div class="best-wrapper">
+							<!-- Slider main container -->
+							<div class="best-slider swiper-container">
+								<!-- Additional required wrapper -->
+								<!-- 2개 이상일때는 2 지우기 -->
+								<!-- <div class="swiper-wrapper"> -->
+								<div class="swiper-wrapper2">
+									<!-- Slides -->
+									<div class="swiper-slide">
+									<!-- <div class="swiper-slide2"> -->
+										<div class="profile">
+											<a href="javascript:void(0)">
+												<img class="thumb" src="./images/event_2/main_feed_thumb_sample.png" alt="">
+											</a>
+											<a href="javascript:void(0)">
+												<span>Biodermaevent</span>
+											</a>
+										</div>
+										<div class="main-img">
+											<a href="javascript:void(0)">
+												<img src="./images/event_2/main_feed_img_sample.jpg" alt="">
+											</a>
+										</div>	
+										<div class="txt-wrap">
+											<div class="inner">
+												메이크업은 말끔하게 지우고<br>
+												건강한 피부만 남기는 바이오더마!<br>
+												이제 밖에서도 간편하게<br>
+												투고키트로 즐길 수 있어서 최고<br><br>
+												#바이오더마 #클렌징워터<br>
+												#투고키트 #클렌징지존
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- If we need navigation buttons -->
+								<!-- <div class="button-prev">
+									<img src="./images/event_2/main_feed_nav_prev.png" alt="이전">
+								</div>
+								<div class="button-next">
+									<img src="./images/event_2/main_feed_nav_next.png" alt="다음">
+								</div> -->
 							</div>
-							<div class="m-video__percents">
-								<a href="http://www.bioderma.co.kr/front/product_view.php?id=7000079" target="_blank" class="m-video__percent"><img src="./images/pages/m-video__percent--1.png" alt="100% 메이크업 클렌징력 1)" /></a>
-								<a href="http://www.bioderma.co.kr/front/product_view.php?id=7000079" target="_blank" class="m-video__percent"><img src="./images/pages/m-video__percent--2.png" alt="100% 저자극 클렌징 1)" /></a>
-								<a href="http://www.bioderma.co.kr/front/product_view.php?id=7000079" target="_blank" class="m-video__percent"><img src="./images/pages/m-video__percent--3.png" alt="클렌징 후 부드러운 피부 1)" /></a>
-							</div>
-							<div class="m-video__noti">1) 프랑스본사자료 CIREC 13041 30명 대상(23-64세 남녀) 7일간 사용(아침/저녁), 사용자 만족도 테스트, 개인차있음</div>
 						</div>
 					</div>
+					<div class="list-feed">
+						<div class="area-title">
+							<img class="title" src="./images/event_2/main_feed_list_tag.png" alt="">
+							<!--
+<span>#바이오더마</span>
+<span>#투고키트</span>
+<span>#클렌징지존</span>
+-->
+							<p class="sub">게시물은 매주 월요일 정오에 업데이트 됩니다</p>
+						</div>
+						<div class="list-container">
+							<div class="inner">
+								<div class="attractt-container" data-idx="0" data-code="T9VmNLEdHZa3iGh" data-board="grid"></div>
+<!--
+								<div class="obj-feed">
+									<img src="./images/event_2/main_feed_list_sample.jpg" alt="">
+								</div>
+								<div class="obj-feed">
+									<img src="./images/event_2/main_feed_list_sample.jpg" alt="">
+								</div>
+								<div class="obj-feed">
+									<img src="./images/event_2/main_feed_list_sample.jpg" alt="">
+								</div>
+								<div class="obj-feed">
+									<img src="./images/event_2/main_feed_list_sample.jpg" alt="">
+								</div>
+-->
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="c-footer">
+				<div class="c-footer__aligner">
+					<ul class="c-footer__list">
+						<li><a href="http://www.bioderma.co.kr/page/brand_philosophy.php" target="_blank">바이오더마 소개</a></li>
+						<li><a href="http://www.bioderma.co.kr/front/board.php?bbs_id=notice" target="_blank">온라인 고객센터</a></li>
+					</ul>
+					<ul class="c-footer__list c-footer__list--none">
+						<li>나오스코리아 유한회사</li>
+						<li>대표: 장이브데모트</li>
+						<li>사업자등록번호: 214-88-79685 <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=&apv_perm_no=2015321015330200215" target="_blank">(사업자정보확인)</a></li>
+						<li>주소: 서울특별시 서초구 서초중앙로 138 우림빌딩 7층 <br>나오스코리아 유한회사</li>
+						<li>개인정보책임자: 김민정</li>
+						<li>이벤트 안내번호: 02-523-7676</li>
+						<li>통신판매업신고번호: 2015-서울서초-0215</li>
+						<li>E-MAIL: bioderma@bioderma.kr</li>
+					</ul>
+					<div class="copyright">©2018  BIODERMA.  ALL RIGHT RESERVED.</div>
 				</div>
 			</div>
-
-<?
-    include_once "./footer.php";
-    
-	include_once "./popup/popup_event_end.php";
-			
-	include_once "./popup/popup_agree1.php";
-    
-	include_once "./popup/popup_agree2.php";
-?>		
-
-			<script type="text/javascript">
-				$('.m-visual__more').on('click', function(){
-					var scTop = $('.scrollTarget').offset().top;
-
-					$('html, body').animate({scrollTop:(scTop-80)+'px'}, 500);
-					// $('html, body').animate({scrollTop :  $('.section.'+nav).offset().top}, 1000);
-
-					return false;
-				});
-			</script>
 		</div>
-<script type="text/javascript" src="http://wcs.naver.net/wcslog.js"></script>
-<script type="text/javascript">
-if(!wcs_add) var wcs_add = {};
-wcs_add["wa"] = "73500228899d2c";
-wcs_do();
-</script>		
-<script type="text/javascript">
-$(document).ready(function(){
 <?
-	if ($_REQUEST["r"] == "v")
-	{
+	include_once "./popup/popup_gift_info.php";
 ?>
-			$('html, body').animate({scrollTop :  $(".m-video").offset().top -220}, 1000);
-<?		
-	}	
-?>
-});
-</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+// 				var mySwiper = new Swiper ('.swiper-container', {
+// \					direction: 'horizontal',
+// 					loop: true,
+// \					navigation: {
+// 						nextEl: '.button-next',
+// 						prevEl: '.button-prev',
+// 					},
+// 				})
+			});
+			
+			$('.btn-more').on('click', function(){
+				var scTop = $('.scrollTarget').offset().top;
 
+				$('html, body').animate({scrollTop:(scTop-40)+'px'}, 500);
+				// $('html, body').animate({scrollTop :  $('.section.'+nav).offset().top}, 1000);
+
+				return false;
+			});
+
+		</script>
+		<script type="text/javascript">
+			(function(d, s) {
+				var j, e = d.getElementsByTagName(s)[0], h = "https://cdn.attractt.com/embed/js/dist/embed.min.js";
+				if (typeof AttracttTower === "function" || e.src === h) { return; }
+				j = d.createElement(s);
+				j.src = h;
+				j.async = true;
+				e.parentNode.insertBefore(j, e);
+			})(document, "script");
+		</script>
 	</body>
 </html>

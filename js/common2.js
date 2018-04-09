@@ -46,7 +46,7 @@ var bioderma = function() {
 	},
 	this.popupMoveClose = function(me) {
 		if (confirm("이 창을 닫으면 메인으로 이동합니다. 이동하시겠습니까?"))
-			location.href = "index2.php";
+			location.href = "index.php";
 		return false;
 	},
 	this.popupSelfClose = function(popup) {
@@ -103,7 +103,7 @@ var bioderma = function() {
 	this.sns_share = function(media) {
 		if (media == "fb")
 		{
-			var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.biodermaevent.com/index2.php?media=share_fb'),'sharer','toolbar=0,status=0,width=600,height=325');
+			var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.biodermaevent.com/index.php?media=share_fb'),'sharer','toolbar=0,status=0,width=600,height=325');
 
 			$.ajax({
 				type   : "POST",
@@ -116,7 +116,7 @@ var bioderma = function() {
 			});
 		}else{
 			Kakao.Story.share({
-				url: 'http://www.biodermaevent.com/index2.php?media=share_ks'
+				url: 'http://www.biodermaevent.com/index.php?media=share_ks'
 			});
 			$.ajax({
 				type   : "POST",
@@ -250,7 +250,7 @@ var bioderma = function() {
 					break;
 					case "D" :
 						alert("오늘은 이미 참여하셨습니다. 내일 다시 참여해주세요");
-						location.href = "index2.php";
+						location.href = "index.php";
 					break;
 				}
 				// console.log(response);
