@@ -107,7 +107,7 @@ class mnv_function extends mnv_dbi
 		$kit_winner_count       = 6000;	// 투고 키트 총 당첨 수량
 		$goods_winner_count     = 6;	// 정품 총 당첨 수량
 
-        $kit_array      = array("Y","N","N","N");
+        $kit_array      = array("Y","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N");
         // $kit_array      = array("Y");
         // $kit_array      = array("Y","N");
 		shuffle($kit_array);
@@ -135,7 +135,7 @@ class mnv_function extends mnv_dbi
         {
 			if ($kit_array[0] == "Y")
 			{
-				$winner = "blank";
+				$winner = "kit";
 			}else{
 				// 3레벨일 경우에만 정품 당첨 추첨
 				if ($level == 3)
