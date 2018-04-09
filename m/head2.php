@@ -9,7 +9,7 @@
 		<meta name="format-detection" content="telephone=no" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="바이오더마가 또! #투고키트를 1000명에게 드립니다">
-		<meta property="og:url" content="http://www.biodermaevent.com/index2.php" />
+		<meta property="og:url" content="http://www.biodermaevent.com/index.php" />
 		<meta property="og:image" content="http://www.biodermaevent.com/images/event2/share01.jpg" />
 		<meta property="og:description" content="지난 이벤트에서 투고키트를 받지 못하신 분들에게 다시 한 번, 투고키트를 증정합니다!">
 

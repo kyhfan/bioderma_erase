@@ -21,7 +21,7 @@
 			</div>
 			<div class="c-section">
 				<div class="c-popup__buttons">
-					<button class="c-popup__button" onclick="movePage('game')">재도전</button>
+					<button class="c-popup__button" onclick="movePage('game2')">재도전</button>
 					<button class="c-popup__button" onclick="movePage('index')">확인</button>
 				</div>
 			</div>

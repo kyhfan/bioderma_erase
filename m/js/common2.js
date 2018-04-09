@@ -79,7 +79,7 @@ $(document).ready(function(event){
 	// popup close
 	$('.c-popup__close2').on('click', function(){
 		if (confirm("이 창을 닫으면 메인으로 이동합니다. 이동하시겠습니까?"))
-			location.href = "index2.php";
+			location.href = "index.php";
 
 		return false;
 	});
@@ -226,7 +226,7 @@ function levelSubmit(level) {
 					break;
 				case "D" :
 					alert("오늘은 이미 참여하셨습니다. 내일 다시 참여해주세요.");
-					location.href = "index2.php";
+					location.href = "index.php";
 					break;
 			}
 		}
@@ -309,7 +309,7 @@ function sns_share(media)
 {
 	if (media == "fb")
 	{
-		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.biodermaevent.com/index2.php?media=share_fb'),'sharer','toolbar=0,status=0,width=600,height=325');
+		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.biodermaevent.com/index.php?media=share_fb'),'sharer','toolbar=0,status=0,width=600,height=325');
 
 		$.ajax({
 			type   : "POST",
@@ -322,7 +322,7 @@ function sns_share(media)
 		});
 	}else if (media == "kt"){
 		Kakao.Link.sendTalkLink({
-			label: '[투고키트 이벤트]\r\n바이오더마가 또!\r\n#투고키트를 1000명에게 드립니다\r\n\r\n지난 이벤트에서 투고키트를 받지 못하신 분들에게다시 한 번, 투고키트를 증정합니다!',
+			label: '[투고키트 이벤트]\r\n바이오더마가 또!\r\n#투고키트를 1000명에게 드립니다\r\n\r\n지난 이벤트에서 투고키트를 받지 못하신 분들에게 다시 한 번, 투고키트를 증정합니다!',
 			image: {
 				src: 'http://www.biodermaevent.com/images/event2/share01.jpg',
 				width: '1200',
@@ -330,7 +330,7 @@ function sns_share(media)
 			},
 			webButton: {
 				text: "BIODERMA",
-				url: 'http://www.biodermaevent.com/m/index2.php?media=kt' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+				url: 'http://www.biodermaevent.com/m/index.php?media=kt' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 			}
 		});
 		$.ajax({
@@ -344,7 +344,7 @@ function sns_share(media)
 		});
 	}else{
 		Kakao.Story.share({
-			url: 'http://www.biodermaevent.com/index2.php?media=share_ks'
+			url: 'http://www.biodermaevent.com/index.php?media=share_ks'
 		});
 		$.ajax({
 			type   : "POST",

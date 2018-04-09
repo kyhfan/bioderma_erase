@@ -7,7 +7,7 @@
                         <img src="./images/event2/share_kakaostory_btn.png" alt="카카오스토리 공유 버튼"> -->
                     </div>
                     <div class="header-navi">
-                        <button class="navi1" data-move="index2" onclick="wmbt.move(this)">
+                        <button class="navi1" data-move="index" onclick="wmbt.move(this)">
                             <span></span>
                             <span>투고키트 이벤트</span>
                         </button>
