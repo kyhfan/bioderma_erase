@@ -36,7 +36,7 @@
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query	= "SELECT mb_regdate FROM member_info WHERE 1 Group by substr(mb_regdate,1,10) ORDER BY mb_regdate DESC";
+	$daily_date_query	= "SELECT mb_regdate FROM member_info WHERE 1 AND mb_regdate < '2018-04-09' Group by substr(mb_regdate,1,10) ORDER BY mb_regdate DESC";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
