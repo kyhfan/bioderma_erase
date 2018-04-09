@@ -21,7 +21,7 @@
     <!-- Page Heading -->
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="page-header">1차 캠페인 사이트 유입자 수 PC / Mobile</h1>
+          <h1 class="page-header">2차 캠페인 사이트 유입자 수 PC / Mobile</h1>
         </div>
       </div>
       <!-- /.row -->
@@ -36,7 +36,7 @@
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query	= "SELECT tracking_date FROM tracking_info WHERE mb_regdate < '2018-04-09' Group by substr(tracking_date,1,10) ORDER BY tracking_date DESC";
+	$daily_date_query	= "SELECT tracking_date FROM tracking_info WHERE mb_regdate > '2018-04-09' Group by substr(tracking_date,1,10) ORDER BY tracking_date DESC";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{

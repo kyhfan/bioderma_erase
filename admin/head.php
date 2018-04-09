@@ -91,28 +91,22 @@ if (isset($_SESSION['ss_mb_name']) == false)
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Daily Count<i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo" class="collapse">
                   <li>
-                    <a href="daily_tracking_count.php">일자별 사이트 유입자 수</a>
-                  </li>
-                  <li>
-                    <a href="daily_media_count.php">캠페인 참여자 수</a>
-                  </li>
-                  <!-- <li>
-                    <a href="daily_media_count2.php">내 마음대로 부문 참여자 수</a>
-                  </li> -->
-                  <!-- <li>
-                    <a href="daily_outlink_count.php">일자별 아웃링크 클릭 수</a>
-                  </li> -->
-                  <!--<li>
-                    <a href="daily_exp_count.php">사이트(체험팩) 레벨별 참여자 수</a>
-                  </li>-->
-                  <li>
-                    <a href="daily_share_count.php">일자별 SNS 공유 버튼 클릭 수</a>
+                    <a href="daily_tracking_count.php">1차 일자별 사이트 유입자 수</a>
                   </li>
                   <li>
                     <a href="winner_count.php">1차 경품별 당첨자 수</a>
                   </li>
                   <li>
+                    <a href="daily_tracking_count2.php">2차 일자별 사이트 유입자 수</a>
+                  </li>
+                  <li>
                     <a href="winner_count2.php">2차 경품별 당첨자 수</a>
+                  </li>
+                  <li>
+                    <a href="daily_media_count.php">캠페인 참여자 수</a>
+                  </li>
+                  <li>
+                    <a href="daily_share_count.php">일자별 SNS 공유 버튼 클릭 수</a>
                   </li>
                 </ul>
               </li>
