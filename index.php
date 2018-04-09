@@ -49,6 +49,7 @@
                             <li>- 세가지 해시태그를 모두 입력하지 않으면 당첨 선발에서 제외됩니다</li>
                             <li>- 제세공과금 규정에 비동의시, 경품을 지급할 수 없어 당첨이 취소됩니다</li>
                             <li>- 지난 당첨자는 선발에서 제외됩니다</li>
+                            <li>- 이벤트를 통한 경품 획득이 아닌 기타 방법(협찬 등)을 통한 경품 획득으로 참여시 당첨 선발에서는 제외됩니다</li>
                         </ul>
                         <div>
                             <button class="gift-info" data-layer-popup="popup_gift_info" onclick="wmbt.popupOpen(this)"></button>
