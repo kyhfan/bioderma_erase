@@ -109,7 +109,10 @@ if (isset($_SESSION['ss_mb_name']) == false)
                     <a href="daily_share_count.php">일자별 SNS 공유 버튼 클릭 수</a>
                   </li>
                   <li>
-                    <a href="winner_count.php">경품별 당첨자 수</a>
+                    <a href="winner_count.php">1차 경품별 당첨자 수</a>
+                  </li>
+                  <li>
+                    <a href="winner_count2.php">2차 경품별 당첨자 수</a>
                   </li>
                 </ul>
               </li>
