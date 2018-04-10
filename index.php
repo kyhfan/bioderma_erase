@@ -1,6 +1,8 @@
 <?
 	include_once "./include/autoload.php";
 
+    $r 	= $_REQUEST["r"];
+	
     $mnv_f = new mnv_function();
     $my_db         = $mnv_f->Connect_MySQL();
     $mobileYN      = $mnv_f->MobileCheck();
@@ -167,7 +169,7 @@
 		include_once "./popup/popup_gift_info.php";
 ?>        
         <script type="text/javascript">
-            $(document).ready(function() {
+            $(window).load(function() {
                 // var mySwiper = new Swiper ('.swiper-container', {
                 //     // Optional parameters
                 //     direction: 'horizontal',
@@ -178,6 +180,18 @@
                 //         prevEl: '.button-prev',
                 //     },
                 // })
+
+<?
+	if ($r == "y")
+	{
+?>
+				var scTop = $('.main-section2').offset().top;
+                $('html, body').animate({scrollTop:scTop + 40}, 500);
+                console.log(scTop);
+<?
+	}
+?>
+                
             });
 
             (function(d, s) {
