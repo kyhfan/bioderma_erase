@@ -187,7 +187,6 @@
 ?>
 				var scTop = $('.main-section2').offset().top;
                 $('html, body').animate({scrollTop:scTop + 40}, 500);
-                console.log(scTop);
 <?
 	}
 ?>

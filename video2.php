@@ -21,12 +21,12 @@ include_once "./head2.php";
 			<div class="c-content__aligner">
 				<div class="video-wrapper">
 					<div class="title">
-						<img src="./images/event2/sub_video_title.png" alt="메이크업 인지 테스트">
+						<img src="./images/event2/sub_video_title2.png" alt="메이크업 인지 테스트">
 					</div>
 					<div class="video">
 						<div class="player">
 							<!-- <img src="./images/event2/sub_video_sample.jpg" alt=""> -->
-							<iframe allowfullscreen="1" src="https://www.youtube.com/embed/JkCGTXTn0oM?controls=0&loop=1&playlist=JkCGTXTn0oM&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" width="971" height="589" style="position:relative;z-index:2"></iframe>
+							<iframe allowfullscreen="1" src="https://www.youtube.com/embed/p3i30xDx6tA?controls=0&loop=1&playlist=p3i30xDx6tA&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" width="971" height="589" style="position:relative;z-index:2"></iframe>
 						</div>
 					</div>
 				</div>
