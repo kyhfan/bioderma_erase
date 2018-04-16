@@ -12,7 +12,7 @@
 			<div class="c-events">
 				<button class="c-event c-event--1" onclick="movePage('index')"><span>투고키트 이벤트</span></button>
 				<button class="c-event c-event--2" onclick="movePage('video')"><span>메이크업 인지 테스트</span></button>
-				<button class="c-event c-event--3" onclick="movePage('video2')"><span>바이오더마 웹드라마</span></button>
+				<button class="c-event c-event--3" onclick="movePage('video2');click_tracking('바이오더마 웹드라마 영상')"><span>바이오더마 웹드라마</span></button>
 				<!-- <button class="c-event c-event--3" onclick="alert('웹드라마 \'지울 수밖에 없는 사랑\'은 4월 11일 오픈됩니다.')"><span>바이오더마 웹드라마</span></button> -->
 			</div>
 			<div class="c-sns">
