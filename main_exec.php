@@ -79,7 +79,7 @@ switch ($_REQUEST['exec'])
         $my_db          = $mnv_f->Connect_MySQL();
         $gubun          = $mnv_f->MobileCheck();
 
-		$click_query	= "INSERT INTO ".$_gl['click_info_table']."(click_name, click_refferer, click_ipaddr, click_gubun, click_date) values ('".$click_name."','".$_SERVER['HTTP_REFERER']."','".$_SERVER['REMOTE_ADDR']."','".$gubun."','".date("Y-m-d H:i:s")."')";
+		$click_query	= "INSERT INTO click_info(click_name, click_refferer, click_ipaddr, click_gubun, click_date) values ('".$click_name."','".$_SERVER['HTTP_REFERER']."','".$_SERVER['REMOTE_ADDR']."','".$gubun."','".date("Y-m-d H:i:s")."')";
 		$result			= mysqli_query($my_db, $click_query);
 
 	break;

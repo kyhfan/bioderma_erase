@@ -265,6 +265,7 @@ wmbt.init();
 
 function click_tracking(click_name)
 {
+	console.log(click_name);
 	$.ajax({
 		type   : "POST",
 		async  : false,
