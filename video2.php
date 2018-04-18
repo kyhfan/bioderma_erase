@@ -26,7 +26,7 @@ include_once "./head2.php";
 					<div class="video">
 						<div class="player">
 							<!-- <img src="./images/event2/sub_video_sample.jpg" alt=""> -->
-							<iframe allowfullscreen="1" src="https://www.youtube.com/embed/p3i30xDx6tA?controls=0&loop=1&playlist=p3i30xDx6tA&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" width="971" height="589" style="position:relative;z-index:2"></iframe>
+							<iframe allowfullscreen="1" src="https://www.youtube.com/embed/OwXHKcC0rL8?controls=0&loop=1&playlist=OwXHKcC0rL8&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1" frameborder="0" id="ytplayer" class="ytplayer" width="971" height="589" style="position:relative;z-index:2"></iframe>
 						</div>
 					</div>
 				</div>
