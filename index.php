@@ -170,6 +170,10 @@
         </div>
 <?
 		include_once "./popup/popup_gift_info.php";
+        
+        include_once "./popup/popup_agree1.php";
+        
+        include_once "./popup/popup_agree2.php";
 ?>        
         <script type="text/javascript">
             $(window).load(function() {
