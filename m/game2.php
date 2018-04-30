@@ -126,9 +126,7 @@ include_once "./popup/popup_agree2.php";
 					count+=1;
 					var gaugeWidths = $('.gauge__adds').css('width'),
 						gaugeWidth = parseInt(gaugeWidths.replace('px', ''));
-						// per = (count + 2) * 5.1 + '%';
 					$('.gauge__time').text(time);
-
 					$('.gauge__adds').animate({
 						'width': ((count + 2) * 5.1) + '%'
 					}, 1000, 'linear');

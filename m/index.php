@@ -85,8 +85,137 @@
 								<!-- Additional required wrapper -->
 								<!-- 2개 이상일때는 2 지우기 -->
 								<!-- <div class="swiper-wrapper"> -->
-								<div class="swiper-wrapper2">
+								<div class="swiper-wrapper">
 									<!-- Slides -->
+									<div class="swiper-slide">
+										<!-- <div class="swiper-slide2"> -->
+										<div class="profile">
+											<a href="javascript:void(0)">
+												<!-- <img class="thumb" src="./images/event_2/main_feed_thumb_sample.png" alt=""> -->
+												<img class="thumb" src="./images/event_2/_yoonsoop_profile.jpg" alt="">
+											</a>
+											<a href="javascript:void(0)">
+												<span>_yoonsoop</span>
+											</a>
+										</div>
+										<div class="main-img">
+											<a href="javascript:void(0)">
+												<!-- <img src="./images/event_2/main_feed_img_sample.jpg" alt=""> -->
+												<img src="./images/event_2/_yoonsoop.jpg" alt="">
+											</a>
+										</div>	
+										<div class="txt-wrap">
+											<div class="inner">
+												이번 여름휴가는 #바이오더마 #투고키트 와 함께!<br><br>
+												
+												#클렌징지존 #센시비오 #inmybag
+											</div>
+										</div>
+									</div>
+									
+									<div class="swiper-slide">
+										<!-- <div class="swiper-slide2"> -->
+										<div class="profile">
+											<a href="javascript:void(0)">
+												<!-- <img class="thumb" src="./images/event_2/main_feed_thumb_sample.png" alt=""> -->
+												<img class="thumb" src="./images/event_2/roro.on_profile.jpg" alt="">
+											</a>
+											<a href="javascript:void(0)">
+												<span>roro.on</span>
+											</a>
+										</div>
+										<div class="main-img">
+											<a href="javascript:void(0)">
+												<!-- <img src="./images/event_2/main_feed_img_sample.jpg" alt=""> -->
+												<img src="./images/event_2/roro.on.jpg" alt="">
+											</a>
+										</div>	
+										<div class="txt-wrap">
+											<div class="inner">
+												✨홀로그램 영롱쓰🌈<br><br>
+
+												#바이오더마 #투고키트 #클렌징지존
+											</div>
+										</div>
+									</div>
+									
+									<div class="swiper-slide">
+										<!-- <div class="swiper-slide2"> -->
+										<div class="profile">
+											<a href="javascript:void(0)">
+												<!-- <img class="thumb" src="./images/event_2/main_feed_thumb_sample.png" alt=""> -->
+												<img class="thumb" src="./images/event_2/luvmyvorld_profile.jpg" alt="">
+											</a>
+											<a href="javascript:void(0)">
+												<span>luvmyvorld</span>
+											</a>
+										</div>
+										<div class="main-img">
+											<a href="javascript:void(0)">
+												<!-- <img src="./images/event_2/main_feed_img_sample.jpg" alt=""> -->
+												<img src="./images/event_2/luvmyvorld.jpg" alt="">
+											</a>
+										</div>	
+										<div class="txt-wrap">
+											<div class="inner">
+												#inmybag #인마이백 #바이오더마 #투고키트 #클렌징지존 참말로 예쁘고 유용하고 💐 다들 클렌징 정착하세요..
+											</div>
+										</div>
+									</div>
+									
+									<div class="swiper-slide">
+										<!-- <div class="swiper-slide2"> -->
+										<div class="profile">
+											<a href="javascript:void(0)">
+												<!-- <img class="thumb" src="./images/event_2/main_feed_thumb_sample.png" alt=""> -->
+												<img class="thumb" src="./images/event_2/2hyo_eun__profile.jpg" alt="">
+											</a>
+											<a href="javascript:void(0)">
+												<span>2hyo_eun_</span>
+											</a>
+										</div>
+										<div class="main-img">
+											<a href="javascript:void(0)">
+												<!-- <img src="./images/event_2/main_feed_img_sample.jpg" alt=""> -->
+												<img src="./images/event_2/2hyo_eun_.jpg" alt="">
+											</a>
+										</div>	
+										<div class="txt-wrap">
+											<div class="inner">
+												술먹고 집와서 인증샷샷샷📸<br><br>
+												
+												#23 #오늘 #지금 #today #바이오더마 #센시비오 #클렌징워터 #한정판 #투고키트 #클렌징지존 #셀카 #셀피 #selca #selfie #셀스타그램 #일상 #일상스타그램 #데일리 #daily
+											</div>
+										</div>
+									</div>
+									
+									<div class="swiper-slide">
+										<!-- <div class="swiper-slide2"> -->
+										<div class="profile">
+											<a href="javascript:void(0)">
+												<!-- <img class="thumb" src="./images/event_2/main_feed_thumb_sample.png" alt=""> -->
+												<img class="thumb" src="./images/event_2/iloveu.ra_profile.jpg" alt="">
+											</a>
+											<a href="javascript:void(0)">
+												<span>iloveu.ra</span>
+											</a>
+										</div>
+										<div class="main-img">
+											<a href="javascript:void(0)">
+												<!-- <img src="./images/event_2/main_feed_img_sample.jpg" alt=""> -->
+												<img src="./images/event_2/iloveu.ra.jpg" alt="">
+											</a>
+										</div>	
+										<div class="txt-wrap">
+											<div class="inner">
+												클렌징은 역시☺️👍 -<br>
+												-<br>
+
+												#바이오더마 #클렌징지존 #투고키트 #클렌징워터 #bioderma #일상 #daily #셀스타그램 #like4like #selfie #skincare #cleansing #cleansingwater #대학로 #종로
+											</div>
+										</div>
+									</div>
+									
 									<div class="swiper-slide">
 									<!-- <div class="swiper-slide2"> -->
 										<div class="profile">
@@ -108,22 +237,18 @@
 											<div class="inner">
 												가방에 쏙!<br>
 												완젹한 클렌징, 요만한거 없는듯💗<br><br>
-												#바이오더마#센시비오#클렌징워터#한정판#투고키트#클렌징지존<br>
-												#좋아요반사#20대#다이어트#인친#오픈카톡#다이렉트#좋아요#<br>
-												l4l#소통#일상#디톡스#27살#훈녀#모닝스타그램#나스타그램<br>
-												#협찬#일요일#쥬얼리#목걸이#주말#대학생#직장인#뷰스타그램<br>
-												#수원#용인#대구
+												#바이오더마#센시비오#클렌징워터#한정판#투고키트#클렌징지존
 											</div>
 										</div>
 									</div>
 								</div>
 								<!-- If we need navigation buttons -->
-								<!-- <div class="button-prev">
+								 <div class="button-prev">
 									<img src="./images/event_2/main_feed_nav_prev.png" alt="이전">
 								</div>
 								<div class="button-next">
 									<img src="./images/event_2/main_feed_nav_next.png" alt="다음">
-								</div> -->
+								</div> 
 							</div>
 						</div>
 					</div>
@@ -184,14 +309,6 @@
 ?>
 		<script type="text/javascript">
 			$(window).load(function() {
-// 				var mySwiper = new Swiper ('.swiper-container', {
-// \					direction: 'horizontal',
-// 					loop: true,
-// \					navigation: {
-// 						nextEl: '.button-next',
-// 						prevEl: '.button-prev',
-// 					},
-// 				})
 <?
 	if ($r = "y")
 	{
@@ -202,6 +319,17 @@
 <?
 	}
 ?>
+			});
+			
+			$(document).ready(function() {
+				var mySwiper = new Swiper ('.swiper-container', {
+					direction: 'horizontal',
+					loop: true,
+					navigation: {
+						nextEl: '.button-next',
+						prevEl: '.button-prev',
+					},
+				});
 			});
 			
 			$('.btn-more').on('click', function(){

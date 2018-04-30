@@ -582,6 +582,7 @@ a {
 	bottom: 12px;
 	right: 34px;
 	width: 27px;
+	cursor: pointer;
 }
 .content-main .feed .best-wrapper .best-slider .button-next {
 	position: absolute;
@@ -589,6 +590,7 @@ a {
 	bottom: 12px;
 	right: 0px;
 	width: 27px;
+	cursor: pointer;
 }
 .content-main .feed .list-feed .area-title {
 	margin-bottom: 86px;
