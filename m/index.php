@@ -313,7 +313,7 @@
 		<script type="text/javascript">
 			$(window).load(function() {
 <?
-	if ($r = "y")
+	if ($r == "y")
 	{
 ?>
 				var scTop = $('.scrollTarget').offset().top;

@@ -92,11 +92,103 @@
                         <img src="./images/event2/best_flag.png" alt="">
                     </div>
                     <div class="section2-best-content swiper-container">
-                        <!-- Additional required wrapper -->
-                        <!-- 2개 이상일때는 2 지우기 -->
-                        <!-- <div class="swiper-wrapper"> -->
-                        <div class="swiper-wrapper2">
+                        <div class="swiper-wrapper">
                             <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="image_area">
+                                    <img src="./images/event2/week2_content__yoonsoop.jpg" alt="" width="561">
+                                </div>
+                                <div class="content_area">
+                                    <div class="profile_area">
+                                        <img src="./images/event2/week2__yoonsoop.jpg" alt="" width="69">
+                                        <span>_yoonsoop</span>
+                                    </div>
+                                    <div class="desc_area">
+                                        이번 여름휴가는 #바이오더마 #투고키트 와 함께!<br><br>
+                                        #클렌징지존 #센시비오 #inmybag<br>
+                                        @bioderma_kr
+                                    </div>
+                                    <div class="color_area">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="image_area">
+                                    <img src="./images/event2/week2_content_roro.on.jpg" alt="" width="561">
+                                </div>
+                                <div class="content_area">
+                                    <div class="profile_area">
+                                        <img src="./images/event2/week2_roro.on.jpg" alt="" width="69">
+                                        <span>roro.on</span>
+                                    </div>
+                                    <div class="desc_area">
+                                        ✨홀로그램 영롱쓰🌈<br><br>
+                                        #바이오더마 #투고키트 #클렌징지존
+                                    </div>
+                                    <div class="color_area">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="image_area">
+                                    <img src="./images/event2/week2_content_luvmyvorld.jpg" alt="" width="561">
+                                </div>
+                                <div class="content_area">
+                                    <div class="profile_area">
+                                        <img src="./images/event2/week2_luvmyvorld.jpg" alt="" width="69">
+                                        <span>luvmyvorld</span>
+                                    </div>
+                                    <div class="desc_area">
+                                        #inmybag #인마이백 #바이오더마<br>
+                                        #투고키트 #클렌징지존 참말로<br> 
+                                        예쁘고 유용하고 💐<br>
+                                        다들 클렌징 정착하세요.. @bioderma_kr
+                                    </div>
+                                    <div class="color_area">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="image_area">
+                                    <img src="./images/event2/week2_content_2hyo_eun_.jpg" alt="" width="561">
+                                </div>
+                                <div class="content_area">
+                                    <div class="profile_area">
+                                        <img src="./images/event2/week2_2hyo_eun_.jpg" alt="" width="69">
+                                        <span>2hyo_eun_</span>
+                                    </div>
+                                    <div class="desc_area">
+                                        술먹고 집와서 인증샷샷샷📸<br>
+                                        #23 #오늘 #지금 #today #바이오더마 #센시비오 #클렌징워터 #한정판 #투고키트 #클렌징지존 #셀카 #셀피 #selca #selfie #셀스타그램 #일상 #일상스타그램 #데일리 #daily
+                                    </div>
+                                    <div class="color_area">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="image_area">
+                                    <img src="./images/event2/week2_content_iloveu.ra.jpg" alt="" width="561">
+                                </div>
+                                <div class="content_area">
+                                    <div class="profile_area">
+                                        <img src="./images/event2/week2_iloveu.ra.jpg" alt="" width="69">
+                                        <span>iloveu.ra</span>
+                                    </div>
+                                    <div class="desc_area">
+                                        클렌징은 역시☺️👍 -<br><br>
+                                        #바이오더마 #클렌징지존 #투고키트 #클렌징워터<br>
+                                        #bioderma #일상 #daily #셀스타그램<br>
+                                        #selfie #skincare #cleansing<br>
+                                        #cleansingwater #대학로 #종로
+                                    </div>
+                                    <div class="color_area">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="swiper-slide">
                                 <div class="image_area">
                                     <!-- <img src="./images/event2/sample_best_image.jpg" alt=""> -->
@@ -111,21 +203,17 @@
                                     <div class="desc_area">
                                         가방에 쏙!<br>
                                         완젹한 클렌징, 요만한거 없는듯💗<br><br>
-                                        #바이오더마#센시비오#클렌징워터#한정판#투고키트#클렌징지존<br>
-                                        #좋아요반사#20대#다이어트#인친#오픈카톡#다이렉트#좋아요#<br>
-                                        l4l#소통#일상#디톡스#27살#훈녀#모닝스타그램#나스타그램<br>
-                                        #협찬#일요일#쥬얼리#목걸이#주말#대학생#직장인#뷰스타그램<br>
-                                        #수원#용인#대구
+                                        #바이오더마#센시비오#클렌징워터#한정판#투고키트#클렌징지존
                                     </div>
                                     <div class="color_area">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="arrow_area">
+                        <div class="arrow_area">
                             <button class="button-prev"></button>
                             <button class="button-next"></button>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -176,17 +264,17 @@
         include_once "./popup/popup_agree2.php";
 ?>        
         <script type="text/javascript">
-            $(window).load(function() {
-                // var mySwiper = new Swiper ('.swiper-container', {
-                //     // Optional parameters
-                //     direction: 'horizontal',
-                //     loop: true,
-                //     // Navigation arrows
-                //     navigation: {
-                //         nextEl: '.button-next',
-                //         prevEl: '.button-prev',
-                //     },
-                // })
+            $(document).ready(function() {
+                var mySwiper = new Swiper ('.swiper-container', {
+                    // Optional parameters
+                    direction: 'horizontal',
+                    loop: true,
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.button-next',
+                        prevEl: '.button-prev'
+                    },
+                })
 
 <?
 	if ($r == "y")
