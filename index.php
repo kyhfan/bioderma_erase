@@ -181,7 +181,7 @@
                                     <div class="desc_area">
                                         클렌징은 역시☺️👍 -<br><br>
                                         #바이오더마 #클렌징지존 #투고키트 #클렌징워터<br>
-                                        #bioderma #일상 #daily #셀스타그램 #like4like<br>
+                                        #bioderma #일상 #daily #셀스타그램<br>
                                         #selfie #skincare #cleansing<br>
                                         #cleansingwater #대학로 #종로
                                     </div>
