@@ -316,9 +316,9 @@ a {
 }
 .content-main section .area-title {text-align: center;}
 .content-main section.visual {
-	min-height: 441px;
+	min-height: 488px;
 	background: url(../images/event_2/main_bg_top.jpg) center top no-repeat;
-	background-size: 100% 441px;
+	background-size: 100% 488px;
 	overflow-x: hidden;
 	text-align: center;
 	padding: 66px 0 15px;
@@ -338,6 +338,19 @@ a {
 	color: #363636;
 	line-height: 16px;
 	letter-spacing: -1.2px;
+}
+.content-main .visual .area-title .report-guide {
+	margin: 13px 0 23px;
+	font-size: 13px;
+	color: #363636;
+}
+.content-main .visual .area-title .report-guide span {
+	display: inline-block;
+	font-size: 12px;
+	border: 1px solid #363636;
+	border-radius: 12px;
+	padding: 2px 8px;
+	margin-right: 6px;
 }
 .content-main .visual .kit {
 	position: relative;

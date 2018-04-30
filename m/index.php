@@ -28,6 +28,9 @@
 						<img class="title" src="./images/event_2/main_title.png" alt="#TO GO KIT">
 						<img class="title-kr" src="./images/event_2/main_title_kr.png" alt="투고키트 이벤트">
 						<p class="sub">지난 이벤트에서 투고키트를 받지 못하신 분들에게<br>다시 한 번, 투고키트를 증정합니다</p>
+						<p class="report-guide">
+							<span>후기 이벤트 당첨자 발표</span>5월 3일 목요일
+						</p>
 					</div>
 					<div class="kit">
 						<img src="./images/event_2/main_visual_kit.png">
