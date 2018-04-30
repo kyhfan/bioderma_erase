@@ -21,7 +21,7 @@
   <!-- Page Heading -->
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header">1차 일자별 경품 당첨자 수</h1>
+        <h1 class="page-header">2차 일자별 경품 당첨자 수</h1>
       </div>
     </div>
       <!-- /.row -->
@@ -31,11 +31,11 @@
             <div id="daily_topgirl_vote_count_div1" style="display:block">
               <table class="table table-hover">
                 <thead>
-                  <tr><th>날짜</th><th>정품(6명)</th><th>투고키트(7000명)</th><th>꽝</th></tr>
+                  <tr><th>날짜</th><th>투고키트(1000명)</th><th>꽝</th></tr>
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query	= "SELECT mb_regdate FROM member_info WHERE mb_regdate < '2018-04-09' Group by substr(mb_regdate,1,10) order by mb_regdate desc";
+	$daily_date_query	= "SELECT mb_regdate FROM member_info WHERE mb_regdate > '2018-04-09' Group by substr(mb_regdate,1,10) order by mb_regdate desc";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
@@ -68,7 +68,6 @@
 ?>
                   <tr>
                     <td><?=$daily_date?></td>
-                    <td><?=number_format($winner_goods)?></td>
                     <td><?=number_format($winner_kit)?></td>
                     <td><?=number_format($winner_blank)?></td>
                   </tr>
@@ -77,7 +76,6 @@
 ?>
                   <tr>
                     <td>합 계</td>
-                    <td><?=number_format($total_goods_cnt)?></td>
                     <td><?=number_format($total_kit_cnt)?></td>
                     <td><?=number_format($total_blank_cnt)?></td>
                   </tr>

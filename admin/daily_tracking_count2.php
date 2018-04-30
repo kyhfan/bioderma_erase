@@ -21,7 +21,7 @@
     <!-- Page Heading -->
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="page-header">1차 캠페인 사이트 유입자 수 PC / Mobile</h1>
+          <h1 class="page-header">2차 캠페인 사이트 유입자 수 PC / Mobile</h1>
         </div>
       </div>
       <!-- /.row -->
@@ -36,7 +36,7 @@
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query	= "SELECT tracking_date FROM tracking_info WHERE tracking_date < '2018-04-09' Group by substr(tracking_date,1,10) ORDER BY tracking_date DESC";
+	$daily_date_query	= "SELECT tracking_date FROM tracking_info WHERE tracking_date > '2018-04-09' Group by substr(tracking_date,1,10) ORDER BY tracking_date DESC";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
@@ -67,10 +67,10 @@
 		{
 			$media_name[]	= $media_daily_data['tracking_media'];
 			$media_cnt[]	= $media_daily_data['media_cnt'];
-			$pc_query		= "SELECT * FROM tracking_info WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='PC' AND tracking_refferer NOT LIKE '%game.php%' AND tracking_refferer NOT LIKE '%index.php%'";
+			$pc_query		= "SELECT * FROM tracking_info WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='PC' AND tracking_refferer NOT LIKE '%game.php%'";
 			// $pc_query		= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='PC' ";
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-			$mobile_query	= "SELECT * FROM tracking_info WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='MOBILE' AND tracking_refferer NOT LIKE '%game.php%' AND tracking_refferer NOT LIKE '%index.php%'";
+			$mobile_query	= "SELECT * FROM tracking_info WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='MOBILE' AND tracking_refferer NOT LIKE '%game.php%'";
 			// $mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='MOBILE'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
 			// $pc_unique_query		= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE 1 AND tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='PC' GROUP BY tracking_ipaddr";

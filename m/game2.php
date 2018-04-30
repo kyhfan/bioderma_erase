@@ -97,7 +97,7 @@ include_once "./popup/popup_level2_clear.php";
 
 include_once "./popup/popup_level3_clear.php";
 
-include_once "./popup/popup_winner_goods.php";
+// include_once "./popup/popup_winner_goods.php";
 
 include_once "./popup/popup_winner_kit.php";
 

@@ -1,6 +1,8 @@
 <?
 	include_once "../include/autoload.php";
 
+	$r 	= $_REQUEST["r"];
+	
 	$mnv_f = new mnv_function();
 	$my_db         = $mnv_f->Connect_MySQL();
 	$mobileYN      = $mnv_f->MobileCheck();
@@ -89,25 +91,28 @@
 									<!-- <div class="swiper-slide2"> -->
 										<div class="profile">
 											<a href="javascript:void(0)">
-												<img class="thumb" src="./images/event_2/main_feed_thumb_sample.png" alt="">
+												<!-- <img class="thumb" src="./images/event_2/main_feed_thumb_sample.png" alt=""> -->
+												<img class="thumb" src="./images/event_2/week1_best_profile.jpg" alt="">
 											</a>
 											<a href="javascript:void(0)">
-												<span>Biodermaevent</span>
+												<span>yell_cc_</span>
 											</a>
 										</div>
 										<div class="main-img">
 											<a href="javascript:void(0)">
-												<img src="./images/event_2/main_feed_img_sample.jpg" alt="">
+												<!-- <img src="./images/event_2/main_feed_img_sample.jpg" alt=""> -->
+												<img src="./images/event_2/week1_best_image.jpg" alt="">
 											</a>
 										</div>	
 										<div class="txt-wrap">
 											<div class="inner">
-												메이크업은 말끔하게 지우고<br>
-												건강한 피부만 남기는 바이오더마!<br>
-												이제 밖에서도 간편하게<br>
-												투고키트로 즐길 수 있어서 최고<br><br>
-												#바이오더마 #클렌징워터<br>
-												#투고키트 #클렌징지존
+												가방에 쏙!<br>
+												완젹한 클렌징, 요만한거 없는듯💗<br><br>
+												#바이오더마#센시비오#클렌징워터#한정판#투고키트#클렌징지존<br>
+												#좋아요반사#20대#다이어트#인친#오픈카톡#다이렉트#좋아요#<br>
+												l4l#소통#일상#디톡스#27살#훈녀#모닝스타그램#나스타그램<br>
+												#협찬#일요일#쥬얼리#목걸이#주말#대학생#직장인#뷰스타그램<br>
+												#수원#용인#대구
 											</div>
 										</div>
 									</div>
@@ -178,7 +183,7 @@
 	include_once "./popup/popup_gift_info.php";
 ?>
 		<script type="text/javascript">
-			$(document).ready(function() {
+			$(window).load(function() {
 // 				var mySwiper = new Swiper ('.swiper-container', {
 // \					direction: 'horizontal',
 // 					loop: true,
@@ -187,6 +192,16 @@
 // 						prevEl: '.button-prev',
 // 					},
 // 				})
+<?
+	if ($r = "y")
+	{
+?>
+				var scTop = $('.scrollTarget').offset().top;
+
+				$('html, body').animate({scrollTop:(scTop-80)+'px'}, 500);
+<?
+	}
+?>
 			});
 			
 			$('.btn-more').on('click', function(){

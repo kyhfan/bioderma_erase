@@ -206,7 +206,7 @@ button {
     position: relative;
     background: #fbedef;
     width: 100% ;
-    height:3863px;
+    height:4013px;
 }
 .main-section2 .section2-wrap{
     position: relative;
@@ -320,7 +320,7 @@ button {
     position: relative;
     background: #fff;
     width: 1207px;
-    height: 603px;
+    height: 753px;
 }
 .main-section2 .section2-wrap .best_flag {
     position: absolute;
@@ -357,6 +357,7 @@ button {
     float: left;
     margin-top: 30px;
     margin-left: 45px;
+    border-radius: 34px;
 }
 .main-section2 .section2-wrap .section2-best-content .content_area .profile_area span{
     float: left;

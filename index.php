@@ -1,6 +1,8 @@
 <?
 	include_once "./include/autoload.php";
 
+    $r 	= $_REQUEST["r"];
+	
     $mnv_f = new mnv_function();
     $my_db         = $mnv_f->Connect_MySQL();
     $mobileYN      = $mnv_f->MobileCheck();
@@ -49,6 +51,7 @@
                             <li>- 세가지 해시태그를 모두 입력하지 않으면 당첨 선발에서 제외됩니다</li>
                             <li>- 제세공과금 규정에 비동의시, 경품을 지급할 수 없어 당첨이 취소됩니다</li>
                             <li>- 지난 당첨자는 선발에서 제외됩니다</li>
+                            <li>- 이벤트를 통한 경품 획득이 아닌 기타 방법(협찬 등)을 통한 경품 획득으로 참여시 당첨 선발에서는 제외됩니다</li>
                         </ul>
                         <div>
                             <button class="gift-info" data-layer-popup="popup_gift_info" onclick="wmbt.popupOpen(this)"></button>
@@ -96,20 +99,23 @@
                             <!-- Slides -->
                             <div class="swiper-slide">
                                 <div class="image_area">
-                                    <img src="./images/event2/sample_best_image.jpg" alt="">
+                                    <!-- <img src="./images/event2/sample_best_image.jpg" alt=""> -->
+                                    <img src="./images/event2/week1_best_image.jpg" alt="" width="561">
                                 </div>
                                 <div class="content_area">
                                     <div class="profile_area">
-                                        <img src="./images/event2/sample_best_profileimage.png" alt="">
-                                        <span>Biodermaevent</span>
+                                        <!-- <img src="./images/event2/sample_best_profileimage.png" alt=""> -->
+                                        <img src="./images/event2/week1_best_profile.jpg" alt="" width="69">
+                                        <span>yell_cc_</span>
                                     </div>
                                     <div class="desc_area">
-                                        메이크업은 말끔하게 지우고<br>
-                                        건강한 피부만 남기는 바이오더마!<br>
-                                        이제 밖에서도 간편하게<br>
-                                        투고키트로 즐길 수 있어서 최고<br><br>
-                                        #바이오더마 #클렌징워터<br>
-                                        #투고키트 #클렌징지존
+                                        가방에 쏙!<br>
+                                        완젹한 클렌징, 요만한거 없는듯💗<br><br>
+                                        #바이오더마#센시비오#클렌징워터#한정판#투고키트#클렌징지존<br>
+                                        #좋아요반사#20대#다이어트#인친#오픈카톡#다이렉트#좋아요#<br>
+                                        l4l#소통#일상#디톡스#27살#훈녀#모닝스타그램#나스타그램<br>
+                                        #협찬#일요일#쥬얼리#목걸이#주말#대학생#직장인#뷰스타그램<br>
+                                        #수원#용인#대구
                                     </div>
                                     <div class="color_area">
                                     </div>
@@ -164,9 +170,13 @@
         </div>
 <?
 		include_once "./popup/popup_gift_info.php";
+        
+        include_once "./popup/popup_agree1.php";
+        
+        include_once "./popup/popup_agree2.php";
 ?>        
         <script type="text/javascript">
-            $(document).ready(function() {
+            $(window).load(function() {
                 // var mySwiper = new Swiper ('.swiper-container', {
                 //     // Optional parameters
                 //     direction: 'horizontal',
@@ -177,6 +187,17 @@
                 //         prevEl: '.button-prev',
                 //     },
                 // })
+
+<?
+	if ($r == "y")
+	{
+?>
+				var scTop = $('.main-section2').offset().top;
+                $('html, body').animate({scrollTop:scTop + 40}, 500);
+<?
+	}
+?>
+                
             });
 
             (function(d, s) {
