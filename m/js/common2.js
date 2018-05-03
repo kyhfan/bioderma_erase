@@ -71,6 +71,7 @@ $(document).ready(function(event){
 	// popup close
 	$('.c-popup__close').on('click', function(){
 		$('html').removeClass('is-popup-open');
+		$('html').removeClass('popupOpened');
 		$(this).parent().parent().removeClass('c-popup--active');
 
 		return false;

@@ -91,7 +91,7 @@
                     <div class="best_flag">
                         <img src="./images/event2/best_flag.png" alt="">
                     </div>
-                    <div class="section2-best-content swiper-container">
+					<div class="section2-best-content swiper-container main-slider">
                         <div class="swiper-wrapper">
                             <!-- Slides -->
                             <div class="swiper-slide">
@@ -262,10 +262,12 @@
         include_once "./popup/popup_agree1.php";
         
         include_once "./popup/popup_agree2.php";
+		
+        include_once "./popup/popup_winner_list.php";
 ?>        
         <script type="text/javascript">
             $(document).ready(function() {
-                var mySwiper = new Swiper ('.swiper-container', {
+                var mainSwiper = new Swiper ('.main-slider', {
                     // Optional parameters
                     direction: 'horizontal',
                     loop: true,
@@ -274,7 +276,35 @@
                         nextEl: '.button-next',
                         prevEl: '.button-prev'
                     },
-                })
+                });
+				
+				var popupSwiper = new Swiper('.popup-slider', {
+					// Optional parameters
+					direction: 'horizontal',
+					loop: true,
+					// Navigation arrows
+					navigation: {
+						nextEl: '.button-next',
+						prevEl: '.button-prev'
+					},
+					on: {
+						slideChange: function() {
+							var grade = 1;
+							if(this.realIndex > 2 && this.realIndex < 6) {
+								grade = 2;
+							} else if(this.realIndex > 5) {
+								grade = 3;
+							} else {
+								grade = 1;
+							}
+							$('#popup_winner_list .grade img').attr({
+								'src': './images/common/0'+grade+'.png',
+								'alt': grade+'등'
+							});
+						}
+					}
+				});
+				
 
 <?
 	if ($r == "y")
@@ -296,6 +326,10 @@
                 j.async = true;
                 e.parentNode.insertBefore(j, e);
             })(document, "script");
+			
+			$(window).load(function() {
+				wmbt.popupSelfOpen('popup_winner_list');
+			});
         </script>
     </body>
 </html>

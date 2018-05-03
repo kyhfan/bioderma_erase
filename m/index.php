@@ -309,6 +309,8 @@
 		</div>
 <?
 	include_once "./popup/popup_gift_info.php";
+		
+	include_once "./popup/popup_winner_list.php";
 ?>
 		<script type="text/javascript">
 			$(window).load(function() {
@@ -322,16 +324,41 @@
 <?
 	}
 ?>
+				popupOpen('popup_winner_list');
 			});
 			
 			$(document).ready(function() {
-				var mySwiper = new Swiper ('.swiper-container', {
+				var mainSwiper = new Swiper ('.main-slider', {
 					direction: 'horizontal',
 					loop: true,
 					navigation: {
 						nextEl: '.button-next',
 						prevEl: '.button-prev',
 					},
+				});
+				var popupSwiper = new Swiper ('.popup-slider', {
+					direction: 'horizontal',
+					loop: true,
+					navigation: {
+						nextEl: '.button-next',
+						prevEl: '.button-prev',
+					},
+					on: {
+						slideChange: function() {
+							var grade = 1;
+							if(this.realIndex > 2 && this.realIndex < 6) {
+								grade = 2;
+							} else if(this.realIndex > 5) {
+								grade = 3;
+							} else {
+								grade = 1;
+							}
+							$('#popup_winner_list .grade img').attr({
+								'src': './images/common/0'+grade+'.png',
+								'alt': grade+'등'
+							});
+						}
+					}
 				});
 			});
 			
