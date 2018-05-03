@@ -84,7 +84,7 @@
 					<div class="weekly-best">
 						<div class="best-wrapper">
 							<!-- Slider main container -->
-							<div class="best-slider swiper-container">
+							<div class="best-slider swiper-container main-slider">
 								<!-- Additional required wrapper -->
 								<!-- 2개 이상일때는 2 지우기 -->
 								<!-- <div class="swiper-wrapper"> -->
