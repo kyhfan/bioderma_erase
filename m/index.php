@@ -35,7 +35,8 @@
 					<div class="kit">
 						<img src="./images/event_2/main_visual_kit.png">
 					</div>
-					<button class="btn-get" onclick="movePage('game2')" type="button">투고키트 받기<span class="txt"></span>
+					<!-- <button class="btn-get" onclick="movePage('game2')" type="button">투고키트 받기<span class="txt"></span> -->
+					<button class="btn-get" onclick="alert('이벤트가 종료 되었습니다.')" type="button">투고키트 받기<span class="txt"></span>
 						<span class="obj"></span></button>
 					<button class="btn-more">더보기</button>
 				</section>

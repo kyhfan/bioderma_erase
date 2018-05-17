@@ -1,6 +1,6 @@
 <?
 include_once "./include/autoload.php";
-
+exit;
 $mnv_f      = new mnv_function();
 $obYN          = $mnv_f->BrowserCheck();
 // $my_db      = $mnv_f->Connect_MySQL();
