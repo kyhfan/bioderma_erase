@@ -1,6 +1,6 @@
 <?
 include_once "../include/autoload.php";
-exit;
+// exit;
 $mnv_f = new mnv_function();
 $my_db         = $mnv_f->Connect_MySQL();
 $mobileYN      = $mnv_f->MobileCheck();

@@ -25,8 +25,8 @@
             <div class="main-section1">
                 <div class="section1-wrap">
                     <img src="./images/event2/main_section1_bg.png" alt="" style="max-width:100%;display:block;">
-                    <!-- <button class="give_kit" data-move="game2" onclick="wmbt.move(this)"></button> -->
-                    <button class="give_kit" data-move="game2" onclick="alert('이벤트가 종료 되었습니다.')"></button>
+                    <button class="give_kit" data-move="game2" onclick="wmbt.move(this)"></button>
+                    <!-- <button class="give_kit" data-move="game2" onclick="alert('이벤트가 종료 되었습니다.')"></button> -->
                 </div>
             </div>
             <div class="main-section2">
@@ -329,7 +329,7 @@
             })(document, "script");
 			
 			$(window).load(function() {
-				wmbt.popupSelfOpen('popup_winner_list');
+				// wmbt.popupSelfOpen('popup_winner_list');
 			});
         </script>
     </body>
